@@ -1,0 +1,583 @@
+/*
+ * config.h.in.  Originally generated automatically from configure.ac by
+ * autoheader and manually changed after that.
+ */
+
+-DFEAT_GUI_MACVIM
+%FEAT_GUI
+
+/* arabic: Arabic keymap and shaping support.*/ *B
+-UFEAT_ARABIC
+
+/* proto LOS */
+-UPROTO
+
+/* Define unless no X support found */
+-UHAVE_X11
+
+/* Define when terminfo support found */
+-UTERMINFO
+
+/* Define when termcap.h contains ospeed */
+-UHAVE_OSPEED
+
+/* Define when ospeed can be extern */
+-UOSPEED_EXTERN
+
+/* Define when termcap.h contains UP, BC and PC */
+-UHAVE_UP_BC_PC
+
+/* Define when UP, BC and PC can be extern */
+-UUP_BC_PC_EXTERN
+
+/* Define when termcap.h defines outfuntype */
+-UHAVE_OUTFUNTYPE
+
+/* Define when __DATE__ " " __TIME__ can be used */
+-UHAVE_DATE_TIME
+
+/* Define when __attribute__((unused)) can be used */
+-UHAVE_ATTRIBUTE_UNUSED
+
+/* defined always when using configure */
+-DUNIX
+
+-UHAVE_ACL
+
+/* Arabic keymap and shaping support.*/
+-DFEAT_ARABIC
+
+/* ":autocmd" command */
+-DFEAT_AUTOCMD
+
+/* Automatically generate a servername for clientserver when --servername is not passed on the command line. */
+-UFEAT_AUTOSERVERNAME
+
+/* Allow balloon expression evaluation. Used with a debugger and for tooltips. Only for GUIs where it was implemented.*/
+-DFEAT_BEVAL_GUI
+
+/* Allow balloon expression evaluation in the terminal. */
+-DFEAT_BEVAL_TERM
+
+/* ":browse" command or just the ":browse" command modifier */
+-UFEAT_BROWSE
+
+/* "Choose one out of the following four:
+ * NO_BUILTIN_TCAPS	Do not include any builtin termcap entries (used only with HAVE_TGETENT defined). (nothing) Machine specific termcap entries will be included.
+ * SOME_BUILTIN_TCAPS	Include most useful builtin termcap entries (used only with 
+ * NO_BUILTIN_TCAPS not defined). This is the default.
+ * ALL_BUILTIN_TCAPS	Include all builtin termcap entries (used only with  
+* NO_BUILTIN_TCAPS not defined)." */
+-DSOME_BUILTIN_TCAPS
+
+/* %o' in 'statusline' and builtin functions line2byte( and byte2line(). Note: Required for Macintosh. */
+-DFEAT_BYTEOFF
+
+/* Inter process communication 
+* The +channel feature requires +eval
+*/
+-DFEAT_JOB_CHANNEL
+
+/* C code indenting */
+-DFEAT_CINDENT
+
+/+ Remote control via the remote_send() function and the --remote argument */
+-DFEAT_CLIENTSERVER
+
+/* Clipboard support.  Always used for the GUI. */
+FEAT_CLIPBOARD
+
+
+/* completion of mappings/abbreviations in cmdline mode. Takes a few Kbyte of code. */
+-DFEAT_CMDL_COMPL
+
+/* showcmd' and 'ruler' options. */
+-DFEAT_CMDL_INFO
+
+/* comments' option. */
+-DFEAT_COMMENTS
+
+/* conceal' option.  Needs syntax highlighting as this is how the concealed text is defined. */
+-DFEAT_CONCEAL
+
+/* Encryption */
+-DFEAT_CRYPT
+
+/* Unix only: Cscope support */
+-UFEAT_CSCOPE
+
+/* synchronization of split windows */
+-DFEAT_CURSORBIND
+
+/*  +dialog_gui		Use GUI dialog.
+* +dialog_con		May use Console dialog.
+* When none of these defined there is no dialog support.*/
+-DFEAT_CON_DIALOG
+-DFEAT_GUI_DIALOG
+
+/* Displaying diffs in a nice way. Requires +windows and +autocmd. */
+-DFEAT_DIFF
+
+/* Digraphs.In insert mode and on the command line you will be able to use digraphs. The CTRL-K command will work.Define OLD_DIGRAPHS to get digraphs compatible with Vim 5.x.  The new ones are from RFC 1345.*/
+-DFEAT_DIGRAPHS
+
+/ *Win32 GUI only: DorectX and |'rederoptions'|*/
+-UFEAT_DIRECTX
+
+/* Drag'n'drop support.  Always used for the GTK+ GUI and MacVim. */
+%FEAT_DND
+
+/* Define if we have EBCDIC code */
+-UEBCDIC
+
+/* When FEAT_EMACS_TAGS defined: Include support for emacs style TAGS file.*/
+-DFEAT_EMACS_TAGS
+
+/* Built-in script language and expression evaluation, ":let", ":if", etc. */
+-DFEAT_EVAL
+
+/* always on now, used to be for Vim's extra Ex commands
+hlsearch' and 'incsearch' options.*/
+-DFEAT_SEARCH_EXTRA
+
+/* Farsi (Persian language) Keymap support. */
+-DFEAT_FKMAP
+
+/* "gf" and "<cfile>" commands. */
+-DFEAT_SEARCHPATH
+
+/* "[I" ":isearch" "^W^I", ":checkpath", etc. */
+-DFEAT_FIND_ID
+
+/* Floating point variables. */
+-DFEAT_FLOAT
+
+/* MacVIm only: edit in full-screen */
+-DFEAT_FULLSCREEN
+
+/* Message translations (requires +multi_lang) (only when "lang" archive unpacked) */
+-UFEAT_GETTEXT
+
+/* "Hangul input support |hangul|. 
+* +hangul_input	Internal Hangul input method.  Must be included
+* through configure: ""--enable-hangulin""
+* Both FEAT_XIM and FEAT_HANGULIN are for Unix and VMS only." */
+-UFEAT_HANGULIN
+
+/* "Internal Hangul input method.  Must be included through configure: ""--enable-hangulin""  
+Both are for Unix and VMS only." */
+-UUSE_ICONV
+
+/*CTRL-N/CTRL-P/CTRL-X in insert mode. Takes about 4Kbyte of code.*/
+-DFEAT_INS_EXPAND
+
+/* Jumplist, CTRL-O and CTRL-I commands. */
+-DFEAT_JUMPLIST
+
+/* " +keymap		'keymap' option.  Allows you to map typed keys in 
+ * Insert mode for a special language." */
+-DFEAT_KEYMAP
+
+/* " * +langmap:  'langmap' option.  Only useful when you put your
+ * keyboard in a special language mode, e.g. for typing
+ * greek." */
+-DFEAT_LANGMAP
+
+/* Define if you want to include libcall */ 
+-
+
+/* " * +linebreak: 'showbreak', 'breakat'  and 'linebreak' options.
+ * Also 'numberwidth'." */
+ -DFEAT_LINEBREAK
+
+/* +lispindent: lisp indenting (From Eric Fischer). */
+ -DFEAT_LISP
+
+ /* " * +listcmds		Vim commands for the buffer list and the argument
+ *			list.  Without this there is no "":buffer"" "":bnext"",
+ *			"":bdel"", "":argdelete"", etc." */
+ -DFEAT_LISTCMDS
+
+/* +localmap: Mappings and abbreviations local to a buffer. */
+ -DFEAT_LOCALMAP
+
+/* Define if you want to include the Lua interpreter */
+-UFEAT_LUA
+
+/* |lua| inrerface |/dyn| */
+-UDYNAMIC_LUA
+
+/* +menu":menu" command */
+-DFEAT_MENU
+
+/* " * +mksession"":mksession"" command.
+ * Requires +windows and +vertsplit." */
+ -DFEAT_SESSION
+
+/* _fname	modifiers for file name.  E.g., "%:p:h".  */
+-DFEAT_MODIFY_FNAME
+
+/* +mouse: Any mouse support (any of the above enabled).*/
+-DFEAT_MOUSE
+
+/* "* +mouse_dec		idem, for Dec mouse handling." */
+-DFEAT_MOUSE_DEC
+
+/* "+mouse_gpm		Unix only: Include code for Linux console mouse handling." *Y/
+-UFEAT_MOUSE_GPM
+
+/* +mouse_jsbterm	idem, for Jsbterm mouse handling.*/
+-UFEAT_MOUSE_JSB
+
+/* +mouse_netterm: idem, for Netterm mouse handling. */
+-DFEAT_MOUSE_NET
+
+/* QNX only: pterm mouse handling |qnx-terminal| */
+-UFEAT_MOUSE_PTERM
+
+/* +mouse_sgr		Unix only: Include code for for SGR-styled mouse." */
+-DFEAT_MOUSE_SGR
+
+/* " * +mouse_sysmouse	Unix only: Include code for FreeBSD and DragonFly
+ * console mouse handling." */
+ -UFEAT_SYSMOUSE
+
+/* " * +mouse_urxvt		Unix only: Include code for for urxvt mosue handling." */
+-DFEAT_MOUSE_URXVT
+
+/* +mouse_xterm Unix only: Include code for xterm mouse handling. */
+-DFEAT_MOUSE_XTERM
+
+/* Define if you want to include mouseshape. */
+-DFEAT_MOUSESHAPE
+
+ /* +multi_byte: Generic multi-byte character handling.  Doesn't work with 16 bit ints.  Required for GTK+ 2. */
+ -
+/* Win32 input method for multibyte chars |multibyte-ime| */
+ -DFEAT_MBYTE_IME
+
+/* +multi_lang		Multi language support. "":menutrans"", "":language"", etc." */
+ -DFEAT_MULTI_LANG
+
+/* Mzscheme interface |mzscheme-dynamic| |/dyn| */
+-UDYNAMIC_MZSCHEME
+
+/* +netbeans_intg	Netbeans integration. 
+* The Netbeans feature requires +listcmds and +eval." */
+-DFEAT_NETBEANS_INTG
+
+/* +num64: 64-bit Number.*/
+-DFEAT_NUM64
+
+/* MacVim only: ODB Editor Protocol support |odbeditor| */
+%FEAT_ODB_EDITOR
+
+/* Win32 GUI only: |ole-interface| */
+-UOLE
+
+/* +path_extra up/downwards searching in 'path' and 'tags'.*/
+-DFEAT_PATH_EXTRA
+
+/* +perl: Perl interface: ""--enable-perlinterp" */
+-UFEAT_PERL
+
+/* Perl interface |perl-dynamic| |/dyn| */
+-UDYNAMIC_PERL
+
+/* " * +persistent_undo	'undofile', 'undodir' options, :wundo and :rundo, and  implementation." */
+-DFEAT_PERSISTENT_UNDO
+
+/* +postscript: Printing uses PostScript file output. */
+-DFEAT_POSTSCRIPT
+
+/* +printer:  hardcopy" command */
+-DFEAT_PRINTER
+
+/* +profile: Profiling for functions and scripts. */
+-DFEAT_PROFILE
+
+/* +python: Python interface: "--enable-pythoninterp" */
+-UFEAT_PYTHON
+
+/* Define if you want to include the Python3 interpreter. */
+-UDYNAMIC_PYTHON
+
+/* Python 3 interface | python-dynamic| |/dyn| */
+-UFEAT_PYTHON3
+
+/* Python 3 interface | python-dynamic| |/dyn| */
+-UDYNAMIC_PYTHON3
+
+/* +quickfix: Quickfix commands. */
+-DFEAT_QUICKFIX
+
+/* +reltime: reltime() function */
+-DFEAT_RELTIME
+
+/* +rightleft:	Right-to-left editing/typing support. */
+-DFEAT_RIGHTLEFT
+
+* Define if you want to include ruby
+FEAT_RUBY
+
+/* Ruby interface |ruby-dynamic| |/dyn|
+-UDYNAMIC_RUBY
+
+/* +scrollbind: synchronization of split windows */
+-DFEAT_SCROLLBIND
+
+/* +signs: Allow signs to be displayed to the left of text lines. 
+* Adds the "":sign"" command." */
+-DFEAT_SIGNS
+
+/* spell checking */
+-DFEAT_SPELL
+
+/* +smartindent: smart C code indenting when the 'si' option is set. */
+-DFEAT_SMARTINDENT
+
+/* Define if you want startuptime */
+-DSTARTUPTIME
+
+/* +statusline: 'statusline', 'rulerformat' and special format of
+ * 'titlestring' and 'iconstring' options. */
+-DFEAT_STL_OPT
+
+/* +sun_workshop	Sun Workshop integration */
+-UFEAT_SUN_WORKSHOP
+
+ /* +syntax: syntax highlighting.  When using this, it's a good
+ * idea to have +autocmd and +eval too. */
+-DFEAT_SYN_HL
+
+/* * Use system() instead of fork/exec for starting a  shell.  Doesn't work for the GUI! */
+-UUSE_SYSTEM
+
+/* +tag_any_white: Allow any white space to separate the fields in a tags file.  When not defined, only a TAB is allowed. */
+-UFEAT_TAG_ANYWHITE
+
+/* +tag_binary: Can use a binary search for the tags file. */
+-DFEAT_TAG_BINS
+
+/* +tag_old_static	Old style static tags: ""file:tag  file  .."".  Slows down tag searching a bit. */
+-DFEAT_TAG_OLDSTATIC
+
+/* +tcl: TCL interface: ""--enable-tclinterp""
+ * These features can only be included by using a configure argument.  See the
+ * Makefile for a line to uncomment.
+ * These features are automatically detected:
+   * +terminfo
+   * +tgetent */
+-UFEAT_TCL
+
+/* Tcl interface |tcl-dybnamic| |/dyn| */
+-UDYNAMIC_TCL
+
+/* +termguicolors	'termguicolors' option.*/
+-DFEAT_TERMGUICOLORS 
+
+/* +terminal: terminal"" command.  Runs a terminal in a window.
+ * requires +channel and +multibyte */
+-DFEAT_TERMINAL
+
+/* only Unix can have terminfo instead of termcap
+ * These features are automatically detected:
+   * +terminfo
+   * +tgetent"*/
+-DTERMINFO
+
+/* +termresponse	send t_RV to obtain terminal response.  Used for xterm to check if mouse dragging can be used and if term  codes can be obtained.*7
+-DFEAT_TERMRESPONSE
+
+/* +textobjects: Text objects: "vaw", "das", etc. */
+-DFEAT_TEXTOBJ
+
+/* +timers: timer_start() */
+-DFEAT_TIMERS
+
+/* +title: 'title' and 'icon' options */
+-DFEAT_TITLE
+
+/* +toolbar: Include code for a toolbar (for the Win32 GUI, GTK always has it).  But only if menus are enabled. */
+-DFEAT_TOOLBAR
+
+/* +transparency: 'transparency' option.
+* MacVim only: window background transparency */
+-DFEAT_TRANSPARENCY
+
+/* +user_commands	Allow the user to define his own commands. */
+-DFEAT_USR_CMDS
+
+/* +vertsplit		Vertically split windows. */
+-DFEAT_VIRTUALEDIT
+
+/* +viminfo: reading/writing the viminfo file. Takes about 8Kbyte of code. */
+-DFEAT_VIMINFO
+
+/* +virtualedit: 'virtualedit' option and its implementation
+ - 	" * +visual		Visual mode - now always included. */
+-DFEAT_VIRTUALEDIT
+
+/* +visualextra: Extra features for Visual mode (mostly block operators). */
+-DFEAT_VISUALEXTRA
+
+/* +vreplace: "gR" and "gr" commands. */
+-DFEAT_VREPLACE
+
+/*  +wildignore: 'wildignore' and 'backupskip' options
+ * Needed for Unix to make ""crontab -e"" work.*/
+-DFEAT_WILDIGN
+
+/* +wildmenu: 'wildmenu' option */
+-DFEAT_WILDMENU
+
+/* +writebackup: 'writebackup' is default on:
+ * Use a backup file while overwriting a file.  But it's  deleted again when 'backup' is not set.  Changing this  is strongly discouraged: You can lose all your  changes when the computer crashes while writing the file.
+ * VMS note: It does work on VMS as well, but because of version handling it does not have any purpose.
+ * Overwrite will write to the new version. */
+-DFEAT_WRITEBACKUP
+
+/* +X11: Unix only.  Include code for xterm title saving and X clipboard.  Only works if HAVE_X11 is also defined. */
+-UWANT_X11
+
+/* +xfontset: X fontset support.  For outputting wide characters. */
+-UFEAT_XFONTSET
+
+/* +xim: X Input Method.  For entering special languages like chinese and Japanese.
+ * Both FEAT_XIM and FEAT_HANGULIN are for Unix and VMS only. */
+%FEAT_XIM
+
+/* Define if you want xpm */
+-UHAVE_XPM
+
+/* Win32 GUI only: pixmap support |w32-xpm-support| */
+-UFEAT_XPM_W32
+
+/* Define if you want xsmp */
+-UUSE_XSMP
+
+/* interactive XSMP (X session managent) support */
+-UUSE_XSMP_INTERACT
+
+/* +xterm_clipboard: Unix only: Include code for handling the clipboard in an xterm like in the GUI. */
+-UFEAT_XCLIPBOARD
+
+/* +xterm_save: The t_ti and t_te entries for the builtin xterm will be set to save the screen when starting Vim and restoring it when -Uexiting.*/
+FEAT_XTERM_SAVE
+
+/* Define if you want to include extra_search, hlsearch' and 'incsearch' options.
+-DFEAT_SEARCH_EXTRA
+
+//--------------------------------------------
+/* Features removed because return in error during the process of replace static funcion - TXL: replaceStaticFunctions.txl */
+-U__BORLANDC__
+-UEBCDIC
+-DFEAT_FOLDING
+
+//----
+/* Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/option.c' as a [program], at or near:
+	] = p_sp ; } >>> if <<< ( do_srr ) { p_srr */
+-UWIN3264
+
+/* [TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/option.c' as a [program], at or near: errmsg = e_invarg ; } >>> else <<< if ( varp == & */
+-UHAVE_SANDBOX
+
+/* [TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/option.c' as a [program], at or near:
+	* ) n ; } >>> } <<< } { char_u * cdpath */
+-DFEAT_SEARCHPATH
+-DFEAT_FIND_ID
+
+/* Define if you want to include process communication. */
+-DFEAT_JOB_CHANNEL
+
+/* Define if you want to include multibyte support. */
+FEAT_XIM
+-FEAT_MBYTE
+USE_ICONV
+-DFEAT_GUI_MACVIM
+FEAT_CLIPBOARD
+
+/* replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/ex_getln.c' as a [program], at or near:	) goto cmdline_changed ; } >>> if <<< ( c == NUL || */
+-DFEAT_WILDMENU
+
+HAVE_AVAIL_MEM
+
+-UGTK_CHECK_VERSION
+-UFEAT_GUI_W32
+
+-DFEAT_GUI
+
+[TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/if_mzsch.c' as a [program], at or near:
+	NULL ) ; # endif } >>> static <<< void setup_timer ( void ) 
+/* Define if you want to include gui_motif */
+-UFEAT_GUI_MOTIF
+
+-UFEAT_GUI_ATHENA
+FEAT_GUI_GTK
+
+[TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/screen.c' as a [program], at or near:
+	boguscols -= n_extra ; } >>> else <<< { boguscols += n_extra ; 
+-DLINE_ATTR
+
+/* [TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/os_unix.c ...*/
+-U__BEOS__
+-URLIM_INFINITY
+
+/* [TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/channel.c ...*/
+-U_WIN32
+
+-U__cplusplus
+
+[TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/main.c
+-UFEAT_GUI_MSWIN
+-UVIMDLL
+-UFEAT_CMDWIN
+
+[TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/misc2.c
+-UMSWIN
+-UAMIGA
+
+TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/misc1.c
+-UVMS
+TRANSPLANT-MACVIM-CMP_v2/Temp/temp_partial_donor_source_file_for_static.out, replaceStaticFunctions.txl] : TXL0193E predefined function [read], called from [solveForAllPrograms] - Syntax error parsing file 'TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/message.c
+-DMACOS_X
+-UVAX
+
+/* readReverseCallGraph */
+[] : TXL0913I - (Information) Recursion stack limit reduced from 268435456 to 66056192 to fit
+[TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/fileio.c, ifdef.txl] : TXL0192E line 6308 of TRANSPLANT-MACVIM-CMP_v2/TempDonorFiles/macvim/src/fileio.c - Syntax error at or near:
+	    } 
+ } 
+
+ -DTEMPDIRNAMES
+
+ -UFEAT_MZSCHEME
+
+ %DO_DECLARE_EXCMD
+
+ -%FEAT_GUI_SCROLL_WHEEL_FORCE
+
+/*Features removedo from option.c
+ -UFEAT_ANTIALIAS
+
+ -DFEAT_AUTOCHDIR
+
+ -DFEAT_BEVAL
+
+-UFEAT_GUI_MAC
+
+-UFEAT_COMPL_FUNC
+
+-UFEAT_RENDER_OPTIONS
+
+-UUSE_CRNL
+
+-UFEAT_WAK
+
+-UMAC
+
+-UBACKSLASH_IN_FILENAME
+
+%HAVE_AVAIL_MEM
+
+%HAVE_TOTAL_MEM

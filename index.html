@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    
+    <style>
+    .holder {
+      display: inline;
+    }
+    .holder img {
+      max-height: 400px;
+      max-width: 400px;
+      object-fit: cover;
+    }
+
+    .table {
+      display: inline;
+    }
+    .table img {
+      max-height: 300px;
+      max-width: 300px;
+      object-fit: cover;
+    }
+
+    .table3 img {
+      max-height: 500px;
+      max-width: 300px;
+      object-fit: cover;
+    }
+
+    .table4 img {
+      max-height: 800px;
+      max-width: 600px;
+      object-fit: cover;
+    }
+
+    .table5 img {
+      max-height: 1300px;
+      max-width: 950px;
+      object-fit: cover;
+    }
+    
+    .table6 img {
+      max-height: 600px;
+      max-width: 400px;
+      object-fit: cover;
+    }
+
+    .table2 {
+      display: inline;
+    }
+    .table2 img {
+      max-height: 200px;
+      max-width: 200px;
+      object-fit: cover;
+    }
+
+	
+    </style>
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/banner/logo.jpg">
+
+    <title>UCL/UFBA/IFBA</title>
+
+    <!--Bootstrap-->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--Font-awesome CSS-->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <!--Normalize-->
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <!--Pretty Photo-->
+    <link href="assets/css/prettyPhoto.css" rel="stylesheet">
+    <!--Owl Carousel-->
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+    <!--Style-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!--Responsive-->
+    <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header Area Start-->
+    <header class="header-top" id="sticky-header">
+        <div class="header-bg">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">UCL/UFBA/IFBA</a>
+                    </div><!-- /.navbar-header -->
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#top">OVERVIEW</a></li>
+                            <li><a href="#proposal">APPROACH</a></li> 
+                            <li><a href="#corpus-collection">ProdScapel</a></li>
+                            <li><a href="#case_study">CASE STUDIES</a></li>
+                            <li><a href="#experimental_evaluation">EXPERIMENTAL EVALUATION</a></li>
+                            <li><a href="#reference">REFERENCES</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
+                        </ul><!-- /.navbar-right -->
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container -->
+            </nav><!-- /.nav -->
+        </div><!-- /.header-bg -->
+    </header><!-- /.header-top -->
+    <!--Header Area End-->
+    
+    <!--Banner Area Start-->
+    <div class="banner-area parallax" id="top">
+        <div class="banner-bg">
+            <div class="container">
+                <div class="banner-title text-center">
+                    <h1>AUTOMATED SOFTWARE TRANSPLANTATION FOR SOFTWARE PRODUCT LINES</h1>
+                    <!-- <div class="banner-btn btn">
+                        <a href="#">Contact Us</a>
+                    </div><!-- /.banner-btn -->
+                </div><!-- /.banner-title -->
+            </div><!-- /.container -->
+        </div><!-- /.banner-bg -->
+    </div><!-- /.banner-area -->
+    <!--Banner Area End-->
+
+        <!--Overview Area Start-->
+    <div class="about-area" id="overview">
+        <div class="about-bg">
+            <div class="container">
+              <!--  <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <div class="about-title title">
+                           
+                            <h2>Generating SPL via Automated Software Transplantation</h2>
+                        </div><!-- /.about-title -->
+                   <!-- </div>
+                </div>-->
+                <div class="row">
+                   
+                    
+                        <div class="about-details ">
+                            <div class="about-title title">
+                                <h2>About the Project</h2>  
+                            </div>
+                            <div class="text-leo about-img">
+                            <img src="assets/images/about/about1.jpg" alt="about">
+                               
+                               <p class="justifyText">For companies producing related products, Software Product Lines (SPL) is a software reuse method that improves time-to-market and software quality, achieving substantial cost reductions. These benefits do not come for free. It often takes years to rearchitect and reengineer a codebase to support SPL and, once adopted, it must be maintained. Current SPL practice rely on a collection of tools, tailored for different reengineering phases, whose output developers must coordinate and integrate. We present Foundry, a general automated approach for leveraging software transplantation to speed conversion to and maintenance of SPL. Foundry facilitates feature extraction. It can efficiently, repeatedly, transplant a sequence of features, implemented in multiple files. 
+                               </p>
+                               
+                               <p class="about-para-middle">We realised FOUNDRY in prodScalpel, a software transplantation tool for SPL that 
+                               facilitates feature identification and can efficiently transplant a multi-organ, i.e., a sequence of features. 
+                               We used prodScalpel to create two product lines and derive two products that contain features from three real-world 
+                               systems each. We also compared it with manual effort, showing that prodScalpel is able to migrate features 
+                               between different codebases within 4 hours, time limit within which expert SPL developers have not finished the task. 
+                               When the same codebase for the host and the donor was used, prodScalpel was able to migrate a feature within an 
+                               average of 48min, compared to an average of 1h21min of developer effort.
+                                </p>
+                                
+                                <p class="about-para-middle">Our paper is available for 
+                                <a
+                                     href = "documents/FOUNDRY_TOSEM_JOURNAL-3.pdf" target = "_ blank"
+                                     rel = "noopener"> download</a> . <!--The paper was presented at FSE 2021 and the slides 
+                                from the presentation are also available: <a
+                                     href = "documents/slide.pdf" target = "_ blank"
+                                     rel = "noopener"> slides</a>.
+        						</p>-->
+                               
+                           </div><!-- /.about-img -->
+                        </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.about-bg -->
+    </div><!-- /.about-area -->
+    <!--About Area End-->
+
+<!--News Proposal Start-->
+    <div class="news-area" id="proposal">
+        <div class="news-bg">
+            <div class="container">
+                <div class="row">
+                        <div class="text-leo about-title title">
+                             <h2>FOUNDRY: The Automated Software Transplantation Approach for SPL re-engineering</h2>
+
+                            
+                          <div class="text-leo about-img_square">
+                        
+                            
+                             <p>Here we present an overview of <i>FOUNDRY</i>’s workflow.  it applies software transplantation idea to re-engineering of product lines from existing systems. Foundry is independent of the programming language, and supports SPL’s <i>domain engineering</i> and <i>application engineering</i> [3] processes at the code level.
+                             Given organs’ entry points for each organ in the donor systems, their target implantation points in the product base, 
+                             and a set of test suites that exercise each organ, it automatically: extracts a set of organs; constructs an organ-host compatibility layer; trans-forms each organ to be compatible with the context of their targetsites in the product base; and implants them in 
+                             the beneficiary’senvironment. All product generation processes are performed in an iterative 
+                             way where each organ is transplanted stepwise, and a new product is incrementally constructed 
+                             as each organ is successfully transplanted.
+                             </p>
+                             <br>
+                         </div><!-- /.about-img -->
+
+                           <!--  <img src="assets/images/img/foundry-approach.jpg" alt="about">-->
+                            <div class='table5'>
+                                <p align="center"><img src='assets/images/img/foundry-approach.jpg'\></p> 
+                                <br>
+                                <p align="center"><b>Fig. 1. FOUNDRY's workflow. </b>
+                                <p align="center"> <i>Domain engineering process supported by FOUNDRY. Four over-organs (A, D, G, L) are extracted from three donor systems and kept in the transplantation platform, with product base consisting of 2 features shared accross all products (P and Q). Application engineering process supported by FOUNDRY. A new product is derived after two software transplantation iterations (organs G and L).</i></p> 
+                            </div>
+                         <div class="text-leo about-img_square">
+                             <p>Based on software transplantation idea, Foundry treats product base and over-organs (representing features) as product line assets. A product base is a host that contains all features that will be shared among the products. An over-organ, in turn, is a completely functional and reusable portion of code extracted from a donor system that conservatively over-approximates the target organ [1]. An over-organ can be specialized to became an organ that preserves the original behavior of the feature in a different host environmen [1].
+
+                        </div><!-- /.about-img -->
+                         <br>
+                        <div class='table4'>
+                                <p align="center"><img src='assets/images/img/autotransplantation_for_spl.jpg'\></p> 
+                                <br>
+                                <p align="center"><b>Fig. 2. Overview of the automated software transplantation process for product derivan.</b></p> 
+                        </div>
+
+                     
+                            
+                        <div class="text-leo about-img_square">
+                             Conceptually, in Foundry, while the product base provides commonalities (i.e., common features) to the target product line, the variability (i.e., variant features) are provided by the transplantation process, as illustrated in Figure 2. This idea opens new ways for SPLE area by automated construction of different products by transplanting multiple organs into a product base.
+                             
+                             </p>  
+
+                             <br>
+
+                        </div><!-- /.about-img -->
+                       
+                        <div class="text-leo about-img_square">
+                           	 <!-- <div class='holder'>
+    							<p align="center"><img src='assets/images/img/approachV5.png'\>
+  							 </div>
+                             <p align="center"><b>Figure 1: Overall <i>FOUNDRY</i></b></p> 
+                       		 <br> -->
+                             
+                             <h5>Domain Engineering</h5>
+                             <p><strong>Preoperative Stage:</strong> As in medicine, Foundry has a preoperative stage where donors and the host are prepared for the transplantation process and a postoperative stage where we evaluate if the transplantation was successful (see Section 3.2 for more details on the postoperative stage). The preoperative stage defines pre-transplantation tasks, responsible for the variability analysis process, the organ’s test suite, donor and host preparation.
+                             </p>
+                             <br>
+                             
+                             <p><strong>Over-organ Extraction:</strong>  Once the donor is prepared, it is possible to start the over-organ extraction process. In this stage, all source code related to the organ to be transplanted, that implements the target feature, must be identified and extracted. As in previous work, we use backward and forward slicing to achieve this task [1]. At the end of the extraction process, the source code of the over-organ is then stored in the transplantation platform, together with other over-organs that compose the product line. All over-organs in the platform are available to be reused during the application engineering process.
+                             </p> 
+                             <br>
+                             
+                             <h5>Application Engineering</h5>
+
+                             <p><strong>Over-organ Selection:</strong>  Over-organ Selection. At the start of the transplantation process, an SPL engineer selects the target features that will be transplanted into the product base to create the target product. The choice is guided by the feature model generated during the variability analysis process, so as, to support the SPL engineer to handle eventual relationship and restrictions among transplanted organs. Once the target feature is chosen in the feature model, it is possible to find the corresponding over-organ in the transplantation platform.
+                             </p>
+                             <br>
+                             <p><strong>Over-organ Reduction and Adaptation:</strong> The over-organ reduction and adaptation processes using genetic programming (GP). GP reduces an over-organ and specialises it to the host environment. It thus creates an organ that preserves the original behaviour of the feature at a given insertion point in the host environment. <i>FOUNDRY</i> supports the adaptation of an organ that contains multiple files. Foundry introduces an organ-host wrapper. This layer is responsible for providing access to the organ from the target host. It is automatically constructed on demand, according to a given implantation point in the product base.</p>
+                             <br>
+                            
+                             <p><strong>Organ Implantation:</strong>   In this stage of the process, the organ is ready to be implanted into the product base. <i>FOUNDRY</i> handles the transplantation of multiple organs into a single host and its consequent dependency and interactions, while avoid code duplication. <i>FOUNDRY</i> solves these challenges by using code clone detection. To avoid duplicated code insertion, <i>FOUNDRY</i> checks whether a specific code element is already present in the host, considering not only its namespace but its structure and context at a fine level of granularity to make sure that two portions of code are "clones".</p>
+                             <br>
+                            
+                             <p><strong>Postoperative Stage:</strong>  As in medicine, <i>FOUNDRY</i> requires checking the side-effects of the transplantation operation. 
+                             For this, we have to perform regression and acceptance testing in the post-operative product base.After the postoperative stage, new iterations of organ transplantation can be performed; thus, in a stepwise and incremental way, a new product is derived as organs are transplanted into a product base</p>
+                           </div><!-- /.about-img -->
+                              
+                        </div><!-- /.news-title -->
+                           
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.news-bg -->
+    </div><!-- /.news-area -->
+    <!--News Area End-->
+    
+    
+
+ <!--corpus-collection Area Start-->
+    <div class="projects-area" id="corpus-collection">
+        <div class="projects-bg">
+            <div class="container">
+                <div class="row">
+                    
+                        <div class="projects-title title">
+                            <h2>ProdScalpel</h2>
+                        </div><!-- /.about-title -->
+                            
+                            <p class="justifyText">Currently, Foundry is realized in a software transplantation tool for SPL re-engeineering called <i>ProdScalpel</i>. The <i>ProdScalpel</i> facilitates feature identification and can efficiently transplant a multi-organ, i.e., a sequence of features. The tool have been developed from 𝜇Scalpel [1] with focus on the transplantation of multiple organs and their implantation into a single codebase. This innovation opens the way to automated software transplantation process for SPLE, since it will enable companies to reuse features from existing codebases in an automated way. Figure 8 shows the overall architecture of the prodScalpel tool. 
+                            </p>
+                            <br>
+                             </div><!-- /.about-title -->
+                            <p align="center"><img src="assets/images/img/prodscalpel-workflow.jpg" alt="about"></p>
+                            <br>
+                            <p align="center"><b>Fig. 3. Overall architecture of prodScalpel. An SDG is a system dependency graph that the genetic programming phase uses to constrain its search space.</b></p> 
+                            <br>
+                            <div class="projects-title title">
+                            <br>
+                             <h5>Source Code</h5>
+                             <p class="justifyText"> The prodScalpel prototype requires 64-bit MacOS 10.15.4, TXL, gcc-4.8, cflow, doxygen, check and with at least 16 GB memory.
+                             
+                             </p>
+                             <!--</ol>
+                              <li>prodScalpel: <a href="../../assets/img/donors">Source</a>.</li>
+                             </ol>-->
+                            <br>
+                            
+                            <h5>Binary With Example Usage</h5>
+                              <p class="justifyText">The prodScalpel binary release was compiled on 64-bit MacOS 10.15.4. It contains an example run for the IDCT Donor - Cflow Host transplant,
+                             from the empirical study.</p>
+                            </ol>
+                              <li>prodScalpel Binary: <a href="../../assets/img/donors">Source</a>.</li>
+                             </ol>
+                            <br>
+                            
+                            <p class="justifyText">Replace /path/to/Transplant-PRODUCT_&lt;<strong>name</strong>&gt; with the path to the Transplantation folder. In the attached example this path is: 
+                            MYTAR-PRODUCT_BASE_BINARY/MYTAR-PRODUCT_BASE_Transplant. However, the binary is in MYTAR-PRODUCT_BASE_BINARY, so the path will be just 
+                            MYTAR-PRODUCT_BASE_Transplant. An example run is:</p>
+                            <br>
+                            
+                            <p>The complete command, as it should be pasted is:</p> 
+							<br>
+							<div class="col-12">
+								<pre><i><p style="font-size: 12px">./autoScalpel_spl <strong>--seeds_file</strong> Transplant-PRODUCT_B/T_MYTAR/seed-1.in <strong>--transplant_log</strong> Transplant-PRODUCT_B/T_MYTAR/LOG/ <strong>--compiler_options</strong> Transplant-PRODUCT_B/T_MYTAR/CFLAGS <strong>--donor_folder</strong> Transplant-PRODUCT_B/T_MYTAR/Donor/MYTAR/ <strong>--workspace</strong> Transplant-PRODUCT_B/T_MYTAR/ <strong>--txl_tools_path</strong> TXL/ <strong>--functions_target</strong> Transplant-PRODUCT_B/T_MYTAR/coreFunctions.in <strong>--host_project</strong> Transplant-PRODUCT_B/ProductBase/NEATVI <strong>--donor_entry_function</strong> main <strong>--donor_entry_file</strong> main.c <strong>--conditional_directives</strong> F_WRITE_ARCHIVE <strong>--product_base</strong> V1 </p></i></pre>
+							</div>
+							
+							<br>
+                            <p class="justifyText">You should run this from root folder. The Organ is automatically grafted into the host program, so, for subsequent 
+ 							runs the original version of the host must be restored. If you wish to run prodScalpel on your own transplants, you will 
+ 							need to keep the same folder structure as shown in our examples. The required and optional parameters of prodScalpel are:</p>
+ 							<br>
+ 							
+ 							<div>
+ 								<pre><p style="font-size: 12px"><strong>--seeds_file /path/to/file:</strong> (required) take the seeds from a file. The file must contain 7 lines of 4 numbers each, as in this example.</p></pre>
+ 								<pre><p style="font-size: 12px"><strong>--transplant_log /path/to/folder/ :</strong> (optional) log the results of the transplantation operations, in every generation.</p></pre>
+								<pre><p style="font-size: 12px"><strong>--compiler_options /path/to/file :</strong> (optional) required if the compilation of the code in donor requires additional options or libraries. The format of this file is: CFLAGS = `libgcrypt-config --libs` . The variable CFLAGS contains all the additional dependencies.</p></pre>
+ 								<pre><p style="font-size: 12px"><strong>--donor_folder /path/to/folder/ :</strong> (required) the folder where is the source code of the donor</p></pre>
+								<pre><p style="font-size: 12px"><strong>--workspace /path/to/folder/ :</strong> (required) the workspace of the transplantation. This is /path/to/Cflow-IDCT_Transplant/ in the above example.</p></pre>
+ 								<pre><p style="font-size: 12px"><strong>--txl_tools_path /path/to/folder/ :</strong> (optional) used when the binary files with extension <i>*.x</i> are in a different place than muScalpel</p></pre>
+ 								<pre><p style="font-size: 12px"><strong>--host_project /path/to/folder :</strong>(required) the folder where is the source code of the host.</p></pre>
+ 								<pre><p style="font-size: 12px"><strong>--donor_entry_function /path/to/file :</strong> (required) the function in the donor that correspond to its <i>entry_point</i> (generally  the main function).</p></pre>
+ 					    		<pre><p style="font-size: 12px"><strong>--donor_entry_file: /path/to/file :</strong> (required) the file in the donor that contains the <i>entry_point</i> (generally main.c).</p></pre>
+ 					    		<pre><p style="font-size: 12px"><strong>--conditional_directives:</strong> (optional) directive in case when the organ and host must be merged. ProdScalpel introduces variability into the organ by inserting this conditional directive around the organ’s code, making it variable.</p></pre>
+							 	<pre><p style="font-size: 12px"><strong>--product_base :</strong> (required) the version of product base after the organ transplantation process. </p></pre>
+							</div>
+							<br>
+ 							
+ 							Additional parameters:
+ 							
+ 							<pre><p style="font-size: 12px"><strong>--exclude_functions /path/to/file:</strong> (optional) exclude some functions from the transplantation algorithm. </p></pre>
+ 							<pre><p style="font-size: 12px"><strong>--transplant_statistics /path/to/file:</strong> (optional) log statistics about the transplantation operation</p></pre>
+ 							<pre><p style="font-size: 12px"><strong>--urandom_seeds : </strong>  prodScalpel will take its seeds from /dev/urandom</p></pre>
+ 							<pre><p style="font-size: 12px"><strong>--random_seeds : </strong>  prodScalpel will take its seeds from /dev/random. This may take a while. The default option is --urandom_seeds.</p></pre>
+							<br>
+							<div class="col-12">
+								<p>For a new organ transplantation change the file <strong>coreFunctions.in</strong>.  For example, to transplant the feature write_archive from MYTAR to the product base NEATVI the complete command, as it should be pasted in the file is:</p>
+								<pre><i><p style="font-size: 12px"> <strong>--coreFunction</strong> write_archive <strong>--donorSystem</strong> MYTAR <strong>--donorFileTarget</strong> Transplant-PRODUCT_BASE/Donor/append.c <strong>--hostFileTarget</strong> Transplant-PRODUCT_BASE/ProductBase/NEATVI/ex.c</p></pre>
+							    <p>Where:</p>
+								<pre><p style="font-size: 12px"><strong>--core_function function_name :</strong> (required) the entry point of the functionality to transplant.</p></pre>
+								<pre><p style="font-size: 12px"><strong>--donorSystem:</strong> (required) the donor system name.</p></pre>
+								<pre><p style="font-size: 12px"><strong>--donor_target /path/to/file :</strong> (required) the file in the donor, with the function annotated for transplantation.</p></pre>
+								<pre><p style="font-size: 12px"><strong>--host_target /path/to/file :</strong> (required) the file in the host that contains the __ADDGRAFTHERE__JUSTHERE annotation. This annotation is required, and it marks the place where the organ will be added.</p></pre>
+								<br>
+                            </div>
+                        </div><!-- /.project-title -->
+                    </div>
+                </div>
+                 
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.projects-bg -->
+    </div><!-- /.projects-area -->
+    <!--Projects Area End-->
+    
+    
+    <!--News Proposal Start-->
+    <div class="news-area" id="case_study">
+        <div class="news-bg">
+            <div class="container">
+                <div class="row">
+                        <div class="text-leo about-title title">
+                            <h2>CASE STUDIES</h2>
+                            <p>We evaluate prodScalpelon two case studies. The objective of this study is to evaluate the proposed approach and 
+                            tool, thereby demonstrating the potential of automated softwaretransplantation for product line generation. Link to a script that runs all our case studies. Here we also provide a dockerized version of our studies.
+                            </p>
+                            <br>
+                           
+    
+                    </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.news-bg -->
+    </div><!-- /.news-area -->
+    <!--News Area End-->
+    
+    
+<!--About Methodology Start-->
+    <div class="about-area" id="case_study_1">
+        <div class="about-bg">
+            <div class="container">
+                <div class="row">
+   
+                        <div class="about-title title">
+                          <!--  <h2>Case study 1</h2>-->
+                        </div><!-- /.about-title -->
+
+                             
+							 <h4>Subjects</h4>
+							 <br>
+							 <p class="justifyText">We used subjects from different domainsand with a wide range of sizes to give evidence thatprodScalpelcanalso be used 
+							 to achieve a product line from a distinct set of usage scenarios. Presented in Table 1, our donors include two text editors, kilo
+							 and VI; and GNU Cflow, a call graph extractor from C source code. We identified the following features as possible desired fea-tures
+							 in a new editor: output from CFLOW, <i>enableRawMode</i> from kilo, <i>vclear<i/> from VI, and <i>spell_check</i> and <i>search</i> from VIM.
+							 </p>
+							 <br> 
+							 <div class='table6'>
+    							<p align="center"><img src='assets/images/img/subjects.png' \>
+  							 </div>
+                             <p align="center"><b>Table 1: Donors and hosts corpus for the evaluation</b></p> 
+                       		 <br> 
+                       		 
+                       		 <p><strong>Product Base</strong> 
+                       		 </p>
+                             <p>The product base can be downloaded from the list below.</p>
+                               <ol> 
+                                <li>Product Base A: <a href="../../assets/img/donors">Download</a>.</li>                      
+                                <li>Product Base A: <a href="../../assets/img/donors">Download</a>.</li>
+                                </ol> 
+                             <p><strong>Donor Programs</strong> 
+                       		 </p>
+                       		 
+                             <p>The preprocessed donor programs can be downloaded from the list below.</p>
+                              <ol> 
+                                <li>Kilo: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li>CFLOW: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li>VI: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li>VIM: <a href="../../assets/img/donors">Download</a>.</li>
+                               </ol>
+                            
+                            <h5>Results</h5> 
+                       		</p>
+                       		<p class="justifyText">Table 2 shows average timings of extracting and transplanting each organ into the product base aswell as the number of code 
+                       		 lines transferred to the generation ofproducts A and B. At the end of the transplantation process, thepostoperative product A 
+                       		 has a total of 28k LoC and 40 featureswhile product B has a total of 745k LOC and 121. Together, donorsprovided three 
+                       		 functionalities to the product line and approximately 7.8k LOC to product A and 8.1k to product B, including, as a re-transplant 
+                       		 check, one feature removed from VI, in the preoperativeprocess. On average, our approach required 4h31min/1KLoC fortransplanting 
+                       		 features into product A, and 4h40min/1KLOC fortransplanting features into product B.
+                            </p>
+                             <br> 
+                            <div class='table6'>
+    							<p align="center"><img src='assets/images/img/results_study_1.png'\>
+  							 </div>
+                             <p align="center"><b>Table 2: Results</b></p>  
+                            <br> 
+
+                            <h4>Case Study Scripts</h4>
+
+                            <p class="justifyText"> For enhancing the reproducibility of our results, we include in this artifact all the required scripts, and tools, for obtaining:</p>
+                            <ol>
+                            <li>All the transplant in the case study.</li>
+                            <li>The results of regression, augmented regression, and acceptance test suite (Table 2, columns PR, for Unanimously, Regression, Regression++, and Acceptance tests).</li>
+                            </ol>
+                            
+                            <p class="justifyText">Note: this scripts contains just one run of each transplant. In the paper the results are averaged on 20 runs. By using the random seed parameter of prodScalpel, and than run the script for 20 times, the results from the paper may be approximated.</p>
+                            <br>
+
+                            <p class="justifyText"> You can find links to the artefacts and a script that runs all our case study below. 
+                            This artifact contains the tool prodScalpel, which was used for autotransplantation. Also we provide our regression, augmented regression, and acceptance test suites, where possible. In the other cases these test suites were executed manually (for GUI programs or the Webserver), or the original regression test suite was not executing at all the organ.
+                            </p>
+                            
+  
+                            <ol> 
+                            <li>Scenarios Product Line A: <a href="../../assets/img/donors">Download</a>.</li>
+                            <li>Scenarios Product Line B: <a href="../../assets/img/donors">Download</a>.</li>
+                            </ol>
+
+                            <p class="justifyText">For running a transplantation untar it and run ./run.sh in the root folder. First we check if you have all the dependencies required for 
+                            running prodScalpel. If you don't have them, you may still chose to run the transplantation, but prodScalpel may crash, or the results may be 
+                            affected. After the run finishes, all the results will be in DONOR-HOST/Host_BENEFICIARY. For example:
+                            <p>ar-xzvf RUN_KILO-Product_base.tar.gz && cd KILO-Product_base && ./run.sh</p>
+                            <p>The results will be in: KILO-Product_base/Host_BENEFICIARY</p>
+                            </p>
+                             <br>
+                             
+                                                         
+                            <p class="justifyText"><strong>Links to the scripts used for running each of the experiments: </strong></p>
+                       	 	<br>
+                       	 	<p class="justifyText"><strong>Product A: </strong> The preprocessed donor and host programs and script used to generate the product A can be downloaded from the list below.</p>
+                              <ol> 
+                                <li> Kilo → Product_Base_A: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li> CFLOW → Product_Base_A: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li> VI → Product_Base_A: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li> VIM → Product_Base_A: <a href="../../assets/img/donors">Download</a>.</li>
+                               </ol>
+                       	
+                       	 <p class="justifyText"><strong>Product B: </strong> The preprocessed donor and host programs and script used to generate the product B can be downloaded from the list below.</p>
+                               <ol> 
+                                <li> Kilo → Product_Base_B: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li> CFLOW → Product_Base_B: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li> VI → Product_Base_B: <a href="../../assets/img/donors">Download</a>.</li>
+                                <li> VIM → Product_Base_B: <a href="../../assets/img/donors">Download</a>.</li>
+                               </ol>
+
+                             <br>
+                             <h5>Docker Build Files</h5>
+                       		 </p>
+                
+                       		 <p class="justifyText">The following Dockerfiles will run all transplantation in the paper. The first one will use a binary of prodScalpel, while the second one builds prodScalpel, 
+                       		 and then execute the experiments with the compiled version. The Dockerfiles were tested with Docker version 1.0.1, build 990021a. After 
+                       		 the run is complete, you will find the results in /home/prodScalpelCaseStudy1 . Example usage:
+                       		 </p>
+                       		 <br>
+                       		 <p class="justifyText"> sudo docker build -t development/prodscalpelcasestudy1 . , in a folder containing Dockerfile . It is recommended that the folders 
+                       		 contains only the docker file.
+                       		 </p>
+                       		 <br>
+                       		 <p class="justifyText"> sudo docker run -P -t -i --rm development/prodscalpelcasestudy1 /bin/bash will then open a docker container with the results of the 
+                       		 experiments in /home/prodscalpelcasestudy1.
+                             </p>
+                             <br>
+                             </ol>
+                              <li>Dockerfile: <a href="../../assets/img/donors">Download</a>. the Dockerfile that uses a compiled binary of muScalpel.</li>
+                              <li>Dockerfile: <a href="../../assets/img/donors">Download</a>. the Dockerfile which also builds muScalpel.</li>
+                             </ol>
+                             <br>
+                             <p class="justifyText">Note: The Dockerfile will fail if your system does not meet the hardware specifications required for running the experiments.
+                             </p>
+                             <br>
+
+
+                       		 
+                            <!--<div class="about-ful">
+                               <ol> 
+                                <li>Extend current autotransplantation approach: write the slicing technique in muScalpel to handle multiple extraction points.</li>
+                                <li>Trace each feature to its test and implementation in VIM source code.</li>
+                                <li>Evolve muScalpel to transplants code from the donor which have not been designed for systematic reuse into reusable product line components.</li>
+                                <li>Perform an experiment to evaluate the Feature decomposition.</li>
+                                <li>Develop the SPL Framework.</li>
+                                <li>Perform an experiment to evaluate the SPL Framework.</li>
+                            </div>-->
+                        </div><!-- /.about-details -->
+   
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.about-bg -->
+    </div><!-- /.about-area -->
+    <!--About Area End-->
+
+<!--About Contributions Start-->
+    <div class="about-area" id="experimental_evaluation">
+        <div class="about-bg">
+            <div class="container">
+                <div class="row">
+   
+                        <div class="about-title title">
+                            <h2>EXPERIMENTAL EVALUATION</h2>
+                        </div><!-- /.about-title -->
+
+ 						<div class="about-ful">
+ 						<p class="justifyText"> Aiming to assess Foundry with respect to human effort, we conducted We conducted an experiment that reflects a real-world process of product line migration from existing codebases [2]. The goal of this experiment is to analyse the effectiveness and efficiency of our approach compared with the manual process of generating a product line from existing systems, performed by SPL experts.
+
+                        We answer our research questions by simulating a real reengineering process where two features must be transferred to a product line built over a product base.  
+                        
+                        In scenario I, we gathered a group of 10 SPL experts (called Group A) where each one of them had to manually re-transplant all portions of code that implement the feature <i>dir_init</i> to the product base. We removed this feature from the original version of <i>NEATVI</i> to generate the product base used in this scenario. In scenario II, another group of 10 SPL experts (called Group B) tried to insert the feature write_archive from <i>MYTAR</i> into the original version of <i>NEATVI</i> used as the product base. 
+
+                        We recruited 20 SPL experts for the experiment that were divided into two different groups.</p>
+						<br>
+						
+						<p class="justifyText"> We created two groups (A and B) with similar background distribution of participants. Table shows the details of 
+                       	the participants involved in the experiment. Group A simulated the first scenario by transplanting a 
+                             feature from a codebase different to the host one. Group B simulated the second scenario by transplanting a feature 
+                             from the same codebase as the host.</p>
+                             <br>
+                          
+                       	
+                       	<div class='table3'>
+    							<p align="center"><img src='assets/images/img/participants.jpg'\>
+  							 </div>
+                             <p align="center"><b>Table 3: The participants’ expertise and division into groups.</b></p> 
+                       		 <br> 
+
+                       <h5>Results</h5> 
+                            </p>
+                            <p class="justifyText">We summarise our results in Table 5. We report the status of the product base and feature inserted by the participants, the time spent and the number of passing tests for the regression augmented regression and acceptance test suites. In the first scenario, only one of the participants was not able to finish the process before the timeout. On the other hand, half of the participants were able to finish the process before achieving the timeout in the second scenario and only three of them have been able to insert the target feature without breaking the product base.
+
+                            </p>
+                             <br>
+                            <p class="justifyText">
+                            For each scenario, we also report the number of prodScalpel runs in which the product derived passed all test cases. For each scenario, we repeat each run 20 times. The success rate was retained for both scenarios I and II, where only one run timed out and the product line generated passed all tests from all test suite. </p>
+                            <div class='table4'>
+                                <p align="center"><img src='assets/images/img/experiment_results.jpg'\>
+                             </div>
+                             <p align="center"><b>Fig. 4. Time (in minutes) spent by participants and prodScalpel on performing the three stages of SPL reengineering: feature extraction, adaption and merging. The graph highlights the average time spent by participants who successfully generated new products</b></p> 
+                             
+                            <br>
+                            <p class="justifyText">In summary, Group A transferred the target feature from NETVI to the product base in 1h24 minutes on average. prodScalpel turned out to be quicker, successfully transplanting this feature in all 20 trials, taking an average of 20 minutes. Most of the participants from Group B had not completed the feature migration process from Mytar within the 4 hours time limit. Considering the participants that were able to finish the process (i.e., participants P17, P18 and P19)successfully (all tests passed) they spent an average of 2h23 minutes while prodScalpel was able to complete this task in 19 of 20 trials in the timeout, taking 27 minutes on average.
+                            </p> 
+                            <br>
+                            <p class="justifyText">By considering the time spent in both scenarios, the tool accomplished the product line generation process 4.8 times faster than the mean time taken by participants who were able to finish the experiment within the 
+                       		</p> 
+                            <br>
+
+                        <h5>Data collection</h5>
+                            
+                            <p class="justifyText">We have provided a task and time registration worksheet. While participants were conducting the assigned tasks, we asked them to take notes of which strategies were being used for each stage of the feature transfer process and why they are performing each specific task. It allowed us to capture strategies and performance data simultaneously. We have complemented the above setup with a post-survey. This way we can better understand participants’ problems and differences between the manual and automated process in both scenarios. We have triangulated the data generated from the experiment with the responses we obtain from the pre and post-surve
+                            </p> 
+                            <br>
+                            
+                            <!--<p class="justifyText"><p>Our artifact can be downloaded from: <a href="../../assets/img/donors">Download</a></p>
+                            </p> 
+                            <br>
+
+
+                            <p class="justifyText"><strong>Our artifact can be downloaded from: </strong></p>
+                            <br>-->
+
+                             <p class="justifyText"><strong>All artifacts generated by the experiment participants can be downloaded from the list below:</strong></p>
+                              <ol> 
+                                <li> Group_A (Mytar → Product Base) <a href="../../assets/img/donors">Download</a>.</li>
+                                <li> Group_B (NEATVI → Product Base) <a href="../../assets/img/donors">Download</a>.</li>
+                               </ol>
+
+                       <h4>Experiment Scripts</h4>
+
+                             <p class="justifyText"> This website contains the prodScalpel in binary form, and the data sets used in both scenarios, including test suites, that underlie our experiments. 
+                             To facilitate replicating our results, we have written a sequence of scripts that run a *single* run of each of our scenario. 
+                             The name of the script identifies the scenario. We have worked hard to make each script bullet-proof and have it thoroughly check your environment for its dependencies and tell you what, if anything, is missing. Despite our best efforts, you may still encounter problems. If that happens, please contact us so we can work with you to resolve them.</p>  <br>  
+                             <p class="justifyText"> This artifact contains the tool prodScalpel, which was used for autotransplantation. Also we provide our regression, augmented regression, and acceptance test suites, where possible. In the other cases these test suites were executed manually (for GUI programs or the Webserver), or the original regression test suite was not executing at all the organ.
+                            </p><br>  
+                             <p class="justifyText">
+                             To establish the time for feature transplantation using our automated approach, we ran prodScalpel 20 times, and measure the average time spent on feature migration in each scenario. This average time was compared with the time spent by our participants on the manual re-engineering proces.
+                             For enhancing the reproducibility of our results, we include in this artifact all the required scripts, and tools, for obtaining:</p>
+                            <ol>
+                            <li>All the transplant in our empirical study and in the case study.</li>
+                            <li>The required time for doing each and every transplant, as well as the total time required for all our experiments 
+                            (Table 2, columns under Time).</li>
+                            <li>The results of regression, augmented regression, and acceptance test suite (Table 2, columns PR, for Unanimously, 
+                            Regression, Regression++, and Acceptance tests).</li>
+                            
+                            <li>The coverage results for the entire postoperative host, and just for the organs (Table 2, columns All and O, for Unanimously, 
+                            >Regression, Regression++, and Acceptance tests). )</li>
+                            </ol>
+                            
+                        <p class="justifyText">Note: this scripts contains just one run of each transplant. In the paper the results are averaged on 20 runs. By using the random seed parameter of prodScalpel, and than run the script for 20 times, the results from the paper may be approximated.</p>
+                        <br>
+                       	<p class="justifyText"> You should run this from scenario I and II folders. The organ is automatically grafted into the host program, 
+                       	so, for subsequent runs the original version of the host must be restored.</p>
+ 						<br>
+
+                       	<h5>Scenario I</h5>
+                       	
+                       	 <p class="justifyText"> The artefacts and script used in the first scenario can be downloaded from the list below.</p>
+                               <ol> 
+                                <li>Mytar->NEATVI (product base): <a href="case_study2/Group_A.zip"> Download</a>.</li>   
+                                 <!-- <li>Mytar: <a href = "case_study2/Donors/MYTAR.zip"> Download</a>.</li>   
+                                 <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li> --> 
+                                <li>Script: <a href="case_study2/Group_A.zip"> Download</a>.</li>                 
+                                </ol> 
+                       
+ 						<p class="justifyText"> <strong>RUN - The complete command, as it should be pasted is: </strong>Transplanting feature <i>write_archive</i> 
+ 						from Mytar-NEATVI</p>
+ 						<i>./autoScalpel_spl --seeds_file Transplant-PRODUCT_B/T_MYTAR/seed-1.in --transplant_log Transplant-PRODUCT_B/T_MYTAR/LOG/ 
+ 						--compiler_options Transplant-PRODUCT_B/T_MYTAR/CFLAGS --donor_folder Transplant-PRODUCT_B/T_MYTAR/Donor/MYTAR/ --workspace 
+ 						Transplant-PRODUCT_B/T_MYTAR/ --txl_tools_path TXL/ --functions_target Transplant-PRODUCT_B/T_MYTAR/coreFunctions.in 
+ 						--host_project Transplant-PRODUCT_B/ProductBase/NEATVI --donor_entry_function main --donor_entry_file main.c --conditional_directives 
+ 						F_WRITE_ARCHIVE --product_base T2</i></p>
+ 						<br>
+ 						
+                       	<h5>Scenario II</h5>
+                       	
+                       	<p class="justifyText"> The artefacts and script used in the second scenario can be downloaded from the list below.</p>
+                               <ol> 
+                                <li>NEATVI2.0 -> NEATVI (product base): <a href="case_study2/Group_B.zip"> Download</a>.</li> 
+                                <!-- <li>NeatVI: <a href="case_study2/Host/NEATVI.zip"> Download</a>.</li>   
+                                <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li> -->
+                                <li>Script: <a href="case_study2/Group_A.zip"> Download</a>.</li>                       
+                                </ol> 
+                     
+                       		 
+                       		 
+						
+						<!-- <p><strong>Donors</strong>: the donor systems can be downloaded from the list below.
+                       		 </p>
+                               <ol> 
+                                <li>Mytar: <a
+                                     href = "case_study2/Donors/MYTAR.zip"> Download</a>.</li>  
+                                                         
+                                <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li>  
+                                </ol> 
+    
+                       	<p><strong>Host</strong>: the product base can be downloaded from the list below.</p>
+                               <ol> 
+                                <li>NeatVI: <a href="case_study2/Host/NEATVI.zip"> Download</a>.</li>                    
+                                </ol> 
+                       	</p> -->
+                       	
+
+ 						<p><strong>RUN - The complete command, as it should be pasted is:</strong> Transplanting feature <i>dir_init</i> from NEATVI-NEATVI(product base)</p>
+
+ 						<p>./autoScalpel_spl --seeds_file Transplant-PRODUCT_B/T_NEATVI/seed-1.in --transplant_log Transplant-PRODUCT_B/T_NEATVI/LOG/ --compiler_options
+ 						Transplant-PRODUCT_B/T_NEATVI/CFLAGS --donor_folder Transplant-PRODUCT_B/T_NEATVI/Donor/NEATVI/ --workspace Transplant-PRODUCT_B/T_NEATVI/
+ 						--txl_tools_path TXL/ --functions_target Transplant-PRODUCT_B/T_NEATVI/coreFunctions.in --host_project Transplant-PRODUCT_B/ProductBase/NEATVI
+ 						--donor_entry_function main --donor_entry_file main.c --conditional_directives F_DIR_INIT --product_base T1</p>
+ 						<br>
+ 						
+                        </div><!-- /.about-details -->
+   
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.about-bg -->
+    </div><!-- /.about-area -->
+    <!--About Area End-->
+
+ <!--About Methodology Start-->
+    <div class="about-area" id="reference">
+        <div class="about-bg">
+            <div class="container">
+                <div class="row">
+   
+                        <div class="about-title title">
+                            <h2>References</h2>
+                        </div><!-- /.about-title -->
+
+                            <div class="about-ful">
+                               <ol> 
+                                <p class="about-para-middle">[1] E. T. Barr, M. Harman, Y. Jia, A. Marginean, and J. Petke, “Automated software transplantation,” in Proceedings of the 2015 International Symposium on Software Testing and Analysis, ISSTA 2015, (New York, NY, USA), pp. 257–269, ACM, 2015.</p>
+
+                                 <p class="about-para-middle"> [2] Charles W. Krueger. 2002. Easing the Transition to Software Mass Customization. In Revised Papers from the 4th International Workshop on Software Product-Family Engineering (PFE ’01). Springer-Verlag, London, UK, UK, 282–293.</p>
+
+                                <p class="about-para-middle"> [3] Paul Clements and Linda Northrop. 2001. Software Product Lines: Practices and Patterns. Addison-Wesley, Boston, MA, USA.</p>
+                            </div>
+                        </div><!-- /.about-details -->
+   
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.about-bg -->
+    </div><!-- /.about-area -->
+    <!--About Area End-->
+    
+    <!--Footer Top Area Start -->
+   <div class="footer-top" id="contact">
+       <div class="footer-top-bg">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-6">
+                       <div class="footer-head">
+                           <h4>Contact</h4>
+                       </div><!--/.footer-head-->
+                       <div class="footer-text">
+                           <p>Contact us and we'll get back as soon as possible.</p>
+                           <br>
+                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> University College London, London, UK</p>
+                            <p>Petke, Justyna</p>
+                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +44 ....</p>
+                            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: j.petke@ucl.ac.uk</p>
+                       		<br>
+                       		<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> University College London, London, UK</p>
+                       		<p>Barr, Earl</p>
+                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +44 ...</p>
+                            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: e.barr@ucl.ac.uk</p>
+                       </div><!--/.footer-text-->
+                       <br>
+                       <div class="footer-text">
+                       		
+                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Federal Univerisity of Bahia, Bahia, Brazil</p>
+                            <p>Leandro Souza</p>
+                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +55 74 99997 3165</p>
+                            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: leandro.souza@ifba.edu.br</p>
+                             <br>
+                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Federal Univerisity of Bahia, Bahia, Brazil</p>
+                            <p>Eduardo Almeida</p>
+                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +55 71 9607 0309</p>
+                            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: esa@rise.com.br</p>
+                       </div><!--/.footer-text-->
+
+                       
+                   </div>
+                   
+                   <div class="col-md-5">
+                       <div class="footer-form">
+                           <h4>Leave Message</h4>
+                           <form action="POST">
+                               
+                                   <div class="form-group">
+                                       <input type="text" name="text" placeholder="Your Name" size="57">
+                                   </div>
+                                   <div class="form-group">
+                                       <input type="email" name="email" placeholder="Your Email" size="57">
+                                   </div>
+                              
+                               <div class="form-group">
+                                   <textarea name="massege" id="massege" cols="30" rows="10"></textarea>
+                               </div>
+                               <div class="form-group">
+                                   <div class="submit-btn">
+                                       <a href="leouneb@gmail.com"> Submit</a>
+                                   </div><!--/.submit-btn-->
+                               </div><!--/.form-group-->
+                           </form><!--/.form-->
+                       </div><!--/.footer-form-->
+                   </div><!--/.col-->
+               </div><!--/.row-->
+           </div><!--/.container-->
+       </div><!--/.footer-top-bg-->
+   </div><!--/.footer-top-->
+   <!--Footer Top Area End -->
+   
+   <!--Footer Area Start -->
+   <footer class="footer-area">
+       <div class="footer-bg">
+           <div class="container">
+               <div class="col-md-6 col-md-offset-3 text-center">
+                   <div class="footer-last">
+                       <p>2023 © Leandro O. de Souza, Earl T. Barr, Justyna Petke and Eduardo S. Almeida</p>
+                   </div><!--/.footer-last-->
+               </div>
+               <div class="top-arrow">
+					<i class="fa fa-long-arrow-up"></i>
+				</div><!-- /.top-arrow-->
+           </div><!--/.container-->
+       </div><!--/.footer-bg-->
+   </footer><!--/.footer-area-->
+   <!--Footer Area End -->
+   
+   <!-- Pre Loader Area Start-->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div><!-- /.preloader -->
+    <!-- Pre Loader Area End-->
+
+    <!--jquery.min.js-->
+    <script src="assets/js/jquery.min.js"></script>
+    <!--Bootstrap JS-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--Modernizr JS-->
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <!--Counter Up-->
+    <script src="assets/js/counterup.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <!--Pretty Photo -->
+    <script src="assets/js/jquery.prettyPhoto.js"></script>
+    <!--Parallax -->
+    <script src="assets/js/parallax.min.js"></script>
+    <!--Owl Carousel-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--Use For Active Some Plug In-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

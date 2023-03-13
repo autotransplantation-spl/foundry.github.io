@@ -1,0 +1,1001 @@
+/*
+-------------------------------------
+  Theme Name:  Discioar - Agency Html Template
+  Theme URL: http://demo.towhidul.com/agency/
+  Author: Themexbest
+  Author URI: https://themeforest.net/user/themexbest/portfolio
+  Creation Date: 02/08/2017
+  Description: A default stylesheet for Discioar - Agency HTML Template
+  Version: 1.0
+  Primary use: Discioar,agency, clean, contact form, creative, css3, fullscreen, gallery, html5, minimal, modern, parallax, photography, portfolio, responsive
+  Support: rumon078102@gmail.com;
+----------------------------------------
+*/
+
+
+/* [Master Stylesheet]
+----------------------------------------
+1. General Style
+2. Typography
+3. Header Area
+4. Banner Area
+5. Feature Area
+6. Counter Area
+7. About Area
+8. Overlay Area
+9. Service Area
+10. Clients Area
+11. Projects Area
+12. Subscribe Area
+13. News Area
+14. Footer Top Area
+15. Footer Area
+16. Preloader Area
+
+----------------------------------------
+*/
+
+
+/*
+-------------------------------------------
+1. General Style
+-------------------------------------------
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700');
+
+
+html{
+    font-size:100%;
+}
+body {
+	background: #fff none repeat scroll 0 0;
+	color: rgba(85, 85, 85, 0.92);
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+    position:relative;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+a{
+	color:#0199ed;
+	text-decoration:none;
+	-webkit-transition:all 0.3s ease-in-out;
+	   -moz-transition:all 0.3s ease-in-out;
+		 -o-transition:all 0.3s ease-in-out;
+	     transition:all 0.3s ease-in-out;
+}
+
+a,
+a > *{
+	outline:none;
+	cursor:pointer;
+	text-decoration:none;
+}
+
+a:focus,
+a:hover{
+	outline:none;
+	color:#838383;
+	text-decoration:none;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a { 
+    color: inherit; 
+}
+
+
+/*
+-------------------------------------
+2. Typography
+-------------------------------------
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	padding:0;
+	color:#353535;
+	margin:0 0 20px;
+    font-family: 'Montserrat', sans-serif;
+	font-weight:600;
+	letter-spacing:1px;
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 48px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 38px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+	font-size: 20px;
+	line-height: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h5 {
+	font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a { 
+    color: inherit;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 21px;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.title h2 {
+    color: #006EA8;
+}
+
+.btn a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid;
+    padding: 10px 25px;
+    background: #006EA8;
+    color: #fff;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+
+.btn a:hover {
+    background: #fff;
+    color: #006EA8;
+}
+
+/*
+-------------------------------------
+3. Header Area
+-------------------------------------
+*/
+
+.navbar-default {
+	margin: 0;
+	padding: 10px 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #353535;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+ul.dropdown-menu li a {
+	margin-top: 14px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	color: #353535;
+	text-transform: uppercase;
+}
+
+.navbar-default .navbar-brand {
+    color: #353535;
+}
+
+a.navbar-brand {
+    text-transform: uppercase;
+    color: #353535;
+    font-weight: 700;
+}
+
+/*
+-------------------------------------
+4. Banner Area
+-------------------------------------
+*/
+
+.banner-area {
+    background: url(../images/banner/4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-title {
+    padding: 238px 0 180px 0;
+}
+
+.banner-title h1 {
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+    font-weight: 700;  
+}
+
+.banner-title p {
+    color: #fff;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+.banner-btn a {
+    border-radius: 0px;
+}
+
+/*
+-------------------------------------
+5. Feature Area
+-------------------------------------
+*/
+
+.feature-bg {
+    padding: 62px 0 40px 0;
+}
+
+.feature-title h2 {
+    margin-bottom: 63px;
+}
+
+.feature-details {
+    text-align: center;
+    border: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding: 30px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    transition: all 1s ease 0s;
+		-webkit-transition: all 1s ease 0s;
+		-moz-transition: all 1s ease 0s;
+		-o-transition: all 1s ease 0s;
+		-ms-transition: all 1s ease 0s;
+}
+
+.feature-text i {
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: #006EA8;
+}
+
+.feature-text h4 {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 19px;
+}
+
+.feature-text p {
+    margin-bottom: -5px;
+}
+
+
+.feature-details:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+}
+
+.feature-details:hover h4 {
+    color: #3390FF;
+}
+
+/*
+-------------------------------------
+6. Counter Area
+-------------------------------------
+*/
+
+.counter-area {
+    background: url(../images/banner/1.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.counter-bg {
+    padding: 70px 0;
+    background: rgba(68, 68, 68, 0.50);
+}
+
+.counter-details {
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    text-align: center;
+    position: relative;
+    padding: 25px;
+}
+
+.counter-text h4 {
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.counter-text strong {
+    font-size: 40px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.counter-icon i {
+    font-size: 30px;
+    color: #fff;
+}
+
+.counter-icon i {
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    right: -10%;
+    top: 30%;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    line-height: 45px;
+    background: #006EA8;
+}
+
+/*
+-------------------------------------
+7. About Area
+-------------------------------------
+*/
+
+.about-bg {
+    padding: 63px 0 70px 0;
+}
+
+.about-title h2 {
+    margin-bottom: 63px;
+}
+
+.about-para-middle {
+    margin-top: 25px;
+}
+
+.about-head p {
+    margin-top: -15px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.about-head h4 {
+    text-transform: uppercase;
+}
+
+.about-ful {
+    margin-top: 16px;
+}
+
+p.about-para {
+    margin-top: 20px;
+}
+
+.about-btn {
+    margin-top: 34px;
+    display: inline-block;
+}
+
+.about-btn a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid;
+    padding: 10px 25px;
+    font-weight: 700;
+    background: #197CB0;
+    color: #fff;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+}
+
+.about-btn a:hover {
+    background: #fff;
+    color: #197CB0;
+}
+
+/*
+-------------------------------------
+8. Overlay Area
+-------------------------------------
+*/
+
+.overlay-area {
+    background: url(../images/banner/4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay-bg {
+    padding: 65px 0 70px 0;
+}
+
+.overlay-text h2 {
+    font-size: 23px;
+    color: #fff;  
+}
+
+.register-btn {
+    margin: 15px 0 8px 0;
+    display: inline-block;
+}
+
+.register-btn a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid;
+    padding: 10px 25px;
+    color: #fff;
+    background: #006EA8;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+    
+}
+
+.register-btn a:hover {
+    color: #006EA8;
+    background: #fff;
+}
+
+/*
+-------------------------------------
+9. Service Area
+-------------------------------------
+*/
+
+.service-area-bg {
+    padding: 63px 0 70px 0;
+}
+
+.service-details {
+    margin-top: 70px;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 30px;
+    transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    transition: all 1s ease 0s;
+		-webkit-transition: all 1s ease 0s;
+		-moz-transition: all 1s ease 0s;
+		-o-transition: all 1s ease 0s;
+		-ms-transition: all 1s ease 0s;
+}
+
+.single-service h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.single-service {
+    margin-top: -5px;
+}
+
+.read-btn {
+    margin-top: 26px;
+}
+
+
+.service-details:hover {
+    transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+}
+
+.service-details:hover .single-service h4 {
+    color: #006EA8;
+}
+
+/*
+-------------------------------------
+10. Clients Area
+-------------------------------------
+*/
+
+.clients-area {
+    background-image: url(../images/banner/banner-slider1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.clients-bg {
+    padding: 70px 0 68px 0;
+}
+
+/*
+-------------------------------------
+11. Projects Area
+-------------------------------------
+*/
+
+.projects-bg {
+    padding: 63px 0 40px 0;
+}
+
+.projects-title {
+    margin-bottom: 67px;
+}
+
+.project-details {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.project-img {
+    position: relative;
+}
+
+.project-img:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(82, 79, 79, 0.75);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        -o-transform: scale(0);
+    transition: .5s;
+        -webkit-transition-duration: all .5s ease-in-out 0s;
+        -moz-transition-duration: all .5s ease-in-out 0s;
+        -ms-transition-duration: all .5s ease-in-out 0s;
+        -o-transition-duration: all .5s ease-in-out 0s;
+}
+
+.project-icons {
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+    z-index: 1;
+    opacity: 0;
+    transition: all .5s ease-in-out 0s;
+    -webkit-transition-duration: all .5s ease-in-out 0s;
+	-moz-transition-duration: all .5s ease-in-out 0s;
+	-ms-transition-duration: all .5s ease-in-out 0s;
+	-o-transition-duration: all .5s ease-in-out 0s;
+}
+
+.project-icons i {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    border: 1px solid;
+    text-align: center;
+    line-height: 45px;
+    margin-left: 5px;
+}
+
+.project-para {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s ease-in-out 0s;
+    -webkit-transition-duration: all .5s ease-in-out 0s;
+	-moz-transition-duration: all .5s ease-in-out 0s;
+	-ms-transition-duration: all .5s ease-in-out 0s;
+	-o-transition-duration: all .5s ease-in-out 0s;
+}
+
+.project-para h4 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.project-para p {
+    margin-top: -20px;
+    color: #fff;
+    font-style: italic;
+    font-size: 12px;
+}
+
+
+.project-img:hover:before {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+
+.project-img:hover .project-icons {
+    opacity: 1;
+    bottom: 6%;
+}
+
+.project-img:hover .project-para {
+    opacity: 1;
+    top: 40%;
+}
+
+
+div.pp_default .pp_social {
+	display: none;
+}
+
+/*
+-------------------------------------
+12. Subscribe Area
+-------------------------------------
+*/
+
+.subscribe-area {
+    background-image: url(../images/banner/4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.subscribe-bg {
+    padding: 64px 0 72px;
+}
+
+.subscribe-details h2 {
+    font-size: 23px;
+    color: #fff;
+}
+
+.quite-btn {
+    margin-top: 10px;
+}
+
+.quite-btn a {
+    border-radius: 0px;
+}
+
+/*
+-------------------------------------
+13. News Area
+-------------------------------------
+*/
+
+.news-bg {
+    padding: 62px 0 68px 0;
+}
+
+.news-title {
+    margin-bottom: 67px;
+}
+
+.news-details {
+    border: 1px solid #ddd;
+}
+
+.news-details p {
+    padding: 15px;
+}
+
+.news-meta {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 35px
+}
+
+.blog-head {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.blog-head h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: -5px;
+    padding: 0 10px 0 10px;
+}
+
+.comments i {
+    font-size: 20px;
+    color: #006EA8;
+    margin-top: 15px;
+}
+
+.comments {
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+p.name {
+    margin-left: 0px;
+}
+
+i.two {
+    margin-left: 0px;
+}
+
+.blog-btn {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.blog-btn a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid;
+    padding: 10px 15px;
+    background: #0070AB;
+    color: #fff;
+}
+
+.news-details:hover .blog-head h4 {
+    color: #0070AB;
+}
+
+.news-details:hover {
+    border: none;
+}
+
+.news-details:hover .blog-btn a {
+    background: #fff;
+    color: #0070AB;
+}
+
+.shadow-effect {
+	transition: all 0.5s ease-in-out;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		-ms-transition: all 0.5s ease-in-out;
+	
+}
+
+.news-details:hover .shadow-effect {
+	background-image: url(../images/shadow.png);
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 15px;
+}
+
+
+/*
+-------------------------------------
+14. Footer Top Area
+-------------------------------------
+*/
+
+
+.footer-top {
+    background-image: url(../images/banner/4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-top-bg {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 63px 0 62px 0;
+}
+
+.footer-text p {
+    color: #fff;
+}
+
+.footer-head h4,
+.footer-service h4,
+.footer-doctors h4,
+.footer-form h4 {
+    text-transform: uppercase;
+    line-height: 24px;
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+..footer-head,
+.footer-service,
+.footer-doctors,
+.footer-form{
+    margin-top: 30px;
+}
+
+.footer-form textarea {
+    width: 86%;
+    height: 100px;
+    margin-top: 30px;
+    outline: 0;
+    outline-color: transparent;
+    margin-bottom: 22px;
+}
+
+.footer-form input {
+    margin-top: 8px;
+    padding: 10px;
+    outline: 0;
+    outline-color: transparent;
+}
+
+.footer-service ul li,
+.footer-doctor-list ul li {
+    line-height: 35px;
+    color: #fff;
+}
+
+ul.service-list,
+ul.doctor-list{
+    margin-top: -5px;
+}
+
+.footer-service ul li a,
+.footer-doctor-list ul li a {
+    color: #fff;
+    margin-left: 10px;
+}
+
+.footer-service ul li a:hover,
+.footer-doctor-list ul li a:hover {
+    color: #0070AB;
+    margin-left: 10px;
+}
+
+.submit-btn a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid;
+    padding: 10px 15px;
+    color: #fff;
+    background: #0070AB;
+    letter-spacing: 1px;
+}
+
+.submit-btn a:hover {
+    color: #0070AB;
+    background: #fff;
+}
+
+/*
+-------------------------------------
+15. Footer Area
+-------------------------------------
+*/
+
+.footer-bg {
+    padding: 15px 0;
+}
+
+.footer-last p {
+	color: #0070AB;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.top-arrow {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    top: auto;
+}
+
+.top-arrow i a {
+    text-decoration: none;
+}
+
+.top-arrow i {
+    font-size: 26px;
+    height: 38px;
+    color: #eff3f1;
+    padding-top: 5px;
+    width: 35px;
+    text-align: center;
+    cursor: pointer;
+    background: #0070AB;
+    border: 2px solid #ddd;
+}
+
+/*
+-------------------------------------
+16. Preloader Area
+-------------------------------------
+*/
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 99999999;
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url(../images/preloader/preloader.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+}

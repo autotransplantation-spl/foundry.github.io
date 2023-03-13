@@ -1,0 +1,7 @@
+
+#include "InterfaceHeader.h"
+
+int spell_check_GRAFT_INTERFACE (typval_T *$_host_rettv, typval_T *$_host_argvars, int $_host_capcol, int $_host_len, hlf_T $_host_attr, char_u *$_host_str, char_u *$_host_word) {
+    __INTERFACE_FUNCTION
+}
+

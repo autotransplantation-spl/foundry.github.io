@@ -1,0 +1,111 @@
+Makefile:228: warning: overriding commands for target `main.o'
+Makefile:9: warning: ignoring old commands for target `main.o'
+clang: warning: -lglib-2.0: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lintl: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -Wl,-framework: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -Wl,CoreFoundation: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/usr/local/Cellar/glib/2.56.2/lib' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/usr/local/opt/gettext/lib' [-Wunused-command-line-argument]
+In file included from main.c:5:
+./InterfaceHeader.h:940:9: warning: 'RGB' macro redefined [-Wmacro-redefined]
+#define RGB(r, g, b) PgRGB(r, g, b)
+        ^
+./InterfaceHeader.h:432:9: note: previous definition is here
+#define RGB(r,g,b)      ((r) << 16) + ((g) << 8) + (b)
+        ^
+./InterfaceHeader.h:1478:9: warning: 'FNAME_ILLEGAL' macro redefined [-Wmacro-redefined]
+#define FNAME_ILLEGAL "|*#?%"       /* Illegal characters in a file name */
+        ^
+./InterfaceHeader.h:1369:9: note: previous definition is here
+#define FNAME_ILLEGAL ";*?`#%" /* illegal characters in a file name */
+        ^
+./InterfaceHeader.h:1863:9: warning: 'mch_remove' macro redefined [-Wmacro-redefined]
+#define mch_remove(x) unlink((char *)(x))
+        ^
+./InterfaceHeader.h:1371:9: note: previous definition is here
+#define mch_remove(x) remove((char *)(x))
+        ^
+./InterfaceHeader.h:4074:9: warning: 'FNAME_ILLEGAL' macro redefined [-Wmacro-redefined]
+#define FNAME_ILLEGAL "\"*?><|" /* illegal characters in a file name */
+        ^
+./InterfaceHeader.h:1478:9: note: previous definition is here
+#define FNAME_ILLEGAL "|*#?%"       /* Illegal characters in a file name */
+        ^
+./InterfaceHeader.h:4458:9: warning: 'BUFSIZE' macro redefined [-Wmacro-redefined]
+#define BUFSIZE 512             /* long enough to hold a file name path */
+        ^
+./InterfaceHeader.h:630:9: note: previous definition is here
+#define BUFSIZE         8192    /* size of normal write buffer */
+        ^
+./InterfaceHeader.h:4460:9: warning: 'NUL' macro redefined [-Wmacro-redefined]
+#define NUL 0
+        ^
+./InterfaceHeader.h:2043:9: note: previous definition is here
+#define NUL             '\000'
+        ^
+./InterfaceHeader.h:6682:19: error: expected identifier
+enum {BLINK_NONE, BLINK_OFF, BLINK_ON} blink_state = BLINK_NONE;
+                  ^
+./InterfaceHeader.h:803:21: note: expanded from macro 'BLINK_OFF'
+#define BLINK_OFF   1
+                    ^
+./InterfaceHeader.h:6682:30: error: expected identifier
+enum {BLINK_NONE, BLINK_OFF, BLINK_ON} blink_state = BLINK_NONE;
+                             ^
+./InterfaceHeader.h:805:21: note: expanded from macro 'BLINK_ON'
+#define BLINK_ON    2
+                    ^
+./InterfaceHeader.h:6691:5: error: unknown type name 'HWND'
+    HWND server;
+    ^
+./InterfaceHeader.h:6692:5: error: unknown type name 'char_u'
+    char_u *reply;
+    ^
+./InterfaceHeader.h:6698:5: error: unknown type name 'ch_mode_T'
+    ch_mode_T jo_mode;
+    ^
+./InterfaceHeader.h:6699:5: error: unknown type name 'ch_mode_T'
+    ch_mode_T jo_in_mode;
+    ^
+./InterfaceHeader.h:6700:5: error: unknown type name 'ch_mode_T'
+    ch_mode_T jo_out_mode;
+    ^
+./InterfaceHeader.h:6701:5: error: unknown type name 'ch_mode_T'
+    ch_mode_T jo_err_mode;
+    ^
+./InterfaceHeader.h:6702:5: error: unknown type name 'job_io_T'
+    job_io_T jo_io [4];
+    ^
+./InterfaceHeader.h:6703:5: error: unknown type name 'char_u'
+    char_u jo_io_name_buf [4] [NUMBUFLEN];
+    ^
+./InterfaceHeader.h:6704:5: error: unknown type name 'char_u'
+    char_u *jo_io_name [4];
+    ^
+./InterfaceHeader.h:6709:5: error: unknown type name 'channel_T'
+    channel_T *jo_channel;
+    ^
+./InterfaceHeader.h:6710:5: error: unknown type name 'linenr_T'
+    linenr_T jo_in_top;
+    ^
+./InterfaceHeader.h:6711:5: error: unknown type name 'linenr_T'
+    linenr_T jo_in_bot;
+    ^
+./InterfaceHeader.h:6712:5: error: unknown type name 'char_u'
+    char_u *jo_callback;
+    ^
+./InterfaceHeader.h:6713:5: error: unknown type name 'partial_T'
+    partial_T *jo_partial;
+    ^
+./InterfaceHeader.h:6714:5: error: unknown type name 'char_u'
+    char_u *jo_out_cb;
+    ^
+./InterfaceHeader.h:6715:5: error: unknown type name 'partial_T'
+    partial_T *jo_out_partial;
+    ^
+./InterfaceHeader.h:6716:5: error: unknown type name 'char_u'
+    char_u *jo_err_cb;
+    ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+6 warnings and 20 errors generated.
+make: *** [main.o] Error 1

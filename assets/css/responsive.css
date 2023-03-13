@@ -1,0 +1,171 @@
+/* Responsive */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .about-ful p {
+        font-size: 13px;
+    }
+    
+    p.about-para {
+        display: none;
+    }
+    
+    .overlay-text h2 {
+        font-size: 18px;
+    }
+    
+    .subscribe-details h2 {
+        font-size: 22px;
+    }
+    
+    .blog-head h4 {
+        font-size: 13px;
+    }
+    
+    p.name {
+        margin-left: 0px;
+    }
+    
+    .footer-form input[type="text"] {
+        width: 177px;
+    }
+    
+    .footer-form textarea {
+        width: 100%;
+    }
+}
+
+/* Medium Devices, Tablet, Mobile */    
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.navbar-default ul li a {
+        margin-top: -49px;
+    }
+    
+    .navbar-brand>img {
+        max-width: 77%;
+        margin-top: -12px;
+    }
+    
+    .counter-details {
+        margin-bottom: 30px;
+    }
+    
+    .counter-icon i {
+        right: -3%;
+    }
+    
+    .counter-details.marg-btm {
+        margin-bottom: 0;
+    }
+    
+    .about-img {
+        margin-bottom: 30px;
+    }
+    
+    .news-details {
+        margin-bottom: 30px;
+    }
+    
+    .news-bg {
+        margin-bottom: -30px;
+    }
+    
+    .footer-service {
+        margin-top: 30px;
+    }
+    
+    .footer-doctors {
+        margin-top: 30px;
+    }
+    
+    .footer-form {
+        margin-top: 30px;
+    }
+    
+    .footer-form input[type="text"] {
+        width: 295px;
+    }
+    
+    .footer-form input[type="email"] {
+        width: 295px;
+        margin-left: 23px;
+    }
+}
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+   .counter-details {
+        margin-bottom: 30px;
+    }
+    
+    .counter-icon i {
+        right: -3%;
+    }
+    
+    .marg-btm {
+        margin-bottom: 0px;
+    }
+    
+    .about-img {
+        margin-bottom: 30px;
+    }
+    
+    .news-details {
+        margin-bottom: 30px;
+    }
+    
+    .news-bg {
+        margin-bottom: -30px;
+    }
+    
+    .footer-service {
+        margin-top: 30px;
+    }
+    
+    .footer-doctors {
+        margin-top: 30px;
+    }
+    
+    .footer-form {
+        margin-top: 30px;
+    }
+    
+    .footer-form input[type="text"] {
+        width: 100%;
+    }
+    
+    .footer-form input[type="email"]{
+        width: 100%;
+    }
+    
+    .footer-form textarea#massege {
+        width: 100%;
+    }
+}
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    
+    .banner-title {
+        padding: 150px 0 100px 0;
+    }
+    
+    .banner-title h4 {
+        font-size: 14px;
+    }
+}
+   
+
+
+
+
+
+
+
+
+
+
+
+
