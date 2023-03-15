@@ -1,0 +1,20 @@
+digraph "ex_read"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ex_read",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ec_insert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ex_8c.html#a0908784dc65be2da119a6b72ef96dec2",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8h.html#ac395e51f25330a6e6033b6d0d22b2076",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="vi_wait",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a9d85e9ed087401367529ab86a5dbf0c5",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="vi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a8d808e0f3453afe6600673ee1ea5f828",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

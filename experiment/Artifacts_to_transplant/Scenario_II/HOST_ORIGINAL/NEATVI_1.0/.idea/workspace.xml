@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="NEAVI" targetName="NEAVI" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="386679c6-0849-423a-a702-651cf1dbac31" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ProjectId" id="1meGMvcc1lZW7eOWt7f5O5zBP0c" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="SwiftSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="NEAVI" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="make make KILO/kilo" PASS_PARENT_ENVS_2="true" PROJECT_NAME="NEAVI" TARGET_NAME="NEAVI" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="NEAVI" RUN_TARGET_NAME="NEAVI">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="386679c6-0849-423a-a702-651cf1dbac31" name="Default Changelist" comment="" />
+      <created>1609846598449</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609846598449</updated>
+      <workItem from="1609846601030" duration="27905000" />
+      <workItem from="1610373068468" duration="5236000" />
+      <workItem from="1610769424697" duration="5257000" />
+      <workItem from="1611098925364" duration="7541000" />
+      <workItem from="1611167307281" duration="12946000" />
+      <workItem from="1611318767514" duration="35307000" />
+      <workItem from="1613133259246" duration="2107000" />
+      <workItem from="1613394489674" duration="3372000" />
+      <workItem from="1613481081174" duration="20471000" />
+      <workItem from="1613589642399" duration="697000" />
+      <workItem from="1613598970217" duration="25358000" />
+      <workItem from="1614039595288" duration="16538000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="3957" y="870" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614085635633">
+      <screen x="3840" y="721" width="1440" height="875" />
+    </state>
+    <state x="117" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.875/-3807.-859.1887.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611893894900" />
+    <state x="-1764" y="-492" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.1025/-1920.-672.1920.1055/-3807.-672.1887.1055@-1920.-672.1920.1055" timestamp="1613577398639" />
+    <state x="-3654" y="-492" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-3807.-672.1887.1055" timestamp="1614017957251" />
+    <state x="3957" y="870" key="#com.intellij.execution.impl.EditConfigurationsDialog/3840.721.1440.875/33.25.1887.1055/1920.25.1920.1055@3840.721.1440.875" timestamp="1614085635633" />
+    <state x="450" y="269" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611893014188">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="450" y="269" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1440.875/-3807.-859.1887.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611893014188" />
+    <state x="-3125" y="-422" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609846708817">
+      <screen x="-3806" y="-700" width="1886" height="1055" />
+    </state>
+    <state x="-3125" y="-422" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1440.875/-3806.-700.1886.1055/-1920.-700.1920.1055@-3806.-700.1886.1055" timestamp="1609846708817" />
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1614095740635">
+      <screen x="3840" y="721" width="1440" height="875" />
+    </state>
+    <state width="1398" height="291" key="GridCell.Tab.0.bottom/0.25.1440.875/-1920.-859.1920.1055/-3806.-859.1886.1055@0.25.1440.875" timestamp="1611522445594" />
+    <state width="1398" height="291" key="GridCell.Tab.0.bottom/0.25.1440.875/-1920.-859.1920.1055/-3807.-859.1887.1055@0.25.1440.875" timestamp="1611669793336" />
+    <state width="1558" height="363" key="GridCell.Tab.0.bottom/0.25.1440.875/-3806.-700.1886.1055/-1920.-700.1920.1055@-3806.-700.1886.1055" timestamp="1610049946109" />
+    <state width="1398" height="291" key="GridCell.Tab.0.bottom/0.25.1440.875/-3807.-859.1887.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611893390420" />
+    <state width="1582" height="245" key="GridCell.Tab.0.bottom/0.25.1680.1025/-1920.-672.1920.1055/-3807.-672.1887.1055@-1920.-672.1920.1055" timestamp="1613589000254" />
+    <state width="1271" height="249" key="GridCell.Tab.0.bottom/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-1920.-672.1920.1055" timestamp="1613855083611" />
+    <state width="1560" height="244" key="GridCell.Tab.0.bottom/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-3807.-672.1887.1055" timestamp="1614052081043" />
+    <state width="1271" height="249" key="GridCell.Tab.0.bottom/0.25.1680.1025/-3808.-672.1888.1055/-1920.-672.1920.1055@-3808.-672.1888.1055" timestamp="1614023130972" />
+    <state width="1238" height="291" key="GridCell.Tab.0.bottom/31.25.1409.875/1440.-196.1920.1055@31.25.1409.875" timestamp="1613130764647" />
+    <state width="1582" height="245" key="GridCell.Tab.0.bottom/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@-1487.-1055.1920.1055" timestamp="1613480951703" />
+    <state width="1530" height="389" key="GridCell.Tab.0.bottom/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@32.25.1648.1025" timestamp="1613425970631" />
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom/3840.721.1440.875/33.25.1887.1055/1920.25.1920.1055@3840.721.1440.875" timestamp="1614095740635" />
+    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1614095740634">
+      <screen x="3840" y="721" width="1440" height="875" />
+    </state>
+    <state width="1398" height="291" key="GridCell.Tab.0.center/0.25.1440.875/-1920.-859.1920.1055/-3806.-859.1886.1055@0.25.1440.875" timestamp="1611522445592" />
+    <state width="1398" height="291" key="GridCell.Tab.0.center/0.25.1440.875/-1920.-859.1920.1055/-3807.-859.1887.1055@0.25.1440.875" timestamp="1611669793336" />
+    <state width="1558" height="363" key="GridCell.Tab.0.center/0.25.1440.875/-3806.-700.1886.1055/-1920.-700.1920.1055@-3806.-700.1886.1055" timestamp="1610049946108" />
+    <state width="1398" height="291" key="GridCell.Tab.0.center/0.25.1440.875/-3807.-859.1887.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611893390419" />
+    <state width="1582" height="245" key="GridCell.Tab.0.center/0.25.1680.1025/-1920.-672.1920.1055/-3807.-672.1887.1055@-1920.-672.1920.1055" timestamp="1613589000251" />
+    <state width="1271" height="249" key="GridCell.Tab.0.center/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-1920.-672.1920.1055" timestamp="1613855083609" />
+    <state width="1560" height="244" key="GridCell.Tab.0.center/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-3807.-672.1887.1055" timestamp="1614052081042" />
+    <state width="1271" height="249" key="GridCell.Tab.0.center/0.25.1680.1025/-3808.-672.1888.1055/-1920.-672.1920.1055@-3808.-672.1888.1055" timestamp="1614023130971" />
+    <state width="1238" height="291" key="GridCell.Tab.0.center/31.25.1409.875/1440.-196.1920.1055@31.25.1409.875" timestamp="1613130764642" />
+    <state width="1582" height="245" key="GridCell.Tab.0.center/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@-1487.-1055.1920.1055" timestamp="1613480951702" />
+    <state width="1530" height="389" key="GridCell.Tab.0.center/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@32.25.1648.1025" timestamp="1613425970630" />
+    <state width="1398" height="244" key="GridCell.Tab.0.center/3840.721.1440.875/33.25.1887.1055/1920.25.1920.1055@3840.721.1440.875" timestamp="1614095740634" />
+    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1614095740633">
+      <screen x="3840" y="721" width="1440" height="875" />
+    </state>
+    <state width="1398" height="291" key="GridCell.Tab.0.left/0.25.1440.875/-1920.-859.1920.1055/-3806.-859.1886.1055@0.25.1440.875" timestamp="1611522445590" />
+    <state width="1398" height="291" key="GridCell.Tab.0.left/0.25.1440.875/-1920.-859.1920.1055/-3807.-859.1887.1055@0.25.1440.875" timestamp="1611669793335" />
+    <state width="1558" height="363" key="GridCell.Tab.0.left/0.25.1440.875/-3806.-700.1886.1055/-1920.-700.1920.1055@-3806.-700.1886.1055" timestamp="1610049946107" />
+    <state width="1398" height="291" key="GridCell.Tab.0.left/0.25.1440.875/-3807.-859.1887.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611893390418" />
+    <state width="1582" height="245" key="GridCell.Tab.0.left/0.25.1680.1025/-1920.-672.1920.1055/-3807.-672.1887.1055@-1920.-672.1920.1055" timestamp="1613589000249" />
+    <state width="1271" height="249" key="GridCell.Tab.0.left/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-1920.-672.1920.1055" timestamp="1613855083608" />
+    <state width="1560" height="244" key="GridCell.Tab.0.left/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-3807.-672.1887.1055" timestamp="1614052081042" />
+    <state width="1271" height="249" key="GridCell.Tab.0.left/0.25.1680.1025/-3808.-672.1888.1055/-1920.-672.1920.1055@-3808.-672.1888.1055" timestamp="1614023130971" />
+    <state width="1238" height="291" key="GridCell.Tab.0.left/31.25.1409.875/1440.-196.1920.1055@31.25.1409.875" timestamp="1613130764642" />
+    <state width="1582" height="245" key="GridCell.Tab.0.left/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@-1487.-1055.1920.1055" timestamp="1613480951701" />
+    <state width="1530" height="389" key="GridCell.Tab.0.left/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@32.25.1648.1025" timestamp="1613425970629" />
+    <state width="1398" height="244" key="GridCell.Tab.0.left/3840.721.1440.875/33.25.1887.1055/1920.25.1920.1055@3840.721.1440.875" timestamp="1614095740633" />
+    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1614095740634">
+      <screen x="3840" y="721" width="1440" height="875" />
+    </state>
+    <state width="1398" height="291" key="GridCell.Tab.0.right/0.25.1440.875/-1920.-859.1920.1055/-3806.-859.1886.1055@0.25.1440.875" timestamp="1611522445593" />
+    <state width="1398" height="291" key="GridCell.Tab.0.right/0.25.1440.875/-1920.-859.1920.1055/-3807.-859.1887.1055@0.25.1440.875" timestamp="1611669793336" />
+    <state width="1558" height="363" key="GridCell.Tab.0.right/0.25.1440.875/-3806.-700.1886.1055/-1920.-700.1920.1055@-3806.-700.1886.1055" timestamp="1610049946108" />
+    <state width="1398" height="291" key="GridCell.Tab.0.right/0.25.1440.875/-3807.-859.1887.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611893390419" />
+    <state width="1582" height="245" key="GridCell.Tab.0.right/0.25.1680.1025/-1920.-672.1920.1055/-3807.-672.1887.1055@-1920.-672.1920.1055" timestamp="1613589000252" />
+    <state width="1271" height="249" key="GridCell.Tab.0.right/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-1920.-672.1920.1055" timestamp="1613855083610" />
+    <state width="1560" height="244" key="GridCell.Tab.0.right/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-3807.-672.1887.1055" timestamp="1614052081043" />
+    <state width="1271" height="249" key="GridCell.Tab.0.right/0.25.1680.1025/-3808.-672.1888.1055/-1920.-672.1920.1055@-3808.-672.1888.1055" timestamp="1614023130972" />
+    <state width="1238" height="291" key="GridCell.Tab.0.right/31.25.1409.875/1440.-196.1920.1055@31.25.1409.875" timestamp="1613130764646" />
+    <state width="1582" height="245" key="GridCell.Tab.0.right/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@-1487.-1055.1920.1055" timestamp="1613480951703" />
+    <state width="1530" height="389" key="GridCell.Tab.0.right/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@32.25.1648.1025" timestamp="1613425970630" />
+    <state width="1398" height="244" key="GridCell.Tab.0.right/3840.721.1440.875/33.25.1887.1055/1920.25.1920.1055@3840.721.1440.875" timestamp="1614095740634" />
+    <state x="397" y="291" key="com.intellij.ide.util.TipDialog" timestamp="1611406784167">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="397" y="291" key="com.intellij.ide.util.TipDialog/0.25.1440.875/-1920.-859.1920.1055/-3806.-859.1886.1055@0.25.1440.875" timestamp="1611406784167" />
+    <state x="4007" y="848" width="676" height="729" key="find.popup" timestamp="1614095738042">
+      <screen x="3840" y="721" width="1440" height="875" />
+    </state>
+    <state x="-3173" y="-568" width="667" height="486" key="find.popup/0.25.1440.875/-1920.-859.1920.1055/-3806.-859.1886.1055@-3806.-859.1886.1055" timestamp="1610575290374" />
+    <state x="483" y="266" width="674" height="486" key="find.popup/0.25.1440.875/-1920.-859.1920.1055/-3806.-859.1886.1055@0.25.1440.875" timestamp="1611516350641" />
+    <state x="-3174" y="-568" width="668" height="486" key="find.popup/0.25.1440.875/-1920.-859.1920.1055/-3807.-859.1887.1055@-3807.-859.1887.1055" timestamp="1610658976180" />
+    <state x="483" y="266" width="674" height="486" key="find.popup/0.25.1440.875/-1920.-859.1920.1055/-3807.-859.1887.1055@0.25.1440.875" timestamp="1611166685787" />
+    <state x="-3173" y="-409" width="667" height="486" key="find.popup/0.25.1440.875/-3806.-700.1886.1055/-1920.-700.1920.1055@-3806.-700.1886.1055" timestamp="1610106239561" />
+    <state x="483" y="266" width="674" height="486" key="find.popup/0.25.1440.875/-3806.-859.1886.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611171853857" />
+    <state x="483" y="266" width="674" height="486" key="find.popup/0.25.1440.875/-3807.-859.1887.1055/-1920.-859.1920.1055@0.25.1440.875" timestamp="1611896767059" />
+    <state x="-1276" y="-382" width="900" height="587" key="find.popup/0.25.1680.1025/-1920.-672.1920.1055/-3807.-672.1887.1055@-1920.-672.1920.1055" timestamp="1613585862173" />
+    <state x="-1276" y="-382" width="900" height="587" key="find.popup/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-1920.-672.1920.1055" timestamp="1613855412077" />
+    <state x="-3588" y="-519" width="885" height="587" key="find.popup/0.25.1680.1025/-3807.-672.1887.1055/-1920.-672.1920.1055@-3807.-672.1887.1055" timestamp="1614052384339" />
+    <state x="-1276" y="-382" width="900" height="587" key="find.popup/0.25.1680.1025/-3808.-672.1888.1055/-1920.-672.1920.1055@-1920.-672.1920.1055" timestamp="1613922656673" />
+    <state x="-3175" y="-382" width="885" height="587" key="find.popup/0.25.1680.1025/-3808.-672.1888.1055/-1920.-672.1920.1055@-3808.-672.1888.1055" timestamp="1614018843524" />
+    <state x="585" y="307" width="772" height="570" key="find.popup/32.25.1648.1025/-1487.-1055.1920.1055/-3407.-1055.1920.1055@32.25.1648.1025" timestamp="1613426108820" />
+    <state x="585" y="307" width="772" height="570" key="find.popup/32.25.1648.1025/-3407.-1055.1920.1055/-1487.-1055.1920.1055@32.25.1648.1025" timestamp="1613309069800" />
+    <state x="4007" y="848" width="676" height="729" key="find.popup/3840.721.1440.875/33.25.1887.1055/1920.25.1920.1055@3840.721.1440.875" timestamp="1614095738042" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/regex.h</url>
+          <line>16</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>588</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>530</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>408</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1405</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1207</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1081</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1216</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1114</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1255</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1299</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1191</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>1026</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1210</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>846</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>676</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>867</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1331</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/lbuf.c</url>
+          <line>58</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1193</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>1012</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>1017</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>490</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>500</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/lbuf.c</url>
+          <line>227</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>473</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>450</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>665</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>670</line>
+          <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>792</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>564</line>
+          <option name="timeStamp" value="79" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>261</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>535</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>317</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/lbuf.c</url>
+          <line>312</line>
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1166</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>359</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ex.c</url>
+          <line>606</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1402</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1398</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/dir.c</url>
+          <line>111</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/dir.c</url>
+          <line>109</line>
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/rset.c</url>
+          <line>67</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/vi.c</url>
+          <line>1395</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="dir_rslr" />
+        <watch expression="vi_ybuf" language="ObjectiveC" />
+        <watch expression="bufs" />
+        <watch expression="sb" />
+        <watch expression="sbuf" />
+        <watch expression="lbuf" />
+        <watch expression="lbuf_edit" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

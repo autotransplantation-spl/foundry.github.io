@@ -1,0 +1,11 @@
+digraph "bufs_switch"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="bufs_switch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="bufs_swap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ex_8c.html#ad2faeac56c69d25b8f7f651061b293a3",tooltip=" "];
+}

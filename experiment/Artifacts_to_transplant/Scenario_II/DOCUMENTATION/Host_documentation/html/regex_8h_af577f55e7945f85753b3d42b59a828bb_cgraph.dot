@@ -1,0 +1,30 @@
+digraph "regexec"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="regexec",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="re_recmatch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#aa5925e49bd18112bb37421dbde29162a",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="re_rec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a8e35614ddf21d405773327a52a95a73d",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ratom_match",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a24fd1fc7457ff4f03fb384f7170ac395",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="brk_match",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#aae17ed73e84075718fb04d131d6ca779",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="brk_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#acc18ff8d2687611a9e221b3329b02413",tooltip=" "];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="uc_dec",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#aaf73cdb88048e7f9fd588eb8d5aeb5a3",tooltip=" "];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="uc_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a9a0d6d5f93f1eaba8b63b16903c0952d",tooltip=" "];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="isword",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a35ad3fd0dbb795e6f30404ce86a7be5b",tooltip=" "];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uc_beg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#ade3e10606e6e8866e6151fe8440d6101",tooltip=" "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

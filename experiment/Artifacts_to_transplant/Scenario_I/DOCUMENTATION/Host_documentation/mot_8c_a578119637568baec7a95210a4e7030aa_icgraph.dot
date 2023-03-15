@@ -1,0 +1,22 @@
+digraph "uc_nextdir"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="uc_nextdir",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lbuf_findchar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8h.html#af03e9c2c66d9a39e9f5afa231ec1c6e3",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="vi_findchar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a79aea4fe01714877e4d3db4a11923376",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="vi_motion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#aaa4777ea0715ea846346d0f27a0cfa3f",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="vc_motion",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a06cbc6eb843436a0e77e07cbab0c4538",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="vi",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a8d808e0f3453afe6600673ee1ea5f828",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

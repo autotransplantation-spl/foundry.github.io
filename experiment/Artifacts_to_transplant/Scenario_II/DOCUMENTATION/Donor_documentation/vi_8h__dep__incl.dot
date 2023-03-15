@@ -1,0 +1,41 @@
+digraph "vi.h"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="vi.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cmd.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$cmd_8c.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="conf.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$conf_8c.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="conf.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$conf_8h.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="dir.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dir_8c.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="ex.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ex_8c.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lbuf.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="led.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$led_8c.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="mot.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mot_8c.html",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="reg.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reg_8c.html",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="ren.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ren_8c.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="rset.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rset_8c.html",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="sbuf.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sbuf_8c.html",tooltip=" "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="syn.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$syn_8c.html",tooltip=" "];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="term.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$term_8c.html",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="uc.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="vi.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html",tooltip=" "];
+}

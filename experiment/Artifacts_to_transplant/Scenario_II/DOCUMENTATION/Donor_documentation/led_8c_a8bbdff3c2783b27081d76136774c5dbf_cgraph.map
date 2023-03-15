@@ -1,0 +1,8 @@
+<map id="led_readchar" name="led_readchar">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,101,108"/>
+<area shape="rect" id="node2" href="$conf_8c.html#acbeed8b0b62960a541af67e17d6c7131" title=" " alt="" coords="149,5,245,32"/>
+<area shape="rect" id="node3" href="$led_8c.html#a1b9303e418de8d39a47db9256cfd9765" title=" " alt="" coords="154,56,241,83"/>
+<area shape="rect" id="node5" href="$term_8c.html#ab37222c9b84980b0492b34d0a4e32f12" title=" " alt="" coords="157,107,237,133"/>
+<area shape="rect" id="node6" href="$regex_8c.html#a9a0d6d5f93f1eaba8b63b16903c0952d" title=" " alt="" coords="167,157,227,184"/>
+<area shape="rect" id="node4" href="$conf_8c.html#a701ceb92f75bae1a0d9d805796eb2f84" title=" " alt="" coords="293,56,380,83"/>
+</map>

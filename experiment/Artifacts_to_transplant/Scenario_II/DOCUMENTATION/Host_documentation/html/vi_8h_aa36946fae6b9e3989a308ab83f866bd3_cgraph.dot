@@ -1,0 +1,19 @@
+digraph "uc_isbell"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="uc_isbell",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="find",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a26b3c1840a578dd97a58069e0af2168c",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="uc_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a45fdc2f2f3cb34515f1014bf754741bb",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uc_isdw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a0f3be4d499b9b3469d03114386b386a2",tooltip=" "];
+  Node4 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uc_iszw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#aef404add952e41075b8871fefaaba669",tooltip=" "];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

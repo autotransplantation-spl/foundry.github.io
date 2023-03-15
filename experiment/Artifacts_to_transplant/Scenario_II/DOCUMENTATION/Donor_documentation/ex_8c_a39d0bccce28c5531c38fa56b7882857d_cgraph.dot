@@ -1,0 +1,25 @@
+digraph "ec_redo"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ec_redo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lbuf_redo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#aca82c206a01766fec09a8fe903b1d688",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lbuf_loadpos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#ab80e32f732eac6af01c013ad5f802561",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="markidx",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#a69221917b521da2cd5f804a9f4694f1a",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lbuf_replace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#a7d6629efef5a5cbd324d82e2b0c07c5d",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lbuf_mark",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#a5a34f3f60dfd5ea06207d96d821da368",tooltip=" "];
+  Node6 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="linecount",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#ab41193f3312b21588338e92e1b144f87",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="linelength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#ac559857979b20ce0c64638c9e3e4edec",tooltip=" "];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

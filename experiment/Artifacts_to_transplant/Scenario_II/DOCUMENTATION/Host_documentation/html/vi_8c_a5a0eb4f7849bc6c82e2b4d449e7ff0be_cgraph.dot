@@ -1,0 +1,15 @@
+digraph "vi_yankbuf"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="vi_yankbuf",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="vi_back",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a030064769b5856a5d3dd0250376877c3",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="vi_read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$vi_8c.html#a85845915d01f90641f8bba816758c1e2",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="term_read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$term_8c.html#ab37222c9b84980b0492b34d0a4e32f12",tooltip=" "];
+}

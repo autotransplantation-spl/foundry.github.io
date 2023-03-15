@@ -1,0 +1,19 @@
+digraph "led_readchar"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="led_readchar",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="conf_digraph",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$conf_8c.html#acbeed8b0b62960a541af67e17d6c7131",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="kmap_map",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$led_8c.html#a1b9303e418de8d39a47db9256cfd9765",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="conf_kmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$conf_8c.html#a701ceb92f75bae1a0d9d805796eb2f84",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="term_read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$term_8c.html#ab37222c9b84980b0492b34d0a4e32f12",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uc_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a9a0d6d5f93f1eaba8b63b16903c0952d",tooltip=" "];
+}

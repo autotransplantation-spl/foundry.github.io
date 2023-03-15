@@ -1,0 +1,13 @@
+digraph "ex_argeol"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ex_argeol",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ex_cmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ex_8c.html#ac81e7e5f5a7172bb68069a443e15d8c1",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="ex_loc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ex_8c.html#a08b9908970de656c77ff16330b753c55",tooltip=" "];
+}

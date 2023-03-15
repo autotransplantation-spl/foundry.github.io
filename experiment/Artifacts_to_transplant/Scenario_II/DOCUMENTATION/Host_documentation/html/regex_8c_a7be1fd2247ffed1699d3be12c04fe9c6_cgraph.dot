@@ -1,0 +1,17 @@
+digraph "rnode_emit"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rnode_emit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="re_insert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#ad3bbf549eef0fe517e9f213c5eadbb0c",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rnode_emitnorep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#afdf3c7adbb2060b793cf83c5312321c8",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="ratom_copy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a71b5a38b3a51e761aaa959a89e7cae55",tooltip=" "];
+  Node3 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,15 @@
+digraph "ex_kwdset"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ex_kwdset",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="reg_put",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reg_8c.html#a4a1ad2201f6bc8ca5faf958f146883d5",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="reg_get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reg_8c.html#a6eaa41c69e0e22bcbb189eaf4ff0feae",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="reg_putraw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$reg_8c.html#a7d863266d9fa9455f0ffa968f51d0ce3",tooltip=" "];
+}

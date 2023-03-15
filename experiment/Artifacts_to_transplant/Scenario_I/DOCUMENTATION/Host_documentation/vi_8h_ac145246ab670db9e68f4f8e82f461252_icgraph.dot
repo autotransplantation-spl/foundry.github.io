@@ -1,0 +1,11 @@
+digraph "ex_lbuf"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="ex_lbuf",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="ec_undo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$ex_8c.html#a0f6c94c34d1bc97a9051aceb7bda7ff0",tooltip=" "];
+}

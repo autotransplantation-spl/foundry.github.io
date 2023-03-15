@@ -1,0 +1,32 @@
+digraph "main"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cleanup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#ae2ded8e601a990b8a9f36dd7053e305e",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="list_archive_content",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#afe6f403c5b87fb936c34a77565b9ea65",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="open_archive_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#ab2df7bd1010abbdb8913f8395b11125b",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="process_command_line",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#aa56ba0dcc55b910791b86a4b9db1c8b6",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="read_archive_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#a3810d9bd5a4318b0301026b15e41ba3a",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="usage",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#a1529ae6b8e2ca8ea9f4368dbf17b965e",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="write_archive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$append_8c.html#a96bfcefbf5ecd984a75cc98eb53f32d8",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="write_archive_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$append_8c.html#acaec22fd2994956cbc5b906c5a4cd119",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="append_file",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$append_8c.html#a0b27d89890937fcd6ba642c928894f58",tooltip=" "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="check_io_errors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#affdb16ec81266263c93640032649b9b4",tooltip=" "];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="write_archive_header",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$archiver_8h.html#a243891ab947a0803bf1c36b5fbe92f26",tooltip=" "];
+  Node12 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

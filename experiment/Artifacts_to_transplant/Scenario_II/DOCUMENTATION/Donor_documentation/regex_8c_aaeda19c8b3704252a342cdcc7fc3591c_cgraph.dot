@@ -1,0 +1,32 @@
+digraph "rnode_grp"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rnode_grp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rnode_free",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#aabe89a3a22bc0fdc0329cf29ec80ad76",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rnode_make",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a39869d385d8410ffb9d5bf74c778c6ce",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rnode_parse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#ac19329676c1426f2b24af24e33e3a845",tooltip=" "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rnode_seq",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#abe0c1f4be43ac6d7caa4f95a560f823f",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rnode_atom",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a0df57dc0ee1beb9018cdd537a58571aa",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="ratom_read",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a8b5ae269a79b320da8e87712e2051d1c",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="ratom_readbrk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a1904288a4b4c7b7d0666c3d85d438e1a",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="brk_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#acc18ff8d2687611a9e221b3329b02413",tooltip=" "];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="uc_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$regex_8c.html#a9a0d6d5f93f1eaba8b63b16903c0952d",tooltip=" "];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

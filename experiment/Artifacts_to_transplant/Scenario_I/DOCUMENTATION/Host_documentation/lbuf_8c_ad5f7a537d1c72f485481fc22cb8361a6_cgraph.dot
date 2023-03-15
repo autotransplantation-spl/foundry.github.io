@@ -1,0 +1,22 @@
+digraph "lbuf_cp"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lbuf_cp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="sbuf_done",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sbuf_8c.html#a7bf14d501d36ce36ee269d77cf2c3fc6",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="sbuf_buf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sbuf_8c.html#a4e56760893d5a6797626743840c9adf2",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="sbuf_extend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sbuf_8c.html#a4ad75f3948c0340c342a3ea3eb63a6e6",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="sbuf_make",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sbuf_8c.html#a57748585d6786a2c1aadc2cbe6f2135b",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="sbuf_str",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sbuf_8c.html#a603d1d6ab090025f5850f10bfa2dec7a",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sbuf_mem",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sbuf_8c.html#aa511ac77d6b486accc01c0512ef27ed2",tooltip=" "];
+  Node7 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,50 @@
+digraph "lbuf_wordend"
+{
+ // INTERACTIVE_SVG=YES
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="lbuf_wordend",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lbuf_chr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mot_8c.html#a1075d9da002a03e0730292ac1948a7b8",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lbuf_get",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#ad0f45475ddc6eb82ecedf63ed1b914d4",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="uc_chr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a2fecd1fc98475ece5f529da3315a9553",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="uc_next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a79c7c44c06c1febff5680c19667e2676",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="uc_end",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a616e24870a58b86644c34ee077faca11",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lbuf_next",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mot_8c.html#a62880e253fa1e427ff400dfbc1cbd2cc",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="lbuf_eol",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mot_8c.html#a5c1f7584815c6ad7811607e7189272f3",tooltip=" "];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="uc_slen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a8afd7835259109c3ec7bb684d4a1f67f",tooltip=" "];
+  Node9 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="lbuf_len",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lbuf_8c.html#ae74f0372b69451ac877a76505b05874f",tooltip=" "];
+  Node7 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="lbuf_lnnext",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mot_8c.html#a7d0e1b91bf9ad736cf9f11035a9beef0",tooltip=" "];
+  Node11 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="lbuf_wordlast",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mot_8c.html#a644f779e0e815979c646ea210c3a1594",tooltip=" "];
+  Node12 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="uc_kind",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a11275a0a4c95061c99fe7462ef3cf1b3",tooltip=" "];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="uc_isalpha",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a111a8afd24172cae38d54d759a5dede5",tooltip=" "];
+  Node13 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="uc_isdigit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a4beb9f2d6b6701d58f701ea92abcb1da",tooltip=" "];
+  Node13 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="uc_isspace",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#ab6be7e2b59f79b8952c13488e1cf036a",tooltip=" "];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="uc_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uc_8c.html#a45fdc2f2f3cb34515f1014bf754741bb",tooltip=" "];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/leandrosouza/CLionProjects/NEAVI/vi.c
+ctype.h
+-
+fcntl.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+vi.h
+/Users/leandrosouza/CLionProjects/NEAVI/vi.h
+
+/Users/leandrosouza/CLionProjects/NEAVI/vi.h
+
