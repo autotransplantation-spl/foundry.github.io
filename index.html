@@ -291,8 +291,10 @@
                             </p>-->
                             <p class="justifyText">Currently, Foundry is realized for C in a software transplantation tool for SPL re-engeineering, called <i>ProdScalpel</i>. ProdScalpel extends 𝜇Scalpel [1] to transplant multiple organs at once and implant them into a single host codebase. This feature is essential for supporting Foundry, since many features, especially those existing, SPL-oblivious codebases, span multiple files. The prodScalpel’s architecture is composed by five modules as shows in Figure 3.
                             </p>
+                            <br>
                             <p class="justifyText">The domain engineering process is supported by modules donor preparation and organ extraction. The donor preparation module is responsible for cleaning up donor codebases by removing all unwanted preprocessor directives, in case it is present in the codebase. The organs extraction module, in turn, is responsible for extracting an over-organ using the program slicing technique.
                             </p>
+                            <br>
                             <p class="justifyText">The application engineering process is supported by the modules host preparation, organ reduction and adaptation, as well as, the organ implantation module. The preparation module is responsible by preparing the product base. It removes all unwanted features from the host codebase surrounded by preprocessor directives. The module organs reduction and adaptation uses <i>clone-aware genetic improvement</i> [4] to reduce an over-organ selected from the transplantation platform and adapt it to execute into the target product base. The last module, organ implantation, is implemented with a clone detector that identifies code elements duplication and dependencies while implanting them into the product base.
                             
                             </p>
