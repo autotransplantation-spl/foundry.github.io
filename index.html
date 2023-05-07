@@ -125,7 +125,7 @@
         <div class="banner-bg">
             <div class="container">
                 <div class="banner-title text-center">
-                    <h1>AUTOMATED SOFTWARE TRANSPLANTATION FOR SOFTWARE PRODUCT LINES</h1>
+                    <h1>Software Product Line Engineering via Software Transplantation</h1>
                     <!-- <div class="banner-btn btn">
                         <a href="#">Contact Us</a>
                     </div><!-- /.banner-btn -->
@@ -165,8 +165,8 @@
                                We used prodScalpel to create two product lines and derive two products that contain features from three real-world 
                                systems each. We also compared it with manual effort, showing that prodScalpel is able to migrate features 
                                between different codebases within 4 hours, time limit within which expert SPL developers have not finished the task. 
-                               When the same codebase for the host and the donor was used, prodScalpel was able to migrate a feature within an 
-                               average of 48min, compared to an average of 1h21min of developer effort.
+                               When the same codebase for the host and the donor was used, prodScalpel was able to migrate a feature within 4.8 faster than SPL experts performing
+                              the same task.
                                 </p>
                                 
                                 <p class="about-para-middle">Our paper is available for 
@@ -287,7 +287,14 @@
                             <h2>ProdScalpel</h2>
                         </div><!-- /.about-title -->
                             
-                            <p class="justifyText">Currently, Foundry is realized in a software transplantation tool for SPL re-engeineering called <i>ProdScalpel</i>. The <i>ProdScalpel</i> facilitates feature identification and can efficiently transplant a multi-organ, i.e., a sequence of features. The tool have been developed from 𝜇Scalpel [1] with focus on the transplantation of multiple organs and their implantation into a single codebase. This innovation opens the way to automated software transplantation process for SPLE, since it will enable companies to reuse features from existing codebases in an automated way. Figure 8 shows the overall architecture of the prodScalpel tool. 
+                            <!--<p class="justifyText">Currently, Foundry is realized in a software transplantation tool for SPL re-engeineering called <i>ProdScalpel</i>. The <i>ProdScalpel</i> facilitates feature identification and can efficiently transplant a multi-organ, i.e., a sequence of features. The tool have been developed from 𝜇Scalpel [1] with focus on the transplantation of multiple organs and their implantation into a single codebase. This innovation opens the way to automated software transplantation process for SPLE, since it will enable companies to reuse features from existing codebases in an automated way. Figure 8 shows the overall architecture of the prodScalpel tool.
+                            </p>-->
+                            <p class="justifyText">Currently, Foundry is realized for C in a software transplantation tool for SPL re-engeineering, called <i>ProdScalpel</i>. ProdScalpel extends 𝜇Scalpel [1] to transplant multiple organs at once and implant them into a single host codebase. This feature is essential for supporting Foundry, since many features, especially those existing, SPL-oblivious codebases, span multiple files. The prodScalpel’s architecture is composed by five modules as shows in Figure 3.
+                            </p>
+                            <p class="justifyText">The domain engineering process is supported by modules donor preparation and organ extraction. The donor preparation module is responsible for cleaning up donor codebases by removing all unwanted preprocessor directives, in case it is present in the codebase. The organs extraction module, in turn, is responsible for extracting an over-organ using the program slicing technique.
+                            </p>
+                            <p class="justifyText">The application engineering process is supported by the modules host preparation, organ reduction and adaptation, as well as, the organ implantation module. The preparation module is responsible by preparing the product base. It removes all unwanted features from the host codebase surrounded by preprocessor directives. The module organs reduction and adaptation uses <i>clone-aware genetic improvement</i> [4] to reduce an over-organ selected from the transplantation platform and adapt it to execute into the target product base. The last module, organ implantation, is implemented with a clone detector that identifies code elements duplication and dependencies while implanting them into the product base.
+                            
                             </p>
                             <br>
                              </div><!-- /.about-title -->
@@ -744,6 +751,9 @@
                                  <p class="about-para-middle"> [2] Charles W. Krueger. 2002. Easing the Transition to Software Mass Customization. In Revised Papers from the 4th International Workshop on Software Product-Family Engineering (PFE ’01). Springer-Verlag, London, UK, UK, 282–293.</p>
 
                                 <p class="about-para-middle"> [3] Paul Clements and Linda Northrop. 2001. Software Product Lines: Practices and Patterns. Addison-Wesley, Boston, MA, USA.</p>
+                                
+                                <p class="about-para-middle"> [4] Justyna Petke, Saemundur O. Haraldsson, Mark Harman, William B. Langdon, David Robert White, and John R. Woodward. 2018. Genetic
+                                Improvement of Software: A Comprehensive Survey. IEEE Trans. Evol. Comput. 22, 3 (2018), 415–432.</p>
                             </div>
                         </div><!-- /.about-details -->
    
@@ -765,20 +775,22 @@
                        <div class="footer-text">
                            <p>Contact us and we'll get back as soon as possible.</p>
                            <br>
-                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> University College London, London, UK</p>
+                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
+                            <p>Department of Computer Science,  University College London, UK</p>
                             <p>Petke, Justyna</p>
-                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +44 ....</p>
+                            <!--<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +44 ....</p>-->
                             <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: j.petke@ucl.ac.uk</p>
                        		<br>
-                       		<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> University College London, London, UK</p>
+                       		<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Department of Computer Science, University College London, London, UK</p>
                        		<p>Barr, Earl</p>
-                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +44 ...</p>
+                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +44 7758 239984</p>
                             <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: e.barr@ucl.ac.uk</p>
                        </div><!--/.footer-text-->
                        <br>
                        <div class="footer-text">
                        		
                             <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Federal Univerisity of Bahia, Bahia, Brazil</p>
+                                Federal Institute of Bahia, Bahia, Brazil</p>
                             <p>Leandro Souza</p>
                             <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +55 74 99997 3165</p>
                             <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: leandro.souza@ifba.edu.br</p>
