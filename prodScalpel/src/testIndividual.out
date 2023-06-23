@@ -1,0 +1,82 @@
+Abstract_Mappings:
+$ABSTRACT_22 $_recv_packet_odata
+$ABSTRACT_5 & $_main_strategy
+$ABSTRACT_20 $_recv_packet_ofile1
+$ABSTRACT_18 $_recv_packet_ofile1
+$ABSTRACT_16 $_recv_packet_ofile1
+$ABSTRACT_14 $_transmit_packet_ofile1
+$ABSTRACT_9 $_send_packet_ofile1
+$ABSTRACT_4 $_main_ofile
+$ABSTRACT_13 $_transmit_packet_data1
+$ABSTRACT_8 $_send_packet_pktbuf_1
+$ABSTRACT_3 $_main_dbuf
+$_main_argc jjj
+$ABSTRACT_21 $_recv_packet_num_samples_1
+$ABSTRACT_19 jjj
+$ABSTRACT_17 jjj
+$ABSTRACT_15 length
+$ABSTRACT_12 length
+$ABSTRACT_11 length
+$ABSTRACT_10 jjj
+$ABSTRACT_7 $_send_packet_len1
+$ABSTRACT_6 length
+$ABSTRACT_2 jjj
+$ABSTRACT_1 $_main_seqno ++
+$ABSTRACT_0 jjj
+Declaration_Mappings:
+/* DECL: 13 */@$_main_strategy@jjj
+/* DECL: 3 */@$_main_msPerPacket@jjj
+/* DECL: 4 */@$_main_bytesPerPacket@length
+/* DECL: 9 */@$_main_samplesPerPacket@length
+/* DECL: 5 */@$_main_i@jjj
+/* DECL: 7 */@$_main_filesize@length
+/* DECL: 8 */@$_main_size@length
+/* DECL: 32 */@$_recv_packet_prev_seqno_1@jjj
+/* DECL: 36 */@$_recv_packet_num_samples_1@length
+/* DECL: 38 */@$_recv_packet_missing_seqno@jjj
+/* DECL: 42 */@$_write_silence_i_1@length
+/* DECL: 46 */@$_write_silence_i_2@jjj
+/* DECL: 47 */@$_recv_packet_nrOfLostPackets@jjj
+/* DECL: 51 */@$_write_silence_i_3@jjj
+/* DECL: 54 */@$_dct_odata_1@arrayOfDefLines
+/* DECL: 57 */@$_dct_k_1@jjj
+/* DECL: 53 */@$ABSTRETVAL_ret_dct1@arrayOfDefLines
+/* DECL: 52 */@$_recv_packet_dctPrev@arrayOfDefLines
+/* DECL: 60 */@$_dct_odata_2@arrayOfDefLines
+/* DECL: 63 */@$_dct_k_2@length
+/* DECL: 59 */@$ABSTRETVAL_ret_dct2@arrayOfDefLines
+/* DECL: 58 */@$_recv_packet_dctCurr@arrayOfDefLines
+/* DECL: 64 */@$_recv_packet_nrOfLostPackets@length
+/* DECL: 56 */@$_dct_n_1@length
+/* DECL: 62 */@$_dct_n_2@length
+/* DECL: 66 */@$_recv_packet_odata@arrayOfDefLines
+/* DECL: 65 */@$_recv_packet_kk@length
+/* DECL: 68 */@$_recv_packet_sign@length
+Statement_Line_Number:
+51
+20
+9
+54
+96
+11
+18
+17
+77
+99
+90
+69
+15
+78
+65
+68
+56
+14
+64
+23
+62
+74
+39
+31
+35
+73
+46

@@ -1,0 +1,3 @@
+idct() <short *idct () at dct.c:47>:
+    malloc()
+    cos()

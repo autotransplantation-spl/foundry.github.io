@@ -1,0 +1,4 @@
+/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/CMakeFiles/prodScalpel.dir
+/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/CMakeFiles/docs.dir
+/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/CMakeFiles/rebuild_cache.dir

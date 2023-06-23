@@ -1,0 +1,188 @@
+diff --git a/ResearchProject/GenTransTXLSourceCode/createInterface.txl b/ResearchProject/GenTransTXLSourceCode/createInterface.txl
+index 49d9665..5c0f8ec 100644
+--- a/ResearchProject/GenTransTXLSourceCode/createInterface.txl
++++ b/ResearchProject/GenTransTXLSourceCode/createInterface.txl
+@@ -148,10 +148,18 @@ function identifyFunctionThatContainsTheGraft P [program]
+ 			interfaceDeclSpec [decl_specifiers] interfaceDeclarator [declarator] 
+ 		construct interfaceArgsList [list argument_declaration] 
+ 			_ [read ArgumentsFilePath]
+-		construct interfaceDeclExt [function_declarator_extension]
+-			'( interfaceArgsList ')	
++		construct interfaceDeclExtTest[function_declarator_extension]
++			'( interfaceArgsList ')		
++		construct interfaceDeclExt[function_declarator_extension]
++			'( ')	
++		construct interfaceFunctionHeaderTest [function_header]
++			interfaceDeclSpec interfaceDeclarator interfaceDeclExtTest
+ 		construct interfaceFunctionHeader [function_header]
+-			interfaceDeclSpec interfaceDeclarator interfaceDeclExt	
++			interfaceDeclSpec interfaceDeclarator interfaceDeclExt
++			
++			
++			
++			
+ 		construct interfaceMark [interfaceFunction]
+ 			__INTERFACE_FUNCTION	
+ 		construct interfaceDecl [declaration_or_statement]
+@@ -161,9 +169,21 @@ function identifyFunctionThatContainsTheGraft P [program]
+ 		construct interfaceCompoundStatement [compound_statement]
+ 			'{  interfaceCompStatementBody '}
+ 		construct interfaceCompleteFunctionDefinition [function_definition]
+-			interfaceFunctionHeader interfaceCompoundStatement
++			interfaceFunctionHeaderTest interfaceCompoundStatement
++		construct interfaceCompleteFunctionDefinitionTest [function_definition]
++			interfaceFunctionHeaderTest interfaceCompoundStatement
++			
++			
++			
++			
++			
+ 		construct callToTheInterface [repeat function_definition]
+-			_ [headerToFunctionCall interfaceFunctionHeader interfaceArgsList interfaceCompleteFunctionDefinition VariableInHostName] 
++			_ [headerToFunctionCall interfaceFunctionHeaderTest interfaceArgsList interfaceCompleteFunctionDefinition VariableInHostName] 
++       	
++       	
++       	
++       	
++       	
+        	deconstruct * [function_definition] callToTheInterface
+        		firstCallToTheInterface [function_definition]
+        	
+@@ -193,27 +213,31 @@ function identifyFunctionThatContainsTheGraft P [program]
+        	
+        	
+        	%construct header File
++       	construct functionHeaderStringlitTest [stringlit]
++      		_ [quote interfaceFunctionHeaderTest]
+        	construct functionHeaderStringlit [stringlit]
+       		_ [quote interfaceFunctionHeader]
++      	 construct functionHeaderDeclarationTest [stringlit]	
++       		functionHeaderStringlitTest [+ ";"] 
+        	construct functionHeaderDeclaration [stringlit]	
+        		functionHeaderStringlit [+ ";"] 
+ 
+-       			
++       	construct interfaceHeaderIDDeclTest [id]
++       		_ [unquote functionHeaderDeclarationTest]	
+        	construct interfaceHeaderIDDecl [id]
+        		_ [unquote functionHeaderDeclaration]	
+-       	
+-       	       			
+-       	construct fctHeaderDeclStm [opt function_definition_or_declaration]
+-       		_ [parse interfaceHeaderIDDecl] %[print]
+-       	%justIncludeLybrariesFromHost	
+-       	deconstruct  fctHeaderDeclStm	
+-       		fctHeaderAsRepeat [ function_definition_or_declaration]
+-       	
+-       	construct finalInterfaceHeaderFile [repeat function_definition_or_declaration]
+-       		_ [. justIncludeLybrariesFromHost] [. fctHeaderAsRepeat]		[print]
++	
++	
++	
++       	construct printfctHeaderDeclStm [id]
++       			interfaceHeaderIDDeclTest [fput InterfaceHeaderName]
+        		
+        	construct printHeaderFileInterface [repeat function_definition_or_declaration]
+-       		finalInterfaceHeaderFile [write InterfaceHeaderName]
++       		justIncludeLybrariesFromHost [write InterfaceHeaderName]
++       		
++
++       	
++       	
+        	
+        	construct finalFunctionsForInterface [repeat function_definition_or_declaration]
+        		_ [. headerFctDefOrDecl] [. interfaceCompleteFctDefOrDecl] [. callToTheInterfaceFctDeforDecl]		
+@@ -286,7 +310,7 @@ function headerToFunctionCall	FunctionHeader [function_header]
+ 	construct FunctionName [stringlit]
+ 		_ [quote FunctionNameBaseDecl]% [+ " ( "]	
+ 	construct testArgToDecl [repeat declaration]
+-		_ [argumentDeclToVariableDecl ListOfSymbols]
++		_ [argumentDeclToVariableDeclRemoveHostAnnotations ListOfSymbols]
+ 	construct baseDeclFromArgs [repeat base_declarator]
+ 		_ [^ testArgToDecl] 
+ 	construct ListOfBaseDecl [list base_declarator]
+@@ -347,7 +371,7 @@ end function
+ 
+ 
+ %functions for adding variables from function header into declaration List	
+-function argumentDeclToVariableDecl argDecl [list argument_declaration]
++function argumentDeclToVariableDeclRemoveHostAnnotations argDecl [list argument_declaration]
+ 	replace [repeat declaration]
+ 		varDecl [repeat declaration]
+ 	deconstruct argDecl
+@@ -373,12 +397,21 @@ function argumentDeclToVariableDecl argDecl [list argument_declaration]
+ 			varIdEl [decl_qualifier_or_type_specifier]
+ 		construct varStringlit [stringlit]
+ 			_ [quote varIdEl]
++		% Remove the host label, so the first 7 characters
++		%construct varStringNoHostLabel [stringlit]
++		%	varStringlit [: 8 999]
++		
+ 		construct varIdAsID [id]
+ 			_ [unquote varStringlit]
+ 		construct varDeclsss [declarator]
+ 			varIdAsID
++			
++		% Remove the host label, so the first 7 characters	
++		construct declaratorRemovedHostLabel [declarator]	
++			varDeclsss [removeHostLabelFromDeclaration]
++			
+ 		construct varInitDeclarator [init_declarator]
+-			varDeclsss
++			declaratorRemovedHostLabel
+ 		construct varListInitDecl [list init_declarator]
+ 			_ [, varInitDeclarator]
+ 		construct varDeclaration [declaration]
+@@ -387,7 +420,7 @@ function argumentDeclToVariableDecl argDecl [list argument_declaration]
+ 		varDeclaration [variableFromArgWithOpt first]		
+ 	by
+ 		varDecl [. FinalDeclar]
+-		[argumentDeclToVariableDecl rest]
++		[argumentDeclToVariableDeclRemoveHostAnnotations rest]
+ end function
+ 	
+ 	
+@@ -406,14 +439,41 @@ function variableFromArgWithOpt Arg [argument_declaration]
+ 		testT
+ 	deconstruct *[declarator] argDeclarator
+ 		declForArg [declarator]
++		
++	% Remove host labels
++	construct declForArgNoHostLabel [declarator]
++		declForArg [removeHostLabelFromDeclaration]
++	
+ 	construct initDeclForLst [init_declarator]
+-		declForArg
++		declForArgNoHostLabel
+ 	construct declar [declaration]
+-		newVarDeclSpecifiers declForArg  ';
++		newVarDeclSpecifiers declForArgNoHostLabel  ';
+ 	by
+ 		declar
+ end function
+ 
++rule removeHostLabelFromDeclaration
++	replace $ [reference_id]
++		current [reference_id]
++	deconstruct * [id] current
++		currentId [id]
++	construct currentStringlit [stringlit]
++		_ [quote currentId]
++		
++	where
++		currentStringlit [grep "$_host_"]	
++		
++	construct currentStringNoLabel [stringlit]
++		currentStringlit [: 8 999]
++	construct currentIdNoLabel [id]
++		_ [unquote currentStringNoLabel]
++	construct currentRefIdNoLabel [reference_id]
++		currentIdNoLabel
++		
++	by
++		currentRefIdNoLabel
++end rule
++
+ 
+ %retrieve return values:
+ function determineReturnValues	GraftFunctionDefinition [function_definition]

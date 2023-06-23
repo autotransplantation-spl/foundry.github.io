@@ -1,0 +1,23 @@
+main (int $_main_argc, char **$_main_argv) {
+    /* DECL: 1 */ FILE *$_main_ofile;
+LABEL_init_dct1 : if (0) {
+    }
+        /* DECL: 18 */ FILE *$_send_packet_ofile1 = $ABSTRACT_4;
+        /* DECL: 24 */ FILE *$_transmit_packet_ofile1 = $ABSTRACT_9;
+        /* DECL: 30 */ FILE *$_recv_packet_ofile1 = $ABSTRACT_14;
+        /* DECL: 33 */ short  *$_recv_packet_prev_samples_1;
+                    LABEL_write_silence1 : if (0) {
+                        }
+                    LABEL_write_silence2 : if (0) {
+                        }
+                            /* STM: 42 */ fwrite ($_recv_packet_prev_samples_1, 2, $_recv_packet_num_samples_1, $_recv_packet_ofile1);
+                            LABEL_write_silence3 : if (0) {
+                                }
+                        /* COMPOUND: 21 */ for ($_dct_n_1 = 0; $_dct_n_1 < N; $_dct_n_1++) {
+                            /* COMPOUND: 21 */}
+                LABEL_dct1 : if (0) {
+                    }
+                LABEL_dct2 : if (0) {
+                    }
+                        /* DECL: 70 */ int *$_idct_idata1 = $ABSTRACT_22;
+LABEL_transmit_packet1 :                        /* RETURN_MARKER */ return idct ($_idct_idata1);

@@ -1,0 +1,15 @@
+--coreFunction write_archive --donorSystem mytar --donorFileTarget Transplant-PRODUCT_B/Donor/MYTAR/append.c --hostFileTarget Transplant-PRODUCT_B/PRODUCT_BASE/pidgin-2.10.9/libpurple/ft.c --outputProduct T1
+
+%--coreFunction write_archive --donorSystem mytar --donorFileTarget Transplant-PRODUCT_B/Donor/MYTAR/append.c --hostFileTarget Transplant-PRODUCT_B/PRODUCT_BASE/VI/ex_cmds.c --outputProduct T1
+
+%--coreFunction enableRawMode --donorSystem c-editor --donorFileTarget Transplant-PRODUCT_B/Donor/c-editor/kilo.c --hostFileTarget Transplant-PRODUCT_B/PRODUCT_BASE-T1/c-editor/kilo.c
+
+%--coreFunction write_archive --donorSystem MYTAR --donorFileTarget Transplant-PRODUCT_B/Donor/MYTAR/append.c --hostFileTarget Transplant-PRODUCT_B/Host/c-editor/kilo.c
+
+%--coreFunction write_archive --donorSystem mytar --donorFileTarget Transplant-PRODUCT_B/Donor/MYTAR/append.c --hostFileTarget Transplant-PRODUCT_B/Host/VIM/main.c
+
+%--coreFunction enableRawMode --donorSystem c-editor --donorFileTarget Transplant-PRODUCT_B/Donor/c-editor/kilo.c --hostFileTarget Transplant-PRODUCT_B/Host/c-editor/kilo.c
+
+%--coreFunction editorOpen --donorSystem c-editor --donorFileTarget Transplant_c-editor/Donor/c-editor/kilo.c --hostFileTarget Transplant-PRODUCT_B/Host/c-editor/kilo.c
+
+%--coreFunction: f_timer_start Transplant-PRODUCT_B/Donor/macvim/src/evalfunc.c Transplant-PRODUCT_B/Host/macvim/src/evalfunc.c

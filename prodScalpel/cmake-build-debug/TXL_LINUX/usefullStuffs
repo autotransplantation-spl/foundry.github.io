@@ -1,0 +1,37 @@
+
+function listOfSymbolsToBaseDeclarators	ListOfSymbols [list argument_declaration]
+	replace [list base_declarator]
+		current [list base_declarator]
+	deconstruct ListOfSymbols 
+		first [argument_declaration] , rest [list argument_declaration]	
+	construct checkTypes [argument_declaration]
+		first [CheckAllTYPES]
+			construct smm [id]
+		_ [message ListOfSymbols]	
+		
+	deconstruct * [base_declarator] first
+		firstBaseDecl [base_declarator]
+
+	by
+		current [, firstBaseDecl]
+		[listOfSymbolsToBaseDeclarators rest]
+end function
+
+
+%VERY USEFULL!!!!
+rule CheckAllTYPES	
+	replace  $ [any]
+		express [any]
+
+	construct eString [stringlit]
+		_ [quote express]
+	construct typeT [id]
+		_ [typeof express]
+	construct stringType [stringlit]
+		_ [quote typeT] [+ "  "]
+	construct finalMessage [stringlit]
+		stringType [+ eString] [fput "PULA.out"]
+
+	by
+		express
+end rule

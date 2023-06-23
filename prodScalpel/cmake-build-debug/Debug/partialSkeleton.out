@@ -1,0 +1,153 @@
+int main (int $_main_argc, char **$_main_argv) {
+    /*@DECL*/ int $_main_argc;
+    /*@DECL*/ char **$_main_argv;
+    /*@DECL*/ temp_index $_main_index;
+    /*@STM*/ set_program_name ($_main_argv [0]);
+    /*@STM*/ argp_version_setup ("cflow", program_authors);
+    /*@STM*/ setlocale (LC_ALL, "");
+    /*@STM*/ bindtextdomain (PACKAGE, LOCALEDIR);
+    /*@STM*/ textdomain (PACKAGE);
+    /*@DECL*/ const char *$_register_output_name1 = $ABSTRACT_0;
+    /*@DECL*/ int (* $_register_output_handler) 1 (cflow_output_command $_register_output_cmd, FILE * $_register_output_outfile, int $_register_output_line, void * $_register_output_data, void * $_register_output_handler_data) = $ABSTRACT_1;
+    /*@DECL*/ cflow_output_command $_register_output_cmd1 = $ABSTRACT_2;
+    /*@DECL*/ int $ABSTRETVAL_ret_register_output1;
+    //Mappings for function: register_output ("gnu", gnu_output_handler, NULL);
+    //call_the_function: register_output register_output1 ()
+LABEL_register_output1 :
+    if (0) {
+    }
+    //REMOVE_THIS ();
+    /*@DECL*/ const char *$_register_output_name2 = $ABSTRACT_3;
+    /*@DECL*/ int (* $_register_output_handler) 2 (cflow_output_command $_register_output_cmd, FILE * $_register_output_outfile, int $_register_output_line, void * $_register_output_data, void * $_register_output_handler_data) = $ABSTRACT_4;
+    /*@DECL*/ cflow_output_command $_register_output_cmd2 = $ABSTRACT_5;
+    /*@DECL*/ int $ABSTRETVAL_ret_register_output2;
+    //Mappings for function: register_output ("posix", posix_output_handler, NULL);
+    //call_the_function: register_output register_output2 ()
+LABEL_register_output2 :
+    if (0) {
+    }
+    //REMOVE_THIS ();
+    /*@STM*/ symbol_map = SM_FUNCTIONS | SM_STATIC | SM_UNDEFINED;
+    //COMPOUND START: COMP_MARK1if (getenv ("POSIXLY_CORRECT")) {}
+    if (getenv ("POSIXLY_CORRECT")) {
+        /*@DECL*/ const char *$_select_output_driver_name1 = $ABSTRACT_6;
+        /*@DECL*/ int $ABSTRETVAL_ret_select_output_driver1;
+        //call_the_function: select_output_driver select_output_driver1
+        //Mappings for function: select_output_driver ("posix");
+    LABEL_select_output_driver1 :
+        if (0) {
+        }
+        //COMPOUND START: COMP_MARK7if (select_output_driver ("posix")) {}
+        if ($ABSTRETVAL_ret_select_output_driver1) {
+            /*@STM*/ error (1, 0, _ ("%s: No such output driver"), "posix");
+        }
+        //COMPOUND END: COMP_MARK7if (select_output_driver ("posix")) {}
+        /*@DECL*/ void $ABSTRETVAL_ret_output_init1;
+        //Mappings for function: output_init ();
+        //call_the_function: output_init output_init1 ()
+    LABEL_output_init1 :
+        if (0) {
+        }
+        //REMOVE_THIS ();
+    }
+    //COMPOUND END: COMP_MARK1if (getenv ("POSIXLY_CORRECT")) {}
+    /*@DECL*/ int *$_sourcerc_argc_ptr1 = $ABSTRACT_7;
+    /*@DECL*/ char ***$_sourcerc_argv_ptr1 = $ABSTRACT_8;
+    /*@DECL*/ void $ABSTRETVAL_ret_sourcerc1;
+    //Mappings for function: sourcerc (& $_main_argc, & $_main_argv);
+    //call_the_function: sourcerc sourcerc1 ()
+LABEL_sourcerc1 :
+    if (0) {
+    }
+    //REMOVE_THIS ();
+    //COMPOUND START: COMP_MARK2if (argp_parse (&argp, $_main_argc, $_main_argv, ARGP_IN_ORDER, &$_main_index, NULL)) {}
+    if (argp_parse (&argp, $_main_argc, $_main_argv, ARGP_IN_ORDER, &$_main_index, NULL)) {
+        /*@STM*/ exit (1);
+    }
+    //COMPOUND END: COMP_MARK2if (argp_parse (&argp, $_main_argc, $_main_argv, ARGP_IN_ORDER, &$_main_index, NULL)) {}
+    //COMPOUND START: COMP_MARK3if (print_option == 0) {}
+    if (print_option == 0) {
+        /*@STM*/ print_option = PRINT_TREE;
+    }
+    //COMPOUND END: COMP_MARK3if (print_option == 0) {}
+    /*@DECL*/ void $ABSTRETVAL_ret_init1;
+    //Mappings for function: init ();
+    //call_the_function: init init1 ()
+LABEL_init1 :
+    if (0) {
+    }
+    //REMOVE_THIS ();
+    //COMPOUND START: COMP_MARK4if (arglist) {}
+    if (arglist) {
+        /*@DECL*/ struct linked_list_entry *$_main_p;
+        //COMPOUND START: COMP_MARK8for ($_main_p = arglist->head; $_main_p; $_main_p = $_main_p->next) {}
+        for ($_main_p = arglist->head; $_main_p; $_main_p = $_main_p->next) {
+            /*@DECL*/ char *$_main_s;
+            /*@STM*/ $_main_s = (char *) $_main_p->data;
+            //COMPOUND START: COMP_MARK9if ($_main_s[0] == '-') {}
+            if ($_main_s[0] == '-') {
+                /*@DECL*/ const char *$_pp_option_arg1 = $ABSTRACT_9;
+                /*@DECL*/ void $ABSTRETVAL_ret_pp_option1;
+                //call_the_function: pp_option pp_option1
+                //Mappings for function: pp_option ($_main_s);
+            LABEL_pp_option1 :
+                if (0) {
+                }
+                /*@STM*/ $ABSTRETVAL_ret_pp_option1;
+            }
+            //COMPOUND END: COMP_MARK9if ($_main_s[0] == '-') {}
+            /*@DECL*/ char *$_source_name1 = $ABSTRACT_10;
+            /*@DECL*/ int $ABSTRETVAL_ret_source1;
+            //call_the_function: source source1
+            //Mappings for function: source ($_main_s);
+        LABEL_source1 :
+            if (0) {
+            }
+            //COMPOUND START: COMP_MARK10else if (source ($_main_s) == 0) {}
+            else if ($ABSTRETVAL_ret_source1 == 0) {
+                /*@DECL*/ int $ABSTRETVAL_ret_yyparse1;
+                //call_the_function: yyparse yyparse1
+                //Mappings for function: yyparse ();
+            LABEL_yyparse1 :
+                if (0) {
+                }
+                /*@STM*/ $ABSTRETVAL_ret_yyparse1;
+            }
+            //COMPOUND END: COMP_MARK10else if (source ($_main_s) == 0) {}
+        }
+        //COMPOUND END: COMP_MARK8for ($_main_p = arglist->head; $_main_p; $_main_p = $_main_p->next) {}
+    }
+    //COMPOUND END: COMP_MARK4if (arglist) {}
+    /*@STM*/ $_main_argc -= $_main_index;
+    /*@STM*/ $_main_argv += $_main_index;
+    //COMPOUND START: COMP_MARK5while ($_main_argc--) {}
+    while ($_main_argc--) {
+        /*@DECL*/ char *$_source_name2 = $ABSTRACT_11;
+        /*@DECL*/ int $ABSTRETVAL_ret_source2;
+        //call_the_function: source source2
+        //Mappings for function: source (*$_main_argv++);
+    LABEL_source2 :
+        if (0) {
+        }
+        //COMPOUND START: COMP_MARK11if (source (*$_main_argv++) == 0) {}
+        if ($ABSTRETVAL_ret_source2 == 0) {
+            /*@DECL*/ int $ABSTRETVAL_ret_yyparse2;
+            //call_the_function: yyparse yyparse2
+            //Mappings for function: yyparse ();
+        LABEL_yyparse2 :
+            if (0) {
+            }
+            /*@STM*/ $ABSTRETVAL_ret_yyparse2;
+        }
+        //COMPOUND END: COMP_MARK11if (source (*$_main_argv++) == 0) {}
+    }
+    //COMPOUND END: COMP_MARK5while ($_main_argc--) {}
+    //COMPOUND START: COMP_MARK6if (input_file_count == 0) {}
+    if (input_file_count == 0) {
+        /*@STM*/ error (1, 0, _ ("no input files"));
+    }
+    //COMPOUND END: COMP_MARK6if (input_file_count == 0) {}
+    /* RETURN_MARKER */ return output ();
+    /*@STM*/ $ABSTRETVAL_ret_main = 0;
+    goto LABEL_main;
+}

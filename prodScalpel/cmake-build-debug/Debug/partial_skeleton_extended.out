@@ -1,0 +1,1240 @@
+int main (int $_main_argc, char **$_main_argv) {
+
+    /*@DECL*/ int $_main_argc;
+
+    /*@DECL*/ char **$_main_argv;
+
+    /*@DECL*/ temp_index $_main_index;
+
+    /*@STM*/ set_program_name ($_main_argv [0]);
+
+    /*@STM*/ argp_version_setup ("cflow", program_authors);
+
+    /*@STM*/ setlocale (LC_ALL, "");
+
+    /*@STM*/ bindtextdomain (PACKAGE, LOCALEDIR);
+
+    /*@STM*/ textdomain (PACKAGE);
+
+    /*@DECL*/ const char *$_register_output_name1 = $ABSTRACT_0;
+
+    /*@DECL*/ int (* $_register_output_handler) 1 (cflow_output_command $_register_output_cmd, FILE * $_register_output_outfile, int $_register_output_line, void * $_register_output_data, void * $_register_output_handler_data) = $ABSTRACT_1;
+
+    /*@DECL*/ cflow_output_command $_register_output_cmd1 = $ABSTRACT_2;
+
+    /*@DECL*/ int $ABSTRETVAL_ret_register_output1;
+
+    //Mappings for function: register_output ("gnu", gnu_output_handler, NULL);
+
+    //COMPOUND START: COMP_MARK12if (driver_max == MAX_OUTPUT_DRIVERS - 1) {}
+
+    if (driver_max == MAX_OUTPUT_DRIVERS - 1) {
+
+        /*@STM*/ abort ();
+
+    }
+
+    //COMPOUND END: COMP_MARK12if (driver_max == MAX_OUTPUT_DRIVERS - 1) {}
+
+    /* RETURN_MARKER */ return output_driver[driver_max].$_register_output_name1 = strdup ($_register_output_name1);
+
+    /* RETURN_MARKER */ return output_driver[driver_max].$_register_output_handler = $_register_output_handler;
+
+    /*@STM*/ output_driver[driver_max].$_register_output_handler_data = $_register_output_handler_data;
+
+    /*@STM*/ $ABSTRETVAL_ret_register_output1 = driver_max++;
+
+    goto LABEL_register_output1;
+
+LABEL_register_output1 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    /*@DECL*/ const char *$_register_output_name2 = $ABSTRACT_3;
+
+    /*@DECL*/ int (* $_register_output_handler) 2 (cflow_output_command $_register_output_cmd, FILE * $_register_output_outfile, int $_register_output_line, void * $_register_output_data, void * $_register_output_handler_data) = $ABSTRACT_4;
+
+    /*@DECL*/ cflow_output_command $_register_output_cmd2 = $ABSTRACT_5;
+
+    /*@DECL*/ int $ABSTRETVAL_ret_register_output2;
+
+    //Mappings for function: register_output ("posix", posix_output_handler, NULL);
+
+    //COMPOUND START: COMP_MARK12if (driver_max == MAX_OUTPUT_DRIVERS - 1) {}
+
+    if (driver_max == MAX_OUTPUT_DRIVERS - 1) {
+
+        /*@STM*/ abort ();
+
+    }
+
+    //COMPOUND END: COMP_MARK12if (driver_max == MAX_OUTPUT_DRIVERS - 1) {}
+
+    /* RETURN_MARKER */ return output_driver[driver_max].$_register_output_name2 = strdup ($_register_output_name2);
+
+    /* RETURN_MARKER */ return output_driver[driver_max].$_register_output_handler = $_register_output_handler;
+
+    /*@STM*/ output_driver[driver_max].$_register_output_handler_data = $_register_output_handler_data;
+
+    /*@STM*/ $ABSTRETVAL_ret_register_output2 = driver_max++;
+
+    goto LABEL_register_output2;
+
+LABEL_register_output2 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    /*@STM*/ symbol_map = SM_FUNCTIONS | SM_STATIC | SM_UNDEFINED;
+
+    //COMPOUND START: COMP_MARK1if (getenv ("POSIXLY_CORRECT")) {}
+
+    if (getenv ("POSIXLY_CORRECT")) {
+
+        /*@DECL*/ const char *$_select_output_driver_name1 = $ABSTRACT_6;
+
+        /*@DECL*/ int $ABSTRETVAL_ret_select_output_driver1;
+
+    /*@DECL*/ int $_select_output_driver_i_1;
+
+    //COMPOUND START: COMP_MARK33for ($_select_output_driver_i = 0; $_select_output_driver_i < driver_max; $_select_output_driver_i++) {}
+
+    for ($_select_output_driver_i_1 = 0; $_select_output_driver_i_1 < driver_max; $_select_output_driver_i_1++) {
+
+        //COMPOUND START: COMP_MARK34if (strcmp (output_driver[$_select_output_driver_i].$_select_output_driver_name, $_select_output_driver_name) == 0) {}
+
+        if (strcmp (output_driver[$_select_output_driver_i_1].$_select_output_driver_name1, $_select_output_driver_name1) == 0) {
+
+            /*@STM*/ driver_index = $_select_output_driver_i_1;
+
+            /*@STM*/ $ABSTRETVAL_ret_select_output_driver1 = 0;
+
+            goto LABEL_select_output_driver1;
+
+        }
+
+        //COMPOUND END: COMP_MARK34if (strcmp (output_driver[$_select_output_driver_i].$_select_output_driver_name, $_select_output_driver_name) == 0) {}
+
+    }
+
+    //COMPOUND END: COMP_MARK33for ($_select_output_driver_i = 0; $_select_output_driver_i < driver_max; $_select_output_driver_i++) {}
+
+    /*@STM*/ $ABSTRETVAL_ret_select_output_driver1 = -1;
+
+    goto LABEL_select_output_driver1;
+
+        //Mappings for function: select_output_driver ("posix");
+
+    LABEL_select_output_driver1 :
+
+        if (0) {
+
+        }
+
+        //COMPOUND START: COMP_MARK7if (select_output_driver ("posix")) {}
+
+        if ($ABSTRETVAL_ret_select_output_driver1) {
+
+            /*@STM*/ error (1, 0, _ ("%s: No such output driver"), "posix");
+
+        }
+
+        //COMPOUND END: COMP_MARK7if (select_output_driver ("posix")) {}
+
+        /*@DECL*/ void $ABSTRETVAL_ret_output_init1;
+
+        //Mappings for function: output_init ();
+
+    /*@STM*/ output_driver[driver_index].handler (cflow_output_init, NULL, 0, NULL, output_driver[driver_index].handler_data);
+
+    LABEL_output_init1 :
+
+        if (0) {
+
+        }
+
+        //REMOVE_THIS ();
+
+    }
+
+    //COMPOUND END: COMP_MARK1if (getenv ("POSIXLY_CORRECT")) {}
+
+    /*@DECL*/ int *$_sourcerc_argc_ptr1 = $ABSTRACT_7;
+
+    /*@DECL*/ char ***$_sourcerc_argv_ptr1 = $ABSTRACT_8;
+
+    /*@DECL*/ void $ABSTRETVAL_ret_sourcerc1;
+
+    //Mappings for function: sourcerc (& $_main_argc, & $_main_argv);
+
+    /*@DECL*/ char *$_sourcerc_env_1;
+
+    /*@DECL*/ int $_sourcerc_xargc_1;
+
+    /*@STM*/ $_sourcerc_xargc_1 = 1;
+
+    /*@DECL*/ char **$_sourcerc_xargv_1;
+
+    /*@STM*/ $_sourcerc_xargv_1 = xmalloc (2 * sizeof *$_sourcerc_xargv_1);
+
+    /*@STM*/ $_sourcerc_xargv_1[0] = **$_sourcerc_argv_ptr1;
+
+    /*@STM*/ $_sourcerc_xargv_1[1] = NULL;
+
+    /*@STM*/ $_sourcerc_env_1 = getenv ("CFLOW_OPTIONS");
+
+    //COMPOUND START: COMP_MARK35if ($_sourcerc_env) {}
+
+    if ($_sourcerc_env_1) {
+
+        /*@DECL*/ int $_sourcerc_argc_1;
+
+        /*@DECL*/ char **$_sourcerc_argv_1;
+
+        /*@DECL*/ const char *$_argcv_get_command1_1 = $ABSTRACT_12;
+
+        /*@DECL*/ const char *$_argcv_get_delim1_1 = $ABSTRACT_13;
+
+        /*@DECL*/ const char *$_argcv_get_cmnt1_1 = $ABSTRACT_14;
+
+        /*@DECL*/ int *$_argcv_get_argc1_1 = $ABSTRACT_15;
+
+        /*@DECL*/ char ***$_argcv_get_argv1_1 = $ABSTRACT_16;
+
+        /*@DECL*/ int $ABSTRETVAL_ret_argcv_get1_1;
+
+        //Mappings for function: argcv_get ($_sourcerc_env, "", "#", & $_sourcerc_argc, & $_sourcerc_argv);
+
+        //call_the_function: argcv_get argcv_get1 ()
+
+    LABEL_argcv_get1 :
+
+        if (0) {
+
+        }
+
+        //REMOVE_THIS ();
+
+        /*@DECL*/ int *$_expand_argcv1_argc_ptr1_1 = $ABSTRACT_17;
+
+        /*@DECL*/ char ***$_expand_argcv1_argv_ptr1_1 = $ABSTRACT_18;
+
+        /*@DECL*/ int $_expand_argcv1_argc1_1 = $ABSTRACT_19;
+
+        /*@DECL*/ char **$_expand_argcv1_argv1_1 = $ABSTRACT_20;
+
+        /*@DECL*/ void $ABSTRETVAL_ret_expand_argcv2_1;
+
+        //Mappings for function: expand_argcv1 (& $_sourcerc_xargc, & $_sourcerc_xargv, $_sourcerc_argc, $_sourcerc_argv);
+
+        //call_the_function: expand_argcv1 expand_argcv2 ()
+
+    LABEL_expand_argcv2 :
+
+        if (0) {
+
+        }
+
+        //REMOVE_THIS ();
+
+        /*@STM*/ free ($_sourcerc_argv_1);
+
+    }
+
+    //COMPOUND END: COMP_MARK35if ($_sourcerc_env) {}
+
+    /*@STM*/ $_sourcerc_env_1 = getenv ("CFLOWRC");
+
+    //COMPOUND START: COMP_MARK36if ($_sourcerc_env) {}
+
+    if ($_sourcerc_env_1) {
+
+        /*@DECL*/ int *$_parse_rc_argc_ptr1 = $ABSTRACT_21;
+
+        /*@DECL*/ char ***$_parse_rc_argv_ptr1 = $ABSTRACT_22;
+
+        /*@DECL*/ char *$_parse_rc_name1 = $ABSTRACT_23;
+
+        /*@DECL*/ void $ABSTRETVAL_ret_parse_rc1;
+
+        //call_the_function: parse_rc parse_rc1
+
+        //Mappings for function: parse_rc (&$_sourcerc_xargc, &$_sourcerc_xargv, $_sourcerc_env);
+
+    LABEL_parse_rc1 :
+
+        if (0) {
+
+        }
+
+        /*@STM*/ $ABSTRETVAL_ret_parse_rc1;
+
+    }
+
+    //COMPOUND END: COMP_MARK36if ($_sourcerc_env) {}
+
+    //COMPOUND START: COMP_MARK37else {}
+
+    else {
+
+        /*@DECL*/ char *$_sourcerc_home;
+
+        /*@STM*/ $_sourcerc_home = getenv ("HOME");
+
+        //COMPOUND START: COMP_MARK39if ($_sourcerc_home) {}
+
+        if ($_sourcerc_home) {
+
+            /*@DECL*/ int $_sourcerc_len;
+
+            /*@STM*/ $_sourcerc_len = strlen ($_sourcerc_home);
+
+            /*@DECL*/ char *$_sourcerc_buf;
+
+            /*@STM*/ $_sourcerc_buf = malloc ($_sourcerc_len + sizeof (LOCAL_RC) + ($_sourcerc_home[$_sourcerc_len - 1] != '/'));
+
+            //COMPOUND START: COMP_MARK40if (!$_sourcerc_buf) {}
+
+            if (!$_sourcerc_buf) {
+
+                goto LABEL_sourcerc1;
+
+            }
+
+            //COMPOUND END: COMP_MARK40if (!$_sourcerc_buf) {}
+
+            /*@STM*/ strcpy ($_sourcerc_buf, $_sourcerc_home);
+
+            //COMPOUND START: COMP_MARK41if ($_sourcerc_home[$_sourcerc_len - 1] != '/') {}
+
+            if ($_sourcerc_home[$_sourcerc_len - 1] != '/') {
+
+                /*@STM*/ $_sourcerc_buf[$_sourcerc_len++] = '/';
+
+            }
+
+            //COMPOUND END: COMP_MARK41if ($_sourcerc_home[$_sourcerc_len - 1] != '/') {}
+
+            /*@STM*/ strcpy ($_sourcerc_buf + $_sourcerc_len, LOCAL_RC);
+
+            /*@DECL*/ int *$_parse_rc_argc_ptr2 = $ABSTRACT_24;
+
+            /*@DECL*/ char ***$_parse_rc_argv_ptr2 = $ABSTRACT_25;
+
+            /*@DECL*/ char *$_parse_rc_name2 = $ABSTRACT_26;
+
+            /*@DECL*/ void $ABSTRETVAL_ret_parse_rc2;
+
+            //Mappings for function: parse_rc (& $_sourcerc_xargc, & $_sourcerc_xargv, $_sourcerc_buf);
+
+            //call_the_function: parse_rc parse_rc2 ()
+
+        LABEL_parse_rc2 :
+
+            if (0) {
+
+            }
+
+            //REMOVE_THIS ();
+
+            /*@STM*/ free ($_sourcerc_buf);
+
+        }
+
+        //COMPOUND END: COMP_MARK39if ($_sourcerc_home) {}
+
+    }
+
+    //COMPOUND END: COMP_MARK37else {}
+
+    //COMPOUND START: COMP_MARK38if ($_sourcerc_xargc > 1) {}
+
+    if ($_sourcerc_xargc_1 > 1) {
+
+        /*@DECL*/ int *$_expand_argcv1_argc_ptr2 = $ABSTRACT_27;
+
+        /*@DECL*/ char ***$_expand_argcv1_argv_ptr2 = $ABSTRACT_28;
+
+        /*@DECL*/ int $_expand_argcv1_argc2 = $ABSTRACT_29;
+
+        /*@DECL*/ char **$_expand_argcv1_argv2 = $ABSTRACT_30;
+
+        /*@DECL*/ void $ABSTRETVAL_ret_expand_argcv3;
+
+        //Mappings for function: expand_argcv1 (& $_sourcerc_xargc, & $_sourcerc_xargv, * $_sourcerc_argc_ptr - 1, * $_sourcerc_argv_ptr + 1);
+
+        //call_the_function: expand_argcv1 expand_argcv3 ()
+
+    LABEL_expand_argcv3 :
+
+        if (0) {
+
+        }
+
+        //REMOVE_THIS ();
+
+        /*@STM*/ *$_sourcerc_argc_ptr1 = $_sourcerc_xargc_1;
+
+        /*@STM*/ *$_sourcerc_argv_ptr1 = $_sourcerc_xargv_1;
+
+    }
+
+    //COMPOUND END: COMP_MARK38if ($_sourcerc_xargc > 1) {}
+
+LABEL_sourcerc1 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    //COMPOUND START: COMP_MARK2if (argp_parse (&argp, $_main_argc, $_main_argv, ARGP_IN_ORDER, &$_main_index, NULL)) {}
+
+    if (argp_parse (&argp, $_main_argc, $_main_argv, ARGP_IN_ORDER, &$_main_index, NULL)) {
+
+        /*@STM*/ exit (1);
+
+    }
+
+    //COMPOUND END: COMP_MARK2if (argp_parse (&argp, $_main_argc, $_main_argv, ARGP_IN_ORDER, &$_main_index, NULL)) {}
+
+    //COMPOUND START: COMP_MARK3if (print_option == 0) {}
+
+    if (print_option == 0) {
+
+        /*@STM*/ print_option = PRINT_TREE;
+
+    }
+
+    //COMPOUND END: COMP_MARK3if (print_option == 0) {}
+
+    /*@DECL*/ void $ABSTRETVAL_ret_init1;
+
+    //Mappings for function: init ();
+
+    //COMPOUND START: COMP_MARK93if (level_indent[0] == NULL) {}
+
+    if (level_indent[0] == NULL) {
+
+        /*@STM*/ level_indent[0] = "    ";
+
+    }
+
+    //COMPOUND END: COMP_MARK93if (level_indent[0] == NULL) {}
+
+    //COMPOUND START: COMP_MARK94if (level_indent[1] == NULL) {}
+
+    if (level_indent[1] == NULL) {
+
+        /*@STM*/ level_indent[1] = level_indent[0];
+
+    }
+
+    //COMPOUND END: COMP_MARK94if (level_indent[1] == NULL) {}
+
+    //COMPOUND START: COMP_MARK95if (level_end[0] == NULL) {}
+
+    if (level_end[0] == NULL) {
+
+        /*@STM*/ level_end[0] = "";
+
+    }
+
+    //COMPOUND END: COMP_MARK95if (level_end[0] == NULL) {}
+
+    //COMPOUND START: COMP_MARK96if (level_end[1] == NULL) {}
+
+    if (level_end[1] == NULL) {
+
+        /*@STM*/ level_end[1] = "";
+
+    }
+
+    //COMPOUND END: COMP_MARK96if (level_end[1] == NULL) {}
+
+    /*@DECL*/ int $_init_lex_debug_level1_1 = $ABSTRACT_31;
+
+    /*@DECL*/ void $ABSTRETVAL_ret_init_lex1_1;
+
+    //Mappings for function: init_lex (debug > 1);
+
+    //call_the_function: init_lex init_lex1 ()
+
+LABEL_init_lex1 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    /*@DECL*/ void $ABSTRETVAL_ret_init_parse1_1;
+
+    //Mappings for function: init_parse ();
+
+    //call_the_function: init_parse init_parse1 ()
+
+LABEL_init_parse1 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+LABEL_init1 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    //COMPOUND START: COMP_MARK4if (arglist) {}
+
+    if (arglist) {
+
+        /*@DECL*/ struct linked_list_entry *$_main_p;
+
+        //COMPOUND START: COMP_MARK8for ($_main_p = arglist->head; $_main_p; $_main_p = $_main_p->next) {}
+
+        for ($_main_p = arglist->head; $_main_p; $_main_p = $_main_p->next) {
+
+            /*@DECL*/ char *$_main_s;
+
+            /*@STM*/ $_main_s = (char *) $_main_p->data;
+
+            //COMPOUND START: COMP_MARK9if ($_main_s[0] == '-') {}
+
+            if ($_main_s[0] == '-') {
+
+                /*@DECL*/ const char *$_pp_option_arg1 = $ABSTRACT_9;
+
+                /*@DECL*/ void $ABSTRETVAL_ret_pp_option1;
+
+    //COMPOUND START: COMP_MARK119if (!opt_stack) {}
+
+    if (!opt_stack) {
+
+        //COMPOUND START: COMP_MARK120if (!pp_bin) {}
+
+        if (!pp_bin) {
+
+            /*@STM*/ pp_bin = "/usr/bin/cpp";
+
+        }
+
+        //COMPOUND END: COMP_MARK120if (!pp_bin) {}
+
+        /*@STM*/ opt_stack = xmalloc (sizeof *opt_stack);
+
+        /*@STM*/ _obstack_begin ((opt_stack), 0, 0, (void * (*) (long)) xmalloc, (void (*) (void *)) free);
+
+    }
+
+    //COMPOUND END: COMP_MARK119if (!opt_stack) {}
+
+    /*@STM*/ __extension__ ({struct obstack * __o = (opt_stack); if (__o -> next_free + 1 > __o -> chunk_limit) _obstack_newchunk (__o, 1); (* ((__o) -> next_free) ++ = (' ')); (void) 0;});
+
+    /*@STM*/ __extension__ ({struct obstack * __o = (opt_stack); int __len = (strlen ($_pp_option_arg1)); if (__o -> next_free + __len > __o -> chunk_limit) _obstack_newchunk (__o, __len); memcpy (__o -> next_free, $_pp_option_arg1, __len); __o -> next_free += __len; (void) 0;});
+
+                //Mappings for function: pp_option ($_main_s);
+
+            LABEL_pp_option1 :
+
+                if (0) {
+
+                }
+
+                /*@STM*/ $ABSTRETVAL_ret_pp_option1;
+
+            }
+
+            //COMPOUND END: COMP_MARK9if ($_main_s[0] == '-') {}
+
+            /*@DECL*/ char *$_source_name1 = $ABSTRACT_10;
+
+            /*@DECL*/ int $ABSTRETVAL_ret_source1;
+
+    /*@DECL*/ FILE *$_source_fp_1;
+
+    /*@STM*/ $_source_fp_1 = fopen ($_source_name1, "r");
+
+    //COMPOUND START: COMP_MARK121if (!$_source_fp) {}
+
+    if (!$_source_fp_1) {
+
+        /*@STM*/ error (0, (* __errno_location ()), ((const char *) ("cannot open `%s'")), $_source_name1);
+
+        /*@STM*/ $ABSTRETVAL_ret_source1 = 1;
+
+        goto LABEL_source1;
+
+    }
+
+    //COMPOUND END: COMP_MARK121if (!$_source_fp) {}
+
+    //COMPOUND START: COMP_MARK122if (preprocess_option) {}
+
+    if (preprocess_option) {
+
+        /*@STM*/ fclose ($_source_fp_1);
+
+        /*@DECL*/ const char *$_pp_open_name1 = $ABSTRACT_32;
+
+        /*@DECL*/ FILE *$ABSTRETVAL_ret_pp_open1;
+
+        //call_the_function: pp_open pp_open1
+
+        //Mappings for function: pp_open ($_source_name);
+
+    LABEL_pp_open1 :
+
+        if (0) {
+
+        }
+
+        /*@STM*/ $_source_fp_1 = $ABSTRETVAL_ret_pp_open1;
+
+        //COMPOUND START: COMP_MARK124if (!$_source_fp) {}
+
+        if (!$_source_fp_1) {
+
+            /*@STM*/ $ABSTRETVAL_ret_source1 = 1;
+
+            goto LABEL_source1;
+
+        }
+
+        //COMPOUND END: COMP_MARK124if (!$_source_fp) {}
+
+    }
+
+    //COMPOUND END: COMP_MARK122if (preprocess_option) {}
+
+    /*@STM*/ __extension__ ({struct obstack * __o = (& string_stk); int __len = (strlen ($_source_name1) + 1); if (__o -> next_free + __len > __o -> chunk_limit) _obstack_newchunk (__o, __len); memcpy (__o -> next_free, $_source_name1, __len); __o -> next_free += __len; (void) 0;});
+
+    //COMPOUND START: COMP_MARK123unnamend_compound_statement number: 122
+
+    filename = __extension__ ({
+
+        /*@DECL*/ struct obstack *$_source___o1;
+
+        /*@STM*/ $_source___o1 = (&string_stk);
+
+        /*@DECL*/ void *$_source___value;
+
+        /*@STM*/ $_source___value = (void *) $_source___o1->object_base;
+
+        //COMPOUND START: COMP_MARK125if ($_source___o1->next_free == $_source___value) {}
+
+        if ($_source___o1->next_free == $_source___value) {
+
+            /*@STM*/ $_source___o1->maybe_empty_object = 1;
+
+        }
+
+        //COMPOUND END: COMP_MARK125if ($_source___o1->next_free == $_source___value) {}
+
+        /*@STM*/ $_source___o1->next_free = ((sizeof (long  int) < sizeof (void *) ? ($_source___o1->object_base) : (char *) 0) + ((($_source___o1->next_free) - (sizeof (long  int) < sizeof (void *) ? ($_source___o1->object_base) : (char *) 0) + ($_source___o1->alignment_mask)) & ~($_source___o1->alignment_mask)));
+
+        //COMPOUND START: COMP_MARK126if ($_source___o1->next_free - (char *) $_source___o1->chunk > $_source___o1->chunk_limit - (char *) $_source___o1->chunk) {}
+
+        if ($_source___o1->next_free - (char *) $_source___o1->chunk > $_source___o1->chunk_limit - (char *) $_source___o1->chunk) {
+
+            /*@STM*/ $_source___o1->next_free = $_source___o1->chunk_limit;
+
+        }
+
+        //COMPOUND END: COMP_MARK126if ($_source___o1->next_free - (char *) $_source___o1->chunk > $_source___o1->chunk_limit - (char *) $_source___o1->chunk) {}
+
+        /*@STM*/ $_source___o1->object_base = $_source___o1->next_free;
+
+        /*@DECL*/ $_source___value;
+
+    }
+
+    );
+
+    //COMPOUND END: COMP_MARK123unnamend_compound_statement number: 122
+
+    /*@STM*/ canonical_filename = filename;
+
+    /*@STM*/ line_num = 1;
+
+    /*@STM*/ input_file_count++;
+
+    /*@STM*/ hit_eof = 0;
+
+    /*@DECL*/ FILE *$_yyrestart_input_file1 = $ABSTRACT_33;
+
+    /*@DECL*/ void $ABSTRETVAL_ret_yyrestart1;
+
+    //Mappings for function: yyrestart ($_source_fp);
+
+    //call_the_function: yyrestart yyrestart1 ()
+
+LABEL_yyrestart1 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    /*@STM*/ $ABSTRETVAL_ret_source1 = 0;
+
+    goto LABEL_source1;
+
+            //Mappings for function: source ($_main_s);
+
+        LABEL_source1 :
+
+            if (0) {
+
+            }
+
+            //COMPOUND START: COMP_MARK10else if (source ($_main_s) == 0) {}
+
+            else if ($ABSTRETVAL_ret_source1 == 0) {
+
+                /*@DECL*/ int $ABSTRETVAL_ret_yyparse1;
+
+    /*@DECL*/ Ident $_yyparse_identifier_1;
+
+    /*@STM*/ level = 0;
+
+    /*@STM*/ caller = NULL;
+
+    /*@DECL*/ void $ABSTRETVAL_ret_clearstack2_1;
+
+    //Mappings for function: clearstack ();
+
+    //call_the_function: clearstack clearstack2 ()
+
+LABEL_clearstack2 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    /*@DECL*/ int $ABSTRETVAL_ret_nexttoken1_1;
+
+    //call_the_function: nexttoken nexttoken1
+
+    //Mappings for function: nexttoken ();
+
+LABEL_nexttoken1 :
+
+    if (0) {
+
+    }
+
+    //COMPOUND START: COMP_MARK147while (nexttoken ()) {}
+
+    while ($ABSTRETVAL_ret_nexttoken1_1) {
+
+        /*@STM*/ $_yyparse_identifier_1.storage = ExternStorage;
+
+        //COMPOUND START: COMP_MARK148switch (tok.type) {}
+
+        switch (tok.type) {
+
+            /*@STM*/ $ABSTRETVAL_ret_yyparse1 = 0;
+
+            goto LABEL_yyparse1;
+
+        case QUALIFIER :
+
+            continue;
+
+            /*@DECL*/ void $ABSTRETVAL_ret_parse_typedef1_1;
+
+            //call_the_function: parse_typedef parse_typedef1
+
+            //Mappings for function: parse_typedef ();
+
+        LABEL_parse_typedef1 :
+
+            if (0) {
+
+            }
+
+            /*@STM*/   case TYPEDEF :
+
+            $ABSTRETVAL_ret_parse_typedef1_1;
+
+            break;
+
+            /*@STM*/   case EXTERN :
+
+            $_yyparse_identifier_1.storage = ExplicitExternStorage;
+
+            /*@DECL*/ Ident *$_parse_declaration_ident1_1 = $ABSTRACT_34;
+
+            /*@DECL*/ int $_parse_declaration_parm1_1 = $ABSTRACT_35;
+
+            /*@DECL*/ void $ABSTRETVAL_ret_parse_declaration1_1;
+
+            //Mappings for function: parse_declaration (& $_yyparse_identifier, 0);
+
+            //call_the_function: parse_declaration parse_declaration1 ()
+
+        LABEL_parse_declaration1 :
+
+            if (0) {
+
+            }
+
+            //REMOVE_THIS ();
+
+            break;
+
+            /*@STM*/   case STATIC :
+
+            $_yyparse_identifier_1.storage = StaticStorage;
+
+            /*@DECL*/ int $ABSTRETVAL_ret_nexttoken2_1;
+
+            //Mappings for function: nexttoken ();
+
+            //call_the_function: nexttoken nexttoken2 ()
+
+        LABEL_nexttoken2 :
+
+            if (0) {
+
+            }
+
+            //REMOVE_THIS ();
+
+            /*@DECL*/ Ident *$_parse_declaration_ident2_1 = $ABSTRACT_36;
+
+            /*@DECL*/ int $_parse_declaration_parm2_1 = $ABSTRACT_37;
+
+            /*@DECL*/ void $ABSTRETVAL_ret_parse_declaration2_1;
+
+            //call_the_function: parse_declaration parse_declaration2
+
+            //Mappings for function: parse_declaration (&$_yyparse_identifier, 0);
+
+        LABEL_parse_declaration2 :
+
+            if (0) {
+
+            }
+
+            /*@STM*/   default :
+
+            $ABSTRETVAL_ret_parse_declaration2_1;
+
+            break;
+
+        }
+
+        //COMPOUND END: COMP_MARK148switch (tok.type) {}
+
+        /*@DECL*/ void $ABSTRETVAL_ret_cleanup_stack1_1;
+
+        //Mappings for function: cleanup_stack ();
+
+        //call_the_function: cleanup_stack cleanup_stack1 ()
+
+    LABEL_cleanup_stack1 :
+
+        if (0) {
+
+        }
+
+        //REMOVE_THIS ();
+
+    }
+
+    //COMPOUND END: COMP_MARK147while (nexttoken ()) {}
+
+    /*@STM*/ $ABSTRETVAL_ret_yyparse1 = 0;
+
+    goto LABEL_yyparse1;
+
+                //Mappings for function: yyparse ();
+
+            LABEL_yyparse1 :
+
+                if (0) {
+
+                }
+
+                /*@STM*/ $ABSTRETVAL_ret_yyparse1;
+
+            }
+
+            //COMPOUND END: COMP_MARK10else if (source ($_main_s) == 0) {}
+
+        }
+
+        //COMPOUND END: COMP_MARK8for ($_main_p = arglist->head; $_main_p; $_main_p = $_main_p->next) {}
+
+    }
+
+    //COMPOUND END: COMP_MARK4if (arglist) {}
+
+    /*@STM*/ $_main_argc -= $_main_index;
+
+    /*@STM*/ $_main_argv += $_main_index;
+
+    //COMPOUND START: COMP_MARK5while ($_main_argc--) {}
+
+    while ($_main_argc--) {
+
+        /*@DECL*/ char *$_source_name2 = $ABSTRACT_11;
+
+        /*@DECL*/ int $ABSTRETVAL_ret_source2;
+
+    /*@DECL*/ FILE *$_source_fp_2;
+
+    /*@STM*/ $_source_fp_2 = fopen ($_source_name2, "r");
+
+    //COMPOUND START: COMP_MARK121if (!$_source_fp) {}
+
+    if (!$_source_fp_2) {
+
+        /*@STM*/ error (0, (* __errno_location ()), ((const char *) ("cannot open `%s'")), $_source_name2);
+
+        /*@STM*/ $ABSTRETVAL_ret_source2 = 1;
+
+        goto LABEL_source2;
+
+    }
+
+    //COMPOUND END: COMP_MARK121if (!$_source_fp) {}
+
+    //COMPOUND START: COMP_MARK122if (preprocess_option) {}
+
+    if (preprocess_option) {
+
+        /*@STM*/ fclose ($_source_fp_2);
+
+        /*@DECL*/ const char *$_pp_open_name1 = $ABSTRACT_38;
+
+        /*@DECL*/ FILE *$ABSTRETVAL_ret_pp_open1;
+
+        //call_the_function: pp_open pp_open1
+
+        //Mappings for function: pp_open ($_source_name);
+
+    LABEL_pp_open1 :
+
+        if (0) {
+
+        }
+
+        /*@STM*/ $_source_fp_2 = $ABSTRETVAL_ret_pp_open1;
+
+        //COMPOUND START: COMP_MARK124if (!$_source_fp) {}
+
+        if (!$_source_fp_2) {
+
+            /*@STM*/ $ABSTRETVAL_ret_source2 = 1;
+
+            goto LABEL_source2;
+
+        }
+
+        //COMPOUND END: COMP_MARK124if (!$_source_fp) {}
+
+    }
+
+    //COMPOUND END: COMP_MARK122if (preprocess_option) {}
+
+    /*@STM*/ __extension__ ({struct obstack * __o = (& string_stk); int __len = (strlen ($_source_name2) + 1); if (__o -> next_free + __len > __o -> chunk_limit) _obstack_newchunk (__o, __len); memcpy (__o -> next_free, $_source_name2, __len); __o -> next_free += __len; (void) 0;});
+
+    //COMPOUND START: COMP_MARK123unnamend_compound_statement number: 122
+
+    filename = __extension__ ({
+
+        /*@DECL*/ struct obstack *$_source___o1;
+
+        /*@STM*/ $_source___o1 = (&string_stk);
+
+        /*@DECL*/ void *$_source___value;
+
+        /*@STM*/ $_source___value = (void *) $_source___o1->object_base;
+
+        //COMPOUND START: COMP_MARK125if ($_source___o1->next_free == $_source___value) {}
+
+        if ($_source___o1->next_free == $_source___value) {
+
+            /*@STM*/ $_source___o1->maybe_empty_object = 1;
+
+        }
+
+        //COMPOUND END: COMP_MARK125if ($_source___o1->next_free == $_source___value) {}
+
+        /*@STM*/ $_source___o1->next_free = ((sizeof (long  int) < sizeof (void *) ? ($_source___o1->object_base) : (char *) 0) + ((($_source___o1->next_free) - (sizeof (long  int) < sizeof (void *) ? ($_source___o1->object_base) : (char *) 0) + ($_source___o1->alignment_mask)) & ~($_source___o1->alignment_mask)));
+
+        //COMPOUND START: COMP_MARK126if ($_source___o1->next_free - (char *) $_source___o1->chunk > $_source___o1->chunk_limit - (char *) $_source___o1->chunk) {}
+
+        if ($_source___o1->next_free - (char *) $_source___o1->chunk > $_source___o1->chunk_limit - (char *) $_source___o1->chunk) {
+
+            /*@STM*/ $_source___o1->next_free = $_source___o1->chunk_limit;
+
+        }
+
+        //COMPOUND END: COMP_MARK126if ($_source___o1->next_free - (char *) $_source___o1->chunk > $_source___o1->chunk_limit - (char *) $_source___o1->chunk) {}
+
+        /*@STM*/ $_source___o1->object_base = $_source___o1->next_free;
+
+        /*@DECL*/ $_source___value;
+
+    }
+
+    );
+
+    //COMPOUND END: COMP_MARK123unnamend_compound_statement number: 122
+
+    /*@STM*/ canonical_filename = filename;
+
+    /*@STM*/ line_num = 1;
+
+    /*@STM*/ input_file_count++;
+
+    /*@STM*/ hit_eof = 0;
+
+    /*@DECL*/ FILE *$_yyrestart_input_file1 = $ABSTRACT_39;
+
+    /*@DECL*/ void $ABSTRETVAL_ret_yyrestart1;
+
+    //Mappings for function: yyrestart ($_source_fp);
+
+    //call_the_function: yyrestart yyrestart1 ()
+
+LABEL_yyrestart1 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    /*@STM*/ $ABSTRETVAL_ret_source2 = 0;
+
+    goto LABEL_source2;
+
+        //Mappings for function: source (*$_main_argv++);
+
+    LABEL_source2 :
+
+        if (0) {
+
+        }
+
+        //COMPOUND START: COMP_MARK11if (source (*$_main_argv++) == 0) {}
+
+        if ($ABSTRETVAL_ret_source2 == 0) {
+
+            /*@DECL*/ int $ABSTRETVAL_ret_yyparse2;
+
+    /*@DECL*/ Ident $_yyparse_identifier_2;
+
+    /*@STM*/ level = 0;
+
+    /*@STM*/ caller = NULL;
+
+    /*@DECL*/ void $ABSTRETVAL_ret_clearstack2_2;
+
+    //Mappings for function: clearstack ();
+
+    //call_the_function: clearstack clearstack2 ()
+
+LABEL_clearstack2 :
+
+    if (0) {
+
+    }
+
+    //REMOVE_THIS ();
+
+    /*@DECL*/ int $ABSTRETVAL_ret_nexttoken1_2;
+
+    //call_the_function: nexttoken nexttoken1
+
+    //Mappings for function: nexttoken ();
+
+LABEL_nexttoken1 :
+
+    if (0) {
+
+    }
+
+    //COMPOUND START: COMP_MARK147while (nexttoken ()) {}
+
+    while ($ABSTRETVAL_ret_nexttoken1_2) {
+
+        /*@STM*/ $_yyparse_identifier_2.storage = ExternStorage;
+
+        //COMPOUND START: COMP_MARK148switch (tok.type) {}
+
+        switch (tok.type) {
+
+            /*@STM*/ $ABSTRETVAL_ret_yyparse2 = 0;
+
+            goto LABEL_yyparse2;
+
+        case QUALIFIER :
+
+            continue;
+
+            /*@DECL*/ void $ABSTRETVAL_ret_parse_typedef1_2;
+
+            //call_the_function: parse_typedef parse_typedef1
+
+            //Mappings for function: parse_typedef ();
+
+        LABEL_parse_typedef1 :
+
+            if (0) {
+
+            }
+
+            /*@STM*/   case TYPEDEF :
+
+            $ABSTRETVAL_ret_parse_typedef1_2;
+
+            break;
+
+            /*@STM*/   case EXTERN :
+
+            $_yyparse_identifier_2.storage = ExplicitExternStorage;
+
+            /*@DECL*/ Ident *$_parse_declaration_ident1_2 = $ABSTRACT_40;
+
+            /*@DECL*/ int $_parse_declaration_parm1_2 = $ABSTRACT_41;
+
+            /*@DECL*/ void $ABSTRETVAL_ret_parse_declaration1_2;
+
+            //Mappings for function: parse_declaration (& $_yyparse_identifier, 0);
+
+            //call_the_function: parse_declaration parse_declaration1 ()
+
+        LABEL_parse_declaration1 :
+
+            if (0) {
+
+            }
+
+            //REMOVE_THIS ();
+
+            break;
+
+            /*@STM*/   case STATIC :
+
+            $_yyparse_identifier_2.storage = StaticStorage;
+
+            /*@DECL*/ int $ABSTRETVAL_ret_nexttoken2_2;
+
+            //Mappings for function: nexttoken ();
+
+            //call_the_function: nexttoken nexttoken2 ()
+
+        LABEL_nexttoken2 :
+
+            if (0) {
+
+            }
+
+            //REMOVE_THIS ();
+
+            /*@DECL*/ Ident *$_parse_declaration_ident2_2 = $ABSTRACT_42;
+
+            /*@DECL*/ int $_parse_declaration_parm2_2 = $ABSTRACT_43;
+
+            /*@DECL*/ void $ABSTRETVAL_ret_parse_declaration2_2;
+
+            //call_the_function: parse_declaration parse_declaration2
+
+            //Mappings for function: parse_declaration (&$_yyparse_identifier, 0);
+
+        LABEL_parse_declaration2 :
+
+            if (0) {
+
+            }
+
+            /*@STM*/   default :
+
+            $ABSTRETVAL_ret_parse_declaration2_2;
+
+            break;
+
+        }
+
+        //COMPOUND END: COMP_MARK148switch (tok.type) {}
+
+        /*@DECL*/ void $ABSTRETVAL_ret_cleanup_stack1_2;
+
+        //Mappings for function: cleanup_stack ();
+
+        //call_the_function: cleanup_stack cleanup_stack1 ()
+
+    LABEL_cleanup_stack1 :
+
+        if (0) {
+
+        }
+
+        //REMOVE_THIS ();
+
+    }
+
+    //COMPOUND END: COMP_MARK147while (nexttoken ()) {}
+
+    /*@STM*/ $ABSTRETVAL_ret_yyparse2 = 0;
+
+    goto LABEL_yyparse2;
+
+            //Mappings for function: yyparse ();
+
+        LABEL_yyparse2 :
+
+            if (0) {
+
+            }
+
+            /*@STM*/ $ABSTRETVAL_ret_yyparse2;
+
+        }
+
+        //COMPOUND END: COMP_MARK11if (source (*$_main_argv++) == 0) {}
+
+    }
+
+    //COMPOUND END: COMP_MARK5while ($_main_argc--) {}
+
+    //COMPOUND START: COMP_MARK6if (input_file_count == 0) {}
+
+    if (input_file_count == 0) {
+
+        /*@STM*/ error (1, 0, _ ("no input files"));
+
+    }
+
+    //COMPOUND END: COMP_MARK6if (input_file_count == 0) {}
+
+    /* RETURN_MARKER */ return output ();
+
+    /*@STM*/ $ABSTRETVAL_ret_main = 0;
+
+    goto LABEL_main;
+
+}
+

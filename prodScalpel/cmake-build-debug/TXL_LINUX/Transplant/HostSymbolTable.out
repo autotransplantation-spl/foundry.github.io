@@ -1,0 +1,12 @@
+CACA pipi;
+int testG;
+int *testG1;
+int testG2 [300];
+int testG3;
+FILE *fin;
+FILE *fout;
+int *arrayC;
+int length;
+int test1;
+int *test2;
+int test3 [500];

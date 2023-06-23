@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="95">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>DeclarationSymbolTable.h</itemPath>
+      <itemPath>DeclarationWthHeaderDefinition.h</itemPath>
+      <itemPath>DependencyList.h</itemPath>
+      <itemPath>DependencyListWithID.h</itemPath>
+      <itemPath>FeatureInterface.h</itemPath>
+      <itemPath>FunctionCallDependency.h</itemPath>
+      <itemPath>FunctionElement.h</itemPath>
+      <itemPath>GIReduction.h</itemPath>
+      <itemPath>GP.h</itemPath>
+      <itemPath>GPIndividual.h</itemPath>
+      <itemPath>GenTrans.h</itemPath>
+      <itemPath>GlobalDeclarations.h</itemPath>
+      <itemPath>IndividualInstantiator.h</itemPath>
+      <itemPath>ListOfFunctionSourceFile.h</itemPath>
+      <itemPath>ListOfInt.h</itemPath>
+      <itemPath>ListOfString.h</itemPath>
+      <itemPath>Mapping.h</itemPath>
+      <itemPath>MappingCandidate.h</itemPath>
+      <itemPath>MarkFunctionCall.h</itemPath>
+      <itemPath>OptionParser.h</itemPath>
+      <itemPath>PrepareForGP.h</itemPath>
+      <itemPath>ReductionIndividual.h</itemPath>
+      <itemPath>Skeleton.h</itemPath>
+      <itemPath>SkeletonMapping.h</itemPath>
+      <itemPath>SymbolTable.h</itemPath>
+      <itemPath>Utils.h</itemPath>
+      <itemPath>coreFunctionExtractor.h</itemPath>
+      <itemPath>folderContent.h</itemPath>
+      <itemPath>reverseCallGraph.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>DeclarationSymbolTable.c</itemPath>
+      <itemPath>DeclarationWithHeaderDefinition.c</itemPath>
+      <itemPath>DependencyList.c</itemPath>
+      <itemPath>DependencyListWithID.c</itemPath>
+      <itemPath>FeatureInterface.c</itemPath>
+      <itemPath>FunctionCallDependency.c</itemPath>
+      <itemPath>FunctionElement.c</itemPath>
+      <itemPath>GIReduction.c</itemPath>
+      <itemPath>GP.c</itemPath>
+      <itemPath>GPIndividual.c</itemPath>
+      <itemPath>GlobalDeclarations.c</itemPath>
+      <itemPath>IndividualInstantiator.c</itemPath>
+      <itemPath>ListOfFunctionSourceFile.c</itemPath>
+      <itemPath>ListOfInt.c</itemPath>
+      <itemPath>ListOfString.c</itemPath>
+      <itemPath>MappingCandidate.c</itemPath>
+      <itemPath>Mappping.c</itemPath>
+      <itemPath>MarkFunctionCall.c</itemPath>
+      <itemPath>OptionParser.c</itemPath>
+      <itemPath>PrepareForGP.c</itemPath>
+      <itemPath>ReductionIndividual.c</itemPath>
+      <itemPath>Skeleton.c</itemPath>
+      <itemPath>SkeletonMapping.c</itemPath>
+      <itemPath>SymbolTable.c</itemPath>
+      <itemPath>Utils.c</itemPath>
+      <itemPath>coreFunctionExtractor.c</itemPath>
+      <itemPath>folderContent.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>reverseCallGraph.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <commandlineTool>gcc</commandlineTool>
+          <commandLine>-std=gnu99 -Wall -g -O0 -DDEBUG</commandLine>
+        </cTool>
+        <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gentrans</output>
+          <commandLine>-lm -DDEBUG</commandLine>
+        </linkerTool>
+      </compileType>
+      <item path="DeclarationSymbolTable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DeclarationSymbolTable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DeclarationWithHeaderDefinition.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DeclarationWthHeaderDefinition.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DependencyList.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DependencyList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DependencyListWithID.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DependencyListWithID.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FeatureInterface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="FeatureInterface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FunctionCallDependency.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="FunctionCallDependency.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FunctionElement.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="FunctionElement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GIReduction.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GIReduction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GP.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GP.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GPIndividual.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GPIndividual.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GenTrans.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GlobalDeclarations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GlobalDeclarations.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IndividualInstantiator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="IndividualInstantiator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListOfFunctionSourceFile.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ListOfFunctionSourceFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListOfInt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ListOfInt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListOfString.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ListOfString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mapping.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MappingCandidate.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MappingCandidate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mappping.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MarkFunctionCall.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MarkFunctionCall.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptionParser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="OptionParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PrepareForGP.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="PrepareForGP.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReductionIndividual.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ReductionIndividual.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Skeleton.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Skeleton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SkeletonMapping.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="SkeletonMapping.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SymbolTable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="SymbolTable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="coreFunctionExtractor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="coreFunctionExtractor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FunctionExtractor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="FunctionExtractor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="folderContent.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="folderContent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="reverseCallGraph.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="reverseCallGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+          <commandLine>-std=gnu99</commandLine>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+      <item path="DeclarationSymbolTable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DeclarationSymbolTable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DeclarationWithHeaderDefinition.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DeclarationWthHeaderDefinition.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DependencyList.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DependencyList.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="DependencyListWithID.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="DependencyListWithID.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FeatureInterface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="FeatureInterface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FunctionCallDependency.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="FunctionCallDependency.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FunctionElement.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="FunctionElement.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GIReduction.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GIReduction.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GP.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GP.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GPIndividual.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GPIndividual.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GenTrans.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="GlobalDeclarations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="GlobalDeclarations.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="IndividualInstantiator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="IndividualInstantiator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListOfFunctionSourceFile.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ListOfFunctionSourceFile.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="CallGraph.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="CallGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListOfInt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ListOfInt.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListOfString.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ListOfString.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mapping.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="MappingCandidate.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MappingCandidate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Mappping.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MarkFunctionCall.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="MarkFunctionCall.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OptionParser.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="OptionParser.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PrepareForGP.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="PrepareForGP.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ReductionIndividual.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ReductionIndividual.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Skeleton.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Skeleton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SkeletonMapping.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="SkeletonMapping.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="SymbolTable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="SymbolTable.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Utils.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="coreFunctionExtractor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="coreFunctionExtractor.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="folderContent.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="folderContent.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="reverseCallGraph.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="reverseCallGraph.h" ex="false" tool="3" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="prodScalpel"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prodScalpel">
+				<Option output="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/prodScalpel" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/malloc"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/bin"/>
+					<Add directory="/usr/local"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 prodScalpel"/>
+					<CompileFile command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="prodScalpel/fast">
+				<Option output="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/prodScalpel" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/malloc"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/local/bin"/>
+					<Add directory="/usr/local"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/14.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 prodScalpel/fast"/>
+					<CompileFile command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="docs">
+				<Option working_dir="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 docs"/>
+					<CompileFile command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/local/bin/gmake -j4 -f &quot;/Users/leandrosouza/CLion_workspace/prodScalpel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/CallGraph.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/CallGraph.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DeclarationSymbolTable.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DeclarationSymbolTable.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DeclarationWithHeaderDefinition.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DeclarationWthHeaderDefinition.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DependencyList.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DependencyList.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DependencyListWithID.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/DependencyListWithID.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FeatureInterface.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FeatureInterface.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FunctionCallDependency.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FunctionCallDependency.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FunctionElement.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FunctionElement.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FunctionExtractor.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/FunctionExtractor.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GIReduction.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GIReduction.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GP.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GP.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GPIndividual.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GPIndividual.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GenTrans.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GlobalDeclarations.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GlobalDeclarations.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GlobalDendendenceGraph.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/GlobalDependenceGraph.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/IndividualInstantiator.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/IndividualInstantiator.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfFunctionForGraph.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfFunctionForGraph.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfFunctionSourceFile.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfFunctionSourceFile.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfInt.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfInt.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfString.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ListOfString.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/Mapping.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/MappingCandidate.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/MappingCandidate.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/Mappping.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/MarkFunctionCall.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/MarkFunctionCall.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/OptionParser.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/OptionParser.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/PrepareForGP.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/PrepareForGP.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ReductionIndividual.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/ReductionIndividual.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/Skeleton.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/Skeleton.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/SkeletonMapping.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/SkeletonMapping.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/SymbolTable.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/SymbolTable.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/Utils.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/Utils.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/coreFunctionExtractor.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/coreFunctionExtractor.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/except.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/except.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/folderContent.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/folderContent.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/main.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/reverseCallGraph.c">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/src/reverseCallGraph.h">
+			<Option target="prodScalpel"/>
+		</Unit>
+		<Unit filename="/Users/leandrosouza/CLion_workspace/prodScalpel/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

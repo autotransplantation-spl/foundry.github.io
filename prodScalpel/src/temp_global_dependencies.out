@@ -1,0 +1,40 @@
+FUNCTION_NAME :
+/* STRUCT_DECL_0 */
+DECLARATION_LIST :
+/* STRUCT_DECL_1 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+FUNCTION_NAME :
+/* STRUCT_DECL_1 */
+DECLARATION_LIST :
+/* STRUCT_DECL_0 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+FUNCTION_NAME :
+/* STRUCT_DECL_2 */
+DECLARATION_LIST :
+/* STRUCT_DECL_1 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+FUNCTION_NAME :
+/* TYPEDEF_DECL_0 */
+DECLARATION_LIST :
+/* STRUCT_DECL_0 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+FUNCTION_NAME :
+/* TYPEDEF_DECL_1 */
+DECLARATION_LIST :
+/* STRUCT_DECL_0 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+FUNCTION_NAME :
+/* TYPEDEF_DECL_2 */
+DECLARATION_LIST :
+/* STRUCT_DECL_1 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+FUNCTION_NAME :
+/* TYPEDEF_DECL_3 */
+DECLARATION_LIST :
+/* STRUCT_DECL_1 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+FUNCTION_NAME :
+/* GLOBAL_DECL_11 */
+DECLARATION_LIST :
+/* STRUCT_DECL_2 */
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

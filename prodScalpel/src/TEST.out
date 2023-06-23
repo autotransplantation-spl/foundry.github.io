@@ -1,0 +1,26 @@
+double u [97], c, cd, cm;
+int i97, j97;
+int test = FALSE;
+static double scale0, scale, N_d;
+static int N;
+struct riffchunkhdr {
+    unsigned int chunkID;
+    unsigned int chunkSize;
+    unsigned int format;
+};
+struct fmthdr {
+    unsigned int subChunk1ID;
+    unsigned int subChunk1Size;
+    unsigned short audioFormat;
+    unsigned short numChannels;
+    unsigned int sampleRate;
+    unsigned int byteRate;
+    unsigned short blockAlign;
+    unsigned short bitsPerSample;
+};
+struct datahdr {
+    unsigned int subChunk2ID;
+    unsigned int subChunk2Size;
+};
+int *dct (short *idata);
+short *idct (int *idata);

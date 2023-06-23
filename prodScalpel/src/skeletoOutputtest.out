@@ -1,0 +1,284 @@
+main (int $_main_argc, char **$_main_argv) {
+    /* DECL: 0 */ FILE *$_main_ifile;
+    /* DECL: 1 */ FILE *$_main_ofile;
+    /* DECL: 2 */ char *$_main_dbuf;
+    /* DECL: 3 */ int $_main_msPerPacket;
+    /* DECL: 4 */ int $_main_bytesPerPacket;
+    /* DECL: 5 */ int $_main_i;
+    /* DECL: 6 */ int $_main_seqno;
+    /* DECL: 7 */ int $_main_filesize;
+    /* DECL: 8 */ int $_main_size;
+    /* DECL: 9 */ int $_main_samplesPerPacket;
+    /* DECL: 10 */ int $_main_hist [32];
+    /* DECL: 11 */ int $_main_j;
+    /* DECL: 12 */ short  *$_main_samples;
+    /* DECL: 13 */ int $_main_strategy;
+    /* STM: 0 */ $_main_strategy = REPAIR_STRATEGY;
+    /* STM: 1 */ $_main_msPerPacket = MS_PER_PACKET;
+    /* STM: 2 */ $_main_samplesPerPacket = $_main_bytesPerPacket / 2;
+    /* DECL: 14 */ int $_init_dct_N_init1 = $ABSTRACT_0;
+    //Mappings for function: init_dct ($_main_samplesPerPacket);
+    /* STM: 3 */ N_d = $_init_dct_N_init1;
+    /* STM: 4 */ N = $_init_dct_N_init1;
+    /* STM: 5 */ scale0 = sqrt (1.0 / N);
+    /* STM: 6 */ scale = sqrt (2.0 / N);
+LABEL_init_dct1 : if (0) {
+    }
+    //REMOVE_THIS ();
+    /* STM: 7 */ $_main_dbuf = malloc ($_main_bytesPerPacket);
+    //COMPOUND START: COMP_MARK1for ($_main_i = 0; $_main_i < $_main_filesize / $_main_bytesPerPacket; $_main_i++) {}
+    /* COMPOUND: 0 */ for ($_main_i = 0; $_main_i < $_main_filesize / $_main_bytesPerPacket; $_main_i++) {
+        /* STM: 8 */ printf ("%d ", $_main_i);
+        /* STM: 9 */ fflush (stdout);
+        /* STM: 10 */ $_main_size = fread ($_main_dbuf, 1, $_main_bytesPerPacket, $_main_ifile);
+        //COMPOUND START: COMP_MARK2if ($_main_size < $_main_bytesPerPacket) {}
+        /* COMPOUND: 1 */ if ($_main_size < $_main_bytesPerPacket) {
+            /* STM: 11 */ printf ("EOF\n");
+            /* STM: 12 */ exit (1);
+            /* COMPOUND: 1 */}
+        //COMPOUND END: COMP_MARK2if ($_main_size < $_main_bytesPerPacket) {}
+        /* DECL: 15 */ int $_send_packet_seqno1 = $ABSTRACT_1;
+        /* DECL: 16 */ int $_send_packet_len1 = $ABSTRACT_2;
+        /* DECL: 17 */ char *$_send_packet_data1 = $ABSTRACT_3;
+        /* DECL: 18 */ FILE *$_send_packet_ofile1 = $ABSTRACT_4;
+        /* DECL: 19 */ int *$_send_packet_repair_strategy1 = $ABSTRACT_5;
+        //Mappings for function: send_packet ($_main_seqno ++, $_main_bytesPerPacket, $_main_dbuf, $_main_ofile, & $_main_strategy);
+        /* DECL: 20 */ char *$_send_packet_pktbuf_1;
+        /* STM: 13 */ $_send_packet_pktbuf_1 = malloc ($_send_packet_len1);
+        /* STM: 14 */ memcpy ($_send_packet_pktbuf_1, $_send_packet_data1, $_send_packet_len1);
+        /* DECL: 21 */ int $_transmit_packet_seqno1 = $ABSTRACT_6;
+        /* DECL: 22 */ int $_transmit_packet_len1 = $ABSTRACT_7;
+        /* DECL: 23 */ char *$_transmit_packet_data1 = $ABSTRACT_8;
+        /* DECL: 24 */ FILE *$_transmit_packet_ofile1 = $ABSTRACT_9;
+        /* DECL: 25 */ int $_transmit_packet_repair_strategy1 = $ABSTRACT_10;
+        //Mappings for function: transmit_packet ($_send_packet_seqno, $_send_packet_len, $_send_packet_pktbuf, $_send_packet_ofile, * $_send_packet_repair_strategy);
+        /* DECL: 26 */ long  $_transmit_packet_r_1;
+        /* STM: 15 */ $_transmit_packet_r_1 = random ();
+        //COMPOUND START: COMP_MARK3if (($_transmit_packet_r % 1000000) / 1000000.0 < LOSS_PROB) {}
+        /* COMPOUND: 2 */ if (($_transmit_packet_r_1 % 1000000) / 1000000.0 < LOSS_PROB) {
+            /* STM: 16 */ free ($_transmit_packet_data1);
+            /* COMPOUND: 2 */ goto LABEL_transmit_packet1;
+            /* COMPOUND: 2 */}
+        //COMPOUND END: COMP_MARK3if (($_transmit_packet_r % 1000000) / 1000000.0 < LOSS_PROB) {}
+        /* DECL: 27 */ int $_recv_packet_seqno1 = $ABSTRACT_11;
+        /* DECL: 28 */ int $_recv_packet_len1 = $ABSTRACT_12;
+        /* DECL: 29 */ char *$_recv_packet_data1 = $ABSTRACT_13;
+        /* DECL: 30 */ FILE *$_recv_packet_ofile1 = $ABSTRACT_14;
+        /* DECL: 31 */ int $_recv_packet_strategy1 = $ABSTRACT_15;
+        //Mappings for function: recv_packet ($_transmit_packet_seqno, $_transmit_packet_len, $_transmit_packet_data, $_transmit_packet_ofile, $_transmit_packet_repair_strategy);
+        /* DECL: 32 */ int $_recv_packet_prev_seqno_1;
+        /* STM: 17 */ $_recv_packet_prev_seqno_1 = -1;
+        /* DECL: 33 */ short  *$_recv_packet_prev_samples_1;
+        /* STM: 18 */ $_recv_packet_prev_samples_1 = 0;
+        /* DECL: 34 */ long  $_recv_packet_stream_position_1;
+        /* STM: 19 */ $_recv_packet_stream_position_1 = 0;
+        /* DECL: 35 */ short  *$_recv_packet_samples_1;
+        /* STM: 20 */ $_recv_packet_samples_1 = (short  *) $_recv_packet_data1;
+        /* DECL: 36 */ int $_recv_packet_num_samples_1;
+        /* STM: 21 */ $_recv_packet_num_samples_1 = $_recv_packet_len1 / 2;
+        /* STM: 22 */ printf ("recv_packet: seqno=%d\n", $_recv_packet_seqno1);
+        //COMPOUND START: COMP_MARK4if ($_recv_packet_prev_seqno != -1 && ($_recv_packet_prev_seqno + 1 != $_recv_packet_seqno)) {}
+        /* COMPOUND: 3 */ if ($_recv_packet_prev_seqno_1 != -1 && ($_recv_packet_prev_seqno_1 + 1 != $_recv_packet_seqno1)) {
+            /* DECL: 37 */ int $_recv_packet_i;
+            /* DECL: 38 */ int $_recv_packet_missing_seqno;
+            /* STM: 23 */ printf ("s=%d\n", $_recv_packet_strategy1);
+            //COMPOUND START: COMP_MARK6switch ($_recv_packet_strategy) {}
+            /* COMPOUND: 4 */ switch ($_recv_packet_strategy1) {
+                //COMPOUND START: COMP_MARK7unnamend_compound_statement number: 6
+                /* COMPOUND: 5 */   case SILENCE : {
+                    /* STM: 24 */ $_recv_packet_missing_seqno = $_recv_packet_prev_seqno_1 + 1;
+                    //COMPOUND START: COMP_MARK11while ($_recv_packet_missing_seqno < $_recv_packet_seqno) {}
+                    /* COMPOUND: 6 */ while ($_recv_packet_missing_seqno < $_recv_packet_seqno1) {
+                        /* DECL: 39 */ FILE *$_write_silence_ofile1 = $ABSTRACT_16;
+                        /* DECL: 40 */ int $_write_silence_num_samples1 = $ABSTRACT_17;
+                        //Mappings for function: write_silence ($_recv_packet_ofile, $_recv_packet_num_samples);
+                        /* DECL: 41 */ short  $_write_silence_missing_pkt_1 [$_write_silence_num_samples1];
+                        /* DECL: 42 */ int $_write_silence_i_1;
+                        //COMPOUND START: COMP_MARK35for ($_write_silence_i = 0; $_write_silence_i < $_write_silence_num_samples; $_write_silence_i++) {}
+                        /* COMPOUND: 7 */ for ($_write_silence_i_1 = 0; $_write_silence_i_1 < $_write_silence_num_samples1; $_write_silence_i_1++) {
+                            /* STM: 25 */ $_write_silence_missing_pkt_1[$_write_silence_i_1] = 0;
+                            /* COMPOUND: 7 */}
+                        //COMPOUND END: COMP_MARK35for ($_write_silence_i = 0; $_write_silence_i < $_write_silence_num_samples; $_write_silence_i++) {}
+                        /* STM: 26 */ fwrite ($_write_silence_missing_pkt_1, 1, $_write_silence_num_samples1 * 2, $_write_silence_ofile1);
+                    LABEL_write_silence1 : if (0) {
+                        }
+                        //REMOVE_THIS ();
+                        /* STM: 27 */ $_recv_packet_missing_seqno++;
+                        /* COMPOUND: 6 */}
+                    //COMPOUND END: COMP_MARK11while ($_recv_packet_missing_seqno < $_recv_packet_seqno) {}
+                    break;
+                    /* COMPOUND: 5 */}
+                //COMPOUND END: COMP_MARK7unnamend_compound_statement number: 6
+                //COMPOUND START: COMP_MARK8unnamend_compound_statement number: 7
+                /* COMPOUND: 8 */   case REPEAT_PREV : {
+                    /* STM: 28 */ fwrite ($_recv_packet_prev_samples_1, 2, $_recv_packet_num_samples_1, $_recv_packet_ofile1);
+                    /* STM: 29 */ $_recv_packet_missing_seqno = $_recv_packet_prev_seqno_1 + 2;
+                    //COMPOUND START: COMP_MARK12while ($_recv_packet_missing_seqno < $_recv_packet_seqno) {}
+                    /* COMPOUND: 9 */ while ($_recv_packet_missing_seqno < $_recv_packet_seqno1) {
+                        /* DECL: 43 */ FILE *$_write_silence_ofile2 = $ABSTRACT_18;
+                        /* DECL: 44 */ int $_write_silence_num_samples2 = $ABSTRACT_19;
+                        //Mappings for function: write_silence ($_recv_packet_ofile, $_recv_packet_num_samples);
+                        /* DECL: 45 */ short  $_write_silence_missing_pkt_2 [$_write_silence_num_samples2];
+                        /* DECL: 46 */ int $_write_silence_i_2;
+                        //COMPOUND START: COMP_MARK35for ($_write_silence_i = 0; $_write_silence_i < $_write_silence_num_samples; $_write_silence_i++) {}
+                        /* COMPOUND: 10 */ for ($_write_silence_i_2 = 0; $_write_silence_i_2 < $_write_silence_num_samples2; $_write_silence_i_2++) {
+                            /* STM: 30 */ $_write_silence_missing_pkt_2[$_write_silence_i_2] = 0;
+                            /* COMPOUND: 10 */}
+                        //COMPOUND END: COMP_MARK35for ($_write_silence_i = 0; $_write_silence_i < $_write_silence_num_samples; $_write_silence_i++) {}
+                        /* STM: 31 */ fwrite ($_write_silence_missing_pkt_2, 1, $_write_silence_num_samples2 * 2, $_write_silence_ofile2);
+                    LABEL_write_silence2 : if (0) {
+                        }
+                        //REMOVE_THIS ();
+                        /* STM: 32 */ $_recv_packet_missing_seqno++;
+                        /* COMPOUND: 9 */}
+                    //COMPOUND END: COMP_MARK12while ($_recv_packet_missing_seqno < $_recv_packet_seqno) {}
+                    break;
+                    /* COMPOUND: 8 */}
+                //COMPOUND END: COMP_MARK8unnamend_compound_statement number: 7
+                //COMPOUND START: COMP_MARK9unnamend_compound_statement number: 8
+                /* COMPOUND: 11 */   case REPEAT_PREV_NEXT : {
+                    /* DECL: 47 */ int $_recv_packet_nrOfLostPackets;
+                    /* STM: 33 */ $_recv_packet_nrOfLostPackets = $_recv_packet_seqno1 - $_recv_packet_prev_seqno_1 - 1;
+                    //COMPOUND START: COMP_MARK13switch ($_recv_packet_nrOfLostPackets) {}
+                    /* COMPOUND: 12 */ switch ($_recv_packet_nrOfLostPackets) {
+                        //COMPOUND START: COMP_MARK14unnamend_compound_statement number: 13
+                        /* COMPOUND: 13 */   case 1 : {
+                            /* STM: 34 */ fwrite ($_recv_packet_prev_samples_1 + $_recv_packet_num_samples_1 / 2, 2, $_recv_packet_num_samples_1 / 2, $_recv_packet_ofile1);
+                            /* STM: 35 */ fwrite ($_recv_packet_samples_1, 2, $_recv_packet_num_samples_1 / 2, $_recv_packet_ofile1);
+                            break;
+                            /* COMPOUND: 13 */}
+                        //COMPOUND END: COMP_MARK14unnamend_compound_statement number: 13
+                        //COMPOUND START: COMP_MARK15unnamend_compound_statement number: 14
+                        /* COMPOUND: 14 */   default : {
+                            /* STM: 36 */ fwrite ($_recv_packet_prev_samples_1, 2, $_recv_packet_num_samples_1, $_recv_packet_ofile1);
+                            /* STM: 37 */ $_recv_packet_nrOfLostPackets = $_recv_packet_nrOfLostPackets - 2;
+                            //COMPOUND START: COMP_MARK16while ($_recv_packet_nrOfLostPackets > 0) {}
+                            /* COMPOUND: 15 */ while ($_recv_packet_nrOfLostPackets > 0) {
+                                /* DECL: 48 */ FILE *$_write_silence_ofile3 = $ABSTRACT_20;
+                                /* DECL: 49 */ int $_write_silence_num_samples3 = $ABSTRACT_21;
+                                //Mappings for function: write_silence ($_recv_packet_ofile, $_recv_packet_num_samples);
+                                /* DECL: 50 */ short  $_write_silence_missing_pkt_3 [$_write_silence_num_samples3];
+                                /* DECL: 51 */ int $_write_silence_i_3;
+                                //COMPOUND START: COMP_MARK35for ($_write_silence_i = 0; $_write_silence_i < $_write_silence_num_samples; $_write_silence_i++) {}
+                                /* COMPOUND: 16 */ for ($_write_silence_i_3 = 0; $_write_silence_i_3 < $_write_silence_num_samples3; $_write_silence_i_3++) {
+                                    /* STM: 38 */ $_write_silence_missing_pkt_3[$_write_silence_i_3] = 0;
+                                    /* COMPOUND: 16 */}
+                                //COMPOUND END: COMP_MARK35for ($_write_silence_i = 0; $_write_silence_i < $_write_silence_num_samples; $_write_silence_i++) {}
+                                /* STM: 39 */ fwrite ($_write_silence_missing_pkt_3, 1, $_write_silence_num_samples3 * 2, $_write_silence_ofile3);
+                            LABEL_write_silence3 : if (0) {
+                                }
+                                //REMOVE_THIS ();
+                                /* STM: 40 */ $_recv_packet_nrOfLostPackets--;
+                                /* COMPOUND: 15 */}
+                            //COMPOUND END: COMP_MARK16while ($_recv_packet_nrOfLostPackets > 0) {}
+                            /* STM: 41 */ fwrite ($_recv_packet_samples_1, 2, $_recv_packet_num_samples_1, $_recv_packet_ofile1);
+                            break;
+                            /* COMPOUND: 14 */}
+                        //COMPOUND END: COMP_MARK15unnamend_compound_statement number: 14
+                        /* COMPOUND: 12 */}
+                    //COMPOUND END: COMP_MARK13switch ($_recv_packet_nrOfLostPackets) {}
+                    break;
+                    /* COMPOUND: 11 */}
+                //COMPOUND END: COMP_MARK9unnamend_compound_statement number: 8
+                //COMPOUND START: COMP_MARK10unnamend_compound_statement number: 9
+                /* COMPOUND: 17 */   case INTERPOLATE : {
+                    /* DECL: 52 */ int *$_recv_packet_dctPrev;
+                    /* DECL: 53 */ int *$ABSTRETVAL_ret_dct1;
+                    /* DECL: 54 */ int *$_dct_odata_1;
+                    /* STM: 42 */ $_dct_odata_1 = malloc (N * sizeof (int));
+                    /* DECL: 55 */ double $_dct_out_val_1;
+                    /* DECL: 56 */ int $_dct_n_1;
+                    /* DECL: 57 */ int $_dct_k_1;
+                    //COMPOUND START: COMP_MARK36for ($_dct_k = 0; $_dct_k < N; $_dct_k++) {}
+                    /* COMPOUND: 18 */ for ($_dct_k_1 = 0; $_dct_k_1 < N; $_dct_k_1++) {
+                        /* STM: 43 */ $_dct_out_val_1 = 0;
+                        //COMPOUND START: COMP_MARK37for ($_dct_n = 0; $_dct_n < N; $_dct_n++) {}
+                        /* COMPOUND: 19 */ for ($_dct_n_1 = 0; $_dct_n_1 < N; $_dct_n_1++) {
+                            /* STM: 44 */ $_dct_out_val_1 += $_dct_idata[$_dct_n_1] * cos ((M_PI / N) * $_dct_k_1 * ($_dct_n_1 + 0.5));
+                            /* COMPOUND: 19 */}
+                        //COMPOUND END: COMP_MARK37for ($_dct_n = 0; $_dct_n < N; $_dct_n++) {}
+                        //COMPOUND START: COMP_MARK38if ($_dct_k == 0) {}
+                        /* COMPOUND: 20 */ if ($_dct_k_1 == 0) {
+                            /* STM: 45 */ $_dct_out_val_1 *= scale0;
+                            /* COMPOUND: 20 */}
+                        //COMPOUND END: COMP_MARK38if ($_dct_k == 0) {}
+                        /* STM: 46 */ $_dct_odata_1[$_dct_k_1] = (int) $_dct_out_val_1;
+                        //COMPOUND START: COMP_MARK39else {}
+                        /* COMPOUND: 21 */ else {
+                            /* STM: 47 */ $_dct_out_val_1 *= scale;
+                            /* COMPOUND: 21 */}
+                        //COMPOUND END: COMP_MARK39else {}
+                        /* COMPOUND: 18 */}
+                    //COMPOUND END: COMP_MARK36for ($_dct_k = 0; $_dct_k < N; $_dct_k++) {}
+                    /* STM: 48 */ $ABSTRETVAL_ret_dct1 = $_dct_odata_1;
+                    /* COMPOUND: 17 */ goto LABEL_dct1;
+                    //Mappings for function: dct ($_recv_packet_prev_samples);
+                LABEL_dct1 : if (0) {
+                    }
+                    /* STM: 49 */ $_recv_packet_dctPrev = $ABSTRETVAL_ret_dct1;
+                    /* DECL: 58 */ int *$_recv_packet_dctCurr;
+                    /* DECL: 59 */ int *$ABSTRETVAL_ret_dct2;
+                    /* DECL: 60 */ int *$_dct_odata_2;
+                    /* STM: 50 */ $_dct_odata_2 = malloc (N * sizeof (int));
+                    /* DECL: 61 */ double $_dct_out_val_2;
+                    /* DECL: 62 */ int $_dct_n_2;
+                    /* DECL: 63 */ int $_dct_k_2;
+                    //COMPOUND START: COMP_MARK36for ($_dct_k = 0; $_dct_k < N; $_dct_k++) {}
+                    /* COMPOUND: 22 */ for ($_dct_k_2 = 0; $_dct_k_2 < N; $_dct_k_2++) {
+                        /* STM: 51 */ $_dct_out_val_2 = 0;
+                        //COMPOUND START: COMP_MARK37for ($_dct_n = 0; $_dct_n < N; $_dct_n++) {}
+                        /* COMPOUND: 23 */ for ($_dct_n_2 = 0; $_dct_n_2 < N; $_dct_n_2++) {
+                            /* STM: 52 */ $_dct_out_val_2 += $_dct_idata[$_dct_n_2] * cos ((M_PI / N) * $_dct_k_2 * ($_dct_n_2 + 0.5));
+                            /* COMPOUND: 23 */}
+                        //COMPOUND END: COMP_MARK37for ($_dct_n = 0; $_dct_n < N; $_dct_n++) {}
+                        //COMPOUND START: COMP_MARK38if ($_dct_k == 0) {}
+                        /* COMPOUND: 24 */ if ($_dct_k_2 == 0) {
+                            /* STM: 53 */ $_dct_out_val_2 *= scale0;
+                            /* COMPOUND: 24 */}
+                        //COMPOUND END: COMP_MARK38if ($_dct_k == 0) {}
+                        /* STM: 54 */ $_dct_odata_2[$_dct_k_2] = (int) $_dct_out_val_2;
+                        //COMPOUND START: COMP_MARK39else {}
+                        /* COMPOUND: 25 */ else {
+                            /* STM: 55 */ $_dct_out_val_2 *= scale;
+                            /* COMPOUND: 25 */}
+                        //COMPOUND END: COMP_MARK39else {}
+                        /* COMPOUND: 22 */}
+                    //COMPOUND END: COMP_MARK36for ($_dct_k = 0; $_dct_k < N; $_dct_k++) {}
+                    /* STM: 56 */ $ABSTRETVAL_ret_dct2 = $_dct_odata_2;
+                    /* COMPOUND: 17 */ goto LABEL_dct2;
+                    //Mappings for function: dct ($_recv_packet_samples);
+                LABEL_dct2 : if (0) {
+                    }
+                    /* STM: 57 */ $_recv_packet_dctCurr = $ABSTRETVAL_ret_dct2;
+                    /* DECL: 64 */ int $_recv_packet_nrOfLostPackets;
+                    /* STM: 58 */ $_recv_packet_nrOfLostPackets = $_recv_packet_seqno1 - $_recv_packet_prev_seqno_1 - 1;
+                    /* DECL: 65 */ int $_recv_packet_kk;
+                    //COMPOUND START: COMP_MARK17if ($_recv_packet_nrOfLostPackets == 1) {}
+                    /* COMPOUND: 26 */ if ($_recv_packet_nrOfLostPackets == 1) {
+                        /* DECL: 66 */ int *$_recv_packet_odata;
+                        /* STM: 59 */ $_recv_packet_odata = malloc ($_recv_packet_num_samples_1 * sizeof (int));
+                        //COMPOUND START: COMP_MARK20for ($_recv_packet_kk = 0; $_recv_packet_kk < $_recv_packet_num_samples; $_recv_packet_kk++) {}
+                        /* COMPOUND: 27 */ for ($_recv_packet_kk = 0; $_recv_packet_kk < $_recv_packet_num_samples_1; $_recv_packet_kk++) {
+                            /* DECL: 67 */ double $_recv_packet_intermediate;
+                            /* STM: 60 */ $_recv_packet_intermediate = abs (0.5 * $_recv_packet_dctPrev[$_recv_packet_kk] + 0.5 * $_recv_packet_dctCurr[$_recv_packet_kk]);
+                            /* DECL: 68 */ int $_recv_packet_sign;
+                            /* STM: 61 */ $_recv_packet_sign = (rand ()) % 2;
+                            //COMPOUND START: COMP_MARK21if ($_recv_packet_sign = 1) {}
+                            /* COMPOUND: 28 */ if ($_recv_packet_sign = 1) {
+                                /* STM: 62 */ $_recv_packet_intermediate = 0 - $_recv_packet_intermediate;
+                                /* COMPOUND: 28 */}
+                            //COMPOUND END: COMP_MARK21if ($_recv_packet_sign = 1) {}
+                            /* STM: 63 */ $_recv_packet_odata[$_recv_packet_kk] = (int) $_recv_packet_intermediate;
+                            /* COMPOUND: 27 */}
+                        //COMPOUND END: COMP_MARK20for ($_recv_packet_kk = 0; $_recv_packet_kk < $_recv_packet_num_samples; $_recv_packet_kk++) {}
+                        /* DECL: 69 */ short  *$_recv_packet_newPacket;
+                        /* DECL: 70 */ int *$_idct_idata1 = $ABSTRACT_22;
+                        /* DECL: 71 */ short  *$ABSTRETVAL_ret_idct1;
+LABEL_transmit_packet1 :                        /* RETURN_MARKER */ return idct ($_idct_idata1);
+                        //call_the_function: idct idct1
+                        /* COMPOUND: 26 */}
+                    /* COMPOUND: 17 */}
+                /* COMPOUND: 4 */}
+            /* COMPOUND: 3 */}
+        /* COMPOUND: 0 */}
+}

@@ -1,0 +1,54 @@
+/* STRUCT_DECL_0 */
+DECLARED_TYPES
+struct Books
+Book
+Book2
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* STRUCT_DECL_1 */
+DECLARED_TYPES
+struct declarationSymbolTable
+DECLARED_GLOBALS
+CACAT_MARE
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* STRUCT_DECL_2 */
+DECLARED_TYPES
+struct declarationSymbolTable2
+DECLARED_GLOBALS
+CACAT_MARE2
+PISAT_MIC
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* STRUCT_DECL_3 */
+DECLARED_TYPES
+struct riffchunkhdr
+DECLARED_GLOBALS
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* STRUCT_DECL_4 */
+DECLARED_TYPES
+struct fmthdr
+DECLARED_GLOBALS
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* STRUCT_DECL_5 */
+DECLARED_TYPES
+struct datahdr
+DECLARED_GLOBALS
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* TYPEDEF_DECL_0 */
+DECLARED_TYPES
+KKTMAREEEEEEEE
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* TYPEDEF_DECL_1 */
+DECLARED_TYPES
+KKTMICCCCCCCCCCCCC
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* TYPEDEF_DECL_2 */
+DECLARED_TYPES
+DeclarationSymbolTable
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* TYPEDEF_DECL_3 */
+DECLARED_TYPES
+KKT_MIC
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/* TYPEDEF_DECL_4 */
+DECLARED_TYPES
+test_UNSIGNED_INT
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

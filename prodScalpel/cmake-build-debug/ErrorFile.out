@@ -1,0 +1,2 @@
+[] : TXL0911W - (Warning) Stack limit less than recommended for TXL size (probable cause: shell stack limit)
+[] : TXL0913I - (Information) Recursion stack limit reduced from 268435456 to 65872896 to fit
