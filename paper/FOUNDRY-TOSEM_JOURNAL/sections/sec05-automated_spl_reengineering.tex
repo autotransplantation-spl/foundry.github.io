@@ -1,0 +1,25 @@
+\section{Automated support for product line re-engeneering} \label{sec:automated_spl_reengineering}
+
+Automated software transplantation, as presented in \FOUNDRY, can provide a set of opportunities to improve and automate the product line reengineering process. This alone might justify the effort to explore research opportunities in software transplantation for SPLE. Here we elaborate on and discuss such opportunities.
+
+\textbf{ Automating reengineering of existing systems into SPL.} Principally \FOUNDRY is proposed as a new way of reengineering existing systems into SPL. 
+Companies can use \FOUNDRY just for the initial conversion of an existing codebase into SPL. In this mode, \FOUNDRY first extracts over-organs from the donor systems, then, produces a product base, created from an existing system by removing all unwanted features to the product line. Then, adapts and implants the organs into this product base, identifying and removing cross-over-organ redundancies. The resulting organs become the SPL's shared set of features. \FOUNDRY can itself be used as a variability mechanism to construct new products by implanting features into a product base. Even with this one-off application of \FOUNDRY, a company can also use \FOUNDRY to surround the transplanted feature with  a conventional variability mechanism. For existing SPL codebase, such as the one it created. \FOUNDRY's variability mechanism insertion also supports surrounding implanted organs with feature flags or preprocessor directives, which permit enabling and disabling of features, to facilitate its integration into an existing SPL codebase that uses them.
+
+\textbf{Automating clone-and-own technique.} \FOUNDRY can automate \emph{clone-and-own}~\cite{Dubinsky2013, Fischer2015}, especially the task of synchronising changes to a feature shared across two products created by clone-and-own. For example, consider the case where the copy of a shared feature in one of the two products is patched to fix a bug. \FOUNDRY permits transplantation of the fixed version over the top of the unpatched copy of the feature. 
+
+\textbf{Automating Reactive Product Line Adoption Process.} 
+Certain companies already have product lines, but adapt a reactive process, where a new feature is added only when a need for such a feature arises. 
+\FOUNDRY can be used initially to generate product variants, and then, as the demand for specific products increases, it could be used to generate product lines.
+
+\textbf{Automating a symbiotic SPL.} \FOUNDRY permits a wholly new form of SPL, \emph{symbiotic SPL}:  in this mode, the donor can be oblivious to a parallel, ongoing SPL reorganisation of its codebase. To capture improvements in the donor, \prodscalpel periodically refreshes its set of features by re-transplanting them into its donor product base and hence into host products. For instance, one could use \prodscalpel to produce lightweight, specialised text editors from the \emph{Vim} project.  
+
+\textbf{Supporting Controlled Maintenance and evolution of SPL.}
+The maintenance of assets and products is a challenging task and an inherent characteristic of a product line. When we include organs as assets in a product line the process becomes even more challenging. In fact, by trying to maintain an over-organ individually in the platform, a developer might introduce errors into the product line or in products derived from it, since their organs eventually share elements —such as variables and functions—with the maintained organ. A solution would be to re-implant the changed organ. Nevertheless, a crucial problem here is how to re-implant the organ changed to match a different version of it already transplanted in the target product. 
+
+We envision two ways to avoid this problem and \emph{maintain} a created product line. Firstly, one can re-transplant the features if the original source codebase changes. Secondly, one can maintain the extracted over-organs, and re-run the adaptation and implantation stages, as need be.
+
+In both scenarios of product line maintenance, \FOUNDRY can be set up to evolve a changed organ with feature flags. Surrounding an organ with feature toggles just before implantation is an interesting alternative for continuous deployment of organs. It thus separates inserted code and makes it easier to maintain.
+To support continuous deployment, the implantation process in \FOUNDRY can be configured to involve each organ with feature flags to connect new, unreleased code to production. Once a transplanted organ is ready for production, developers can turn off the flag and reveal the new organ or its changes to users.
+
+\textbf{Providing a Variability Mechanism through Organ Transplantation.} 
+\FOUNDRY provides a variability mechanism itself. It allows developers to include or not a given feature, to instantiate different products at any moment only by transplanting them into the target product. It avoids the problem of maintaining and evolving a product line that consists of a massive number of products. Additionally,  it avoids feature flag removal and technical debt around unremoved feature flags.

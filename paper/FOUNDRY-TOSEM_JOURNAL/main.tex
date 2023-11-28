@@ -1,0 +1,240 @@
+
+%\documentclass[manuscript,screen]{acmart}
+\documentclass[acmtacm,screen]{acmart}
+%\documentclass[acmsmall, screen, review=false]{acmart}
+%\documentclass[anonymous,print]{acmart}
+%\usepackage[true]{anonymous-acm}
+\usepackage[nameinlink]{cleveref}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage{framed}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+\input{abbreviations.tex}
+  
+% hyperref commands to correct capitalise \autoref labels
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+\def\algorithmautorefname{Algorithm}
+%github
+\usepackage[switch]{lineno}%line number
+%\linenumbers
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+ 
+%\setcopyright{acmcopyright}
+%\copyrightyear{2022}
+%\acmYear{2022}
+%\acmDOI{XXXXXXX.XXXXXXX}
+
+%% These commands are for a JOURNAL article.
+%\acmJournal{JACM}
+%\acmVolume{37}
+%\acmNumber{4}
+%\acmArticle{111}
+%\acmMonth{8}
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Comments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{ifthen}
+\usepackage{xcolor}
+
+\newboolean{showcomments}
+\setboolean{showcomments}{true} % comment this line to deactivate comments
+\ifthenelse{\boolean{showcomments}}{
+  \newcommand{\nbc}[3]{
+    {\colorbox{#3}{\bfseries\sffamily\scriptsize\textcolor{white}{#1}}}%
+    {\textcolor{#3}{\sf\small$\blacktriangleright$\textit{#2}$\blacktriangleleft$}}}
+  \newcommand{\todo}[1]{\nbc{TODO}{#1}{blue}\xspace}
+}{
+  \newcommand{\nbc}[3]{}
+  \newcommand{\todo}[1]{}
+}
+\newcommand{\eb}[1]{\nbc{Earl}{#1}{orange}}
+\newcommand{\jp}[1]{\nbc{Justyna}{#1}{blue}}
+\newcommand{\ls}[1]{\nbc{Leandro}{#1}{red}}
+\newcommand\re[1]{\nbc{To Review:}{#1}{green}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Comments %%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Project Macros
+\newcommand{\FOUNDRY}{\textsc{Foundry}\xspace}
+\newcommand{\prodscalpel}{\textsc{prodScalpel}\xspace}
+\newcommand{\projURL}{\url{utopia.com}}
+
+\begin{document}
+
+\title{Software Product Line Engineering via Software Transplantation }
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+
+\author{Leandro O. Souza}
+\email{leandro.souza@ifba.edu.br}
+\orcid{0009-0001-6264-2573}
+%\orcid{1234-5678-9012}
+%\authornotemark[1]
+\affiliation{%
+  \institution{Federal Institute of Bahia}
+ % \streetaddress{Rua Rogério Nunes Dourado, 27}
+  \city{Irecê}
+  \state{Bahia}
+  \country{Brazil}
+ % \postcode{44900-000}
+}
+
+\author{Earl T. Barr}
+\email{E.Barr@ucl.ac.uk}
+\orcid{0000-0003-0771-7891}
+\affiliation{
+    \institution{University College London}
+    \city{London}
+    \country{UK}
+    }
+
+\author{Justyna Petke}
+\email{j.petke@ucl.ac.uk}
+\orcid{0000-0002-7833-6044}
+\affiliation{
+    \institution{University College London}
+    \city{London}
+    \country{UK}
+    }
+
+\author{Eduardo S. Almeida}
+\email{esa@rise.com.br}
+\affiliation{
+    \institution{Federal University of Bahia}
+    \city{Salvador}
+    \state{Bahia}
+    \country{Brazil}
+    }
+
+\author{Paulo Anselmo M. S. Neto}
+\email{paulo.motant@ufrpe.br}
+\orcid{0000-0003-0197-8249}
+\affiliation{
+    \institution{Federal Rural University of Pernambuco}
+    \city{Recife}
+    \state{Pernambuco}
+    \country{Brazil}
+    }
+
+
+%\author{ADD AUTHOR NAMES}
+%\email{leandro.souza@ifba.edu.br}
+%\affiliation{%
+%  \institution{University College London}
+  %\streetaddress{1 Th{\o}rv{\"a}ld Circle}
+%  \city{London}
+%  \country{UK}}
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+\renewcommand{\shortauthors}{Trovato and Tobin, et al.}
+
+\begin{abstract}
+For companies producing related products, a Software Product Line (SPL) is a software reuse method that improves time-to-market and software quality, achieving substantial cost reductions. 
+These benefits do not come for free.
+It often takes years to re-architect and re-engineer a codebase to support SPL and, once adopted, it must be maintained. Current SPL practice relies on a collection of tools, tailored for different reengineering phases, whose output developers must coordinate and integrate. 
+We present \FOUNDRY, a general automated approach for leveraging software transplantation to speed conversion to and maintenance of SPL. 
+\FOUNDRY facilitates feature extraction and migration. 
+It can efficiently, repeatedly, transplant a sequence of features, implemented in multiple files. 
+We used \FOUNDRY to create two valid product lines that integrate features from three real-world systems in an automated way. 
+Moreover, we conducted an experiment comparing \FOUNDRY's feature migration with manual effort. We show that \FOUNDRY automatically migrated features across codebases 4.8 times faster, on average, than the average time a group of SPL experts took to accomplish the task.
+\end{abstract}
+
+
+%We show that \FOUNDRY takes, on average, 18\% of the time to reuse features across codebases than a group of SPL experts.
+%\end{abstract}
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+% ADD CCS CONCEPTS
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Software Product Lines, Software Transplantation, Genetic Improvement}
+
+%\received{20 February 2007}
+%\received[revised]{12 March 2009}
+%\received[accepted]{5 June 2009}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+%sections
+\input{sections/sec01-introduction}
+\label{intro}
+
+\input{sections/sec02-motivating_example.tex}
+\label{sec:motivating_example}
+
+\input{sections/sec03-approach.tex}
+\label{sec:approach}
+
+\input{sections/sec04-implementation.tex}
+\label{sec:implementation}
+
+\input{sections/sec06-case_studies.tex}
+\label{sec:case_studies}
+
+\input{sections/sec07-experiment.tex}
+\label{sec:experiment}
+
+\input{sections/sec05-automated_spl_reengineering.tex}
+\label{sec:automated_spl_reengineering}
+
+\input{sections/sec08-related_work.tex}
+\label{sec:related_work}
+
+\input{sections/sec09-conclusion.tex}
+\label{sec:conclusion} 
+%-------------
+
+%\section{Acknowledgments}
+
+%This work was support by the UKRI EPSRC grant no. EP/P023991/1.
+
+\section{Copyright}
+
+For the purpose of open access, the author has applied a Creative Commons Attribution (CC BY) licence to any Author Accepted Manuscript version arising.
+
+%\section{Appendices}
+
+%If your work needs an appendix, add it before the ``\verb|\end{document}|'' command at the conclusion of your source document.
+
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{biblio.bib}
+
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+\end{document}
+\endinput
+
+%% End of file `main.tex'.

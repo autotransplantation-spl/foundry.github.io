@@ -1,0 +1,113 @@
+\section{Case Studies} \label{sec:case_studies}
+We evaluate \prodscalpel~on two case studies for generating new product variants from real-world systems. This section explains the objectives, research questions, and subject systems. Additionally, it presents the results of our study and discusses the implications. Our corpus and data collected are available at the project webpage~\cite{ProjectWebpage}.
+
+\subsection{Objective and Research Questions}
+The objective of this study is to evaluate the proposed approach and tool, thereby demonstrating the potential of automated software transplantation for product line generation. % and 
+We aim to answer the following research questions:
+
+\begin{quote}
+\textbf{RQ1.} \emph{How much effort is required to generate products from a product line created using \prodscalpel?}
+\end{quote}
+Given the complexity of the task at hand, it seems unreasonable to expect the product derivation process to be instantaneous. Still, it will need to be fast enough to be incorporated into a development cycle and demonstrate its advantage over manual effort. To answer this question, we computed the time required, and the number LOCs transferred to productize software.
+
+\begin{quote}
+\textbf{RQ2.} \emph{Which features can \prodscalpel~productize?}
+\end{quote}
+We discuss the characteristics of features that \prodscalpel~can and those it cannot yet handle. Given the inherent complexity of the process, it is important to clearly define its current limitations. 
+
+\subsection{Methodology}
+
+\textbf{Subject systems}. We chose two text editors, \emph{VI} and \emph{VIM}, as product bases.
+For donors we chose subjects from two different domains: code analysis software and text editors.
+We chose \emph{GNU Cflow}, a call graph extractor from C source code, as a donor.
+This is to show that donors can also come from different application domains.
+We reuse \emph{VI} and \emph{VIM} as donors, as well as another text editor, \emph{kilo}.
+This is to show that donors can come from the same system as the product base, but also different systems within the same application domain.
+
+Our donors are presented in Table~\ref{tab:donors_list}.
+We identified the following features as possible desired features in a new editor: $\texttt{output}$ from CFLOW, $\texttt{enableRawMode}$ from kilo, $\texttt{vclear}$ from VI, and $\texttt{spell\_check}$ and $\texttt{search}$ from VIM. Table~\ref{tab:donors_list} presents more details on the subjects.
+
+\textbf{Procedure and execution}. 
+Initially, we automatically remove dead-code from both donors and host codebases by using \prodscalpel. 
+We also reduced each host to its basic form removing all optional features. Thus, both donors and host are prepared for the transplantation process. 
+Given an organs' entry point for each organ in the donor systems provided by us, their target implantation points in the product base, and a set of test suites for each organ, \prodscalpel was used to localise and extract a set of organs from the donor, transform each organ to be compatible with the context of their target sites in the product base and implant the organs in the beneficiary's environment. Each automated organ transplantation process was repeated 20 times, due to the heuristic nature of the over-organ adaptation process. We computed the average number of lines of code transplanted and the average runtimes for the transplantation process.
+
+\textbf{Case study environment}. The runtimes for each transplantation were measured on an Intel Core 3.1 GHz Dual-Core Intel Core i5, with 16 GB memory running MacOS 10.15.4.
+
+\begin{table}[t]
+\centering 
+	\caption{Donors and hosts corpus for the evaluation: column Features shows the number of features identified. 
+	}
+	\label{tab:donors_list}
+	\begin{tabular}{llrr} \hline
+        Subjects &Type  & Size (LOC) & \#Features   \\\hline
+	    Kilo     &Donor & 804        & 17      \\
+		CFLOW    &Donor & 4,274      & 54      \\
+		VI       &Donor & 20,292     & 36      \\
+		VIM      &Donor & 839,438    & 176      \\\hline
+		VI       &Product Base & 20,223 & 36      \\
+		VIM      &Product Base & 737,466 & 117     \\\hline
+	\end{tabular}
+\end{table}
+
+\subsection{Results and Discussion} \label{sec:result_discussion}
+
+
+ 
+Table~\ref{tab:transplantation_time} shows average runtimes of transplanting each organ into the product base as well as the total number of code lines transplanted to derive each product. At the end of the transplantation process, the postoperative product A has a total of 28k LoC and 40 features while product B has a total of 745k LOC and 121 features. Together, donors provided three feature variants to the product line, approximately 7.8k LOC to product A and 8.1k to product B, including a feature removed and re-transplanted in \emph{VI}.
+
+\begin{table}[h]\centering 
+
+%	\resizebox{12cm}{!}{%
+    \caption{Case studies results} 
+    \Description{Multi-organ transplantation results to generate products A and B. \emph{Columns Trans. Time shows the time (Sys+User) spent on the organ transplant process in which column Sys. correspond to the \prodscalpel's execution time; column User correspond to the user time spent in preoperative stage and  augmenting the host’s regression test suite (regression++). Product A uses a reduced VI editor as a product base, while Product B was derived by transplanting features from the donors into the reduced VIM editor.}}
+    \label{tab:transplantation_time}
+	\begin{center}
+	\begin{tabular}{lrrrrrr} \hline
+		\multicolumn{1}{c}{Donors} & \multicolumn{3}{c}{Number of}   & &\multicolumn{2}{c}{Trans.time(min)} \\
+		\cline{2-4} \cline{6-7}
+		 & \multicolumn{1}{c}{LoC}  & \multicolumn{1}{c}{Functions} & \multicolumn{1}{c}{Files} & & \multicolumn{1}{c}{Sys.} & \multicolumn{1}{c}{User}\\\hline
+	%	MYTAR       &4 & \sim197 & 8 & 8 &  & 74 & 82\\
+		Kilo        & $\sim$963 & 35 & 4 & & $\sim$86 & 32\\
+		CFLOW       & $\sim$4,822 & 37 & 8 &  & $\sim$344 &123 \\
+		VI          & $\sim$1,983 & 5 & 15 &  & $\sim$1,234 &184\\\hline
+		\rowcolor[gray]{.9} Product A  &$\sim$7,768 & 77 & 27 & & $\sim$1,664 & 339 \\\hline
+	%	MYTAR       &4 & \sim215 & 8 & 8 & & 74 & 82\\
+		Kilo        & $\sim$981 & 35 & 4 & & $\sim$94 & 32\\
+		CFLOW       & $\sim$4,898 & 37 & 8 &  & $\sim$428 & 123\\
+		VI          & $\sim$2,234 & 5 & 15 &  & $\sim$1,294 & 184\\\hline
+		\rowcolor[gray]{.9} Product B  & $\sim$8,113 & 77 & 27 & & $\sim$1,890 &532\\\hline
+	\end{tabular}
+	\end{center}
+	
+    %}	
+\end{table}
+
+\begin{framed}
+\noindent To answer RQ1, on average, \prodscalpel spent 4h31min/1KLoC for transplanting three features into VI, and 4h40min/1KLOC for transplanting the same three features into VIM.
+\end{framed}
+
+To answer question \textbf{RQ2}, we also tried to transplant two more features:  $\texttt{spell\_check}$ and $\texttt{search}$,  both containing larger amounts of code, about 104 KLOCs and 153 KLOCs, respectively.
+
+\prodscalpel uses Doxygen~\cite{Doxygen2018}, a source code documentation generator, to generate the call and caller graphs. 
+It thus inherits the limitation of generating an imprecise call graph when dealing with function pointers. 
+This leads to unneccessary instructions to be copied, while others missing.
+Although possible with an additional manual effort, such limitations made our tool unable to automatically extract the larger organs from VIM. 
+We can, in the future, turn to \emph{Dynamic analysis}~\cite{Cornelissen2009} and other code manipulating tools to optimise the efficiency of the slicing process, to efficiently identify those statements in the program slice which have influence on the target organ. Investigating more precise techniques is future work.
+
+\begin{framed}
+\noindent To answer RQ2, \prodscalpel was able to productise three features from three different systems. However, transplantation of organs from a larger donor exposed some limitations of the technologies used by our tool.
+\end{framed}
+
+In summary, these case studies show initial evidence that software transplantation can be successfully used for building product variants automatically by combining features transplanted from real-world systems.
+\prodscalpel inherits limitations of the underlying slicing tools, thus its generalisability can be further improved with progress in that domain.
+New studies may give more evidence that our approach is also extensible and flexible in other domains, opening perspectives for future work.\looseness=-1
+
+
+\subsection{Threats to Validity} \label{ch-6:threats}
+
+The relatively small number and diversity of systems used for transplantation pose an external threat to validity. However, we tried to mitigate it by constructing a possible real-world scenario, i.e., transplantation of features that would be useful in production of new text editors.
+
+In terms of internal threats, we are limited by abilities of the tools we use, in particular, Doxygen, for call graph construction, and TXL for program transformation. We also use testing as a means of validating our approach, which cannot provide a formal proof of its correctness. However, testing is a standard approach in evaluating code in real-world scenarios due to its high scalability. 
+
+Additionally, our case studies are limited to a specific implementation technique and specific code-transplantation scenarios; generalization to object-oriented languages and others requires further investigation. 
