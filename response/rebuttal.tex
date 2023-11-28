@@ -137,21 +137,10 @@ In addition, maybe RQ2 is expressed in a misleading way when put in light of the
 \reviewersection
 
 \begin{point}
-
-1) The general proposal is not clear. There are important mismatches in the problem definition and the example. Without a clear problem definition, the solution is difficult to evaluate. 
+The general proposal is not clear. There are important mismatches in the problem definition and the example. Without a clear problem definition, the solution is difficult to evaluate. 
 \end{point}
 \begin{reply}
-	We appreciate the reviewer's thoughtful consideration of our paper. We acknowledge the concern raised regarding the clarity of the problem definition and its alignment with the provided example. We understand the importance of a well-defined problem statement for a thorough evaluation of our proposed solution.
-
-The central problem we address in our paper revolves around the challenges inherent in Software Product Line (SPL) re-engineering. Specifically, we focus on the need for a systematic and automated approach to transplant reusable components (organs) from existing SPLs into a new product base. This process, which we term "software transplantation," aims to streamline SPL re-engineering by enhancing reusability and reducing redundancy.
-
-To provide a concrete illustration, we offer an example in the paper to elucidate the transplantation process. However, we acknowledge that there might be room for improvement in aligning this example more closely with the general problem definition. We revisited the example in our manuscript to ensure better coherence with the overarching problem statement.
-
-In Section 3, where we detail our software transplantation approach, Foundry, we will provide additional context to clarify the problem definition further. This clarification include a refined articulation of the challenges associated with SPL re-engineering that our approach aims to address. By doing so, we wait had enhanced the overall coherence between the problem definition and the proposed solution.
-
-We appreciate the reviewer's guidance on this matter, and we are committed to enhancing the clarity of our problem statement to facilitate a more accurate evaluation of our solution.
-
-Thank you for your valuable feedback, and we look forward to addressing any further concerns you may have.
+	
 \end{reply}
 \begin{changes}
     TODO
@@ -170,11 +159,61 @@ TODO
 \end{changes}
 
 \begin{point} 
-1) In the abstract, you say that this proposal is to re-engineer existing product into a SPL. However, the motivating example and the solution does not fit well with this. In Section 2 you say that the GNOME team could be interested in offering an SPL of text editors. Then, you describe two other tools where you could take features from and "transplant"  it to a common code base generated from Gedit. This is confusing because when you are in an extractive SPL approach you have a set of products and you do not know from which one you should start building the code base for your SPL. Why Gedit and not Evince or Nedit? Are really those systems of a family of systems managed from the same organization or are they just individual products that share some common features. 
+    In the abstract, you say that this proposal is to re-engineer existing product into a SPL. However, the motivating example and the solution does not fit well with this. In Section 2 you say that the GNOME team could be interested in offering an SPL of text editors. Then, you describe two other tools where you could take features from and "transplant"  it to a common code base generated from Gedit. This is confusing because when you are in an extractive SPL approach you have a set of products and you do not know from which one you should start building the code base for your SPL. Why Gedit and not Evince or Nedit? Are really those systems of a family of systems managed from the same organization or are they just individual products that share some common features. 
 \end{point}
 \begin{reply}
-	TODO
+	We appreciate the reviewer's comments and have carefully considered the concerns raised.We can see how what we wrote was unclear; in particular, the motivation example needed elaboration, and the mention of GEdit, Evince, and NEdit is vague by does not proves information that they just individual products that share some common features but can be used to generate product lines from a re-engineering process.
+
+    In response, we have revised the motivating example to enhance clarity and coherence with the overarching problem statement. We have rewritten it to emphasize the challenges faced by open-source projects like GNOME and how our proposed approach, Foundry, addresses these challenges, providing a clearer and more focused illustration of our methodology. 
 \end{reply}
+
+\begin{changes}
+    
+    \textbf{MOTIVATING EXAMPLE}
+    
+    Original:
+    \begin{itemize}
+        \item Mentioned GNOME as an open-source project.
+        \item Highlighted the challenge of reusing features due to separate developments.
+        \item Introduced mass customization and common platform principles of SPLE.
+    \end{itemize} 
+    Revised:
+    \begin{itemize}
+        \item Retained the essence of GNOME as an open-source project.
+        \item Emphasized the obstacle of manual efforts hindering seamless feature reuse.
+        \item Clarified the principles of SPLE for mass customization and a common platform.
+    \end{itemize} 
+    
+    PROBLEM DEFINITION CONTEXT
+    
+    Original:
+    \begin{itemize}
+        \item Introduced the problem faced by the GNOME project in adopting SPL.
+        \item Outlined the scenario of augmenting GEdit with additional features.
+        \item Mentioned the selection of GEdit as the product base and identified target features.
+        \end{itemize} 
+    Revised:
+    \begin{itemize}
+        \item Maintained the essence of the problem in adopting SPL by GNOME.
+        \item Expanded on the scenario of text editor enhancement.
+        \item Emphasized the role of GEdit as the product base and detailed the target features.
+        \end{itemize} 
+        
+    PROBLEM DEFINITION
+    
+    Original:
+    \begin{itemize}
+        \item Described the challenges of automated transplantation, including code extraction and adaptation.
+        \item Mentioned potential dependencies among transplanted organs.
+        \item Concluded with the importance of overcoming challenges for successful SPL-ST adoption.
+    \end{itemize} 
+    Revised:
+    \begin{itemize}
+        \item Retained the challenges of automated transplantation, emphasizing diverse donor codebases.
+        \item Emphasized the careful adaptation of features to the host system.
+        \item Highlighted potential dependencies among transplanted organs and the crucial role in SPL-ST adoption. 
+    \end{itemize} 
+\end{changes}
 
 \begin{point} 
 The example seems to be more on "copying" features from other products rather than re-engineering an existing SPL. Also, you present in Fig. 1 the donors and the  host using a feature model. Are they already SPLs according to that? Are you re-engineering an SPL from existing SPLs? All this is confusing and makes it difficult to understand the problem you want to solve. The problem has to be very well explained so that the solution can be evaluated. 
