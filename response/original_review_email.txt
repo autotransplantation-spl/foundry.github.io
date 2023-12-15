@@ -1,0 +1,185 @@
+Dear Dr. Oliveira de Souza,
+
+We have completed the review of your paper titled:
+
+Software Product Line Engineering via Software Transplantation
+TOSEM-2023-0120
+authored by Oliveira de Souza, Leandro; Barr, Earl; Petke, Justyna; Santana de Almeida, Eduardo; Silveira, Paulo
+
+It is the decision of the TOSEM Editorial Board that we cannot accept your paper for publication in TOSEM without major revisions. It is ACM TOSEM best practice to make decisions with at least three reviews, however, we are also doing our best to make decisions within a reasonable time frame.  In the few cases of two thorough and consistent reviews and a late third review, we prefer to go ahead with a not-too-late-yet decision rather than waiting for a third review. One reviewer is largely satisfied with the state of the paper, but does require some changes (that may require substantial modifications).  The other reviewer has major objections to key aspects of the paper, but it is possible that these could be addressed to a substantial extent by a major revision.  In particular, clarification of goals and scope (as well as some presentation issues) are key to both reviewer's concerns.
+
+I have included anonymous, verbatim reviewer comments to guide your revisions.
+
+If you need further information, please contact Dr. Alex David Groce, the TOSEM Associate Editor who was in charge of your paper. The email address is: agroce@gmail.com, alex@eecs.oregonstate.edu
+
+It is important that you revise your paper as soon as possible for best visibility. If this is a Fast-Impact Track submission, we will do our best to complete subsequent reviews within 45 days on the condition that the revision is submitted within 45 days.
+
+To expedite the re-review process, please submit your revision through Manuscript Central (http://mc.manuscriptcentral.com/tosem) under manuscript ID# TOSEM-2023-0120.  You may select "create a revision" for this manuscript ID which is located under "manuscripts with decisions".  In addition, please include a cover letter that specifically states how your revision addresses the concerns articulated by the referees.
+
+We look forward to receiving your revision, and thank you for your interest in TOSEM.
+
+Sincerely,
+
+
+Mauro Pezze
+Editor-in-Chief
+ACM Transactions on Software Engineering and Methodology
+
+
+===============REVIEWS==============
+
+Referee: 1
+
+Recommendation: Needs Minor Revision
+
+Comments:
+As I said before, the problem tackled with this work is challenging and one of the identified bottlenecks in the field of SPL.
+This work proposes a quite complete solution that seems to perform well as shown by the evaluation.
+I only have a few comments about this paper which are more like questions I think than criticisms.
+
+Figure 1 shows a sequence of transplatations, which I agree is easy to represent for such kind of succession, but is the order really important? In my opinion, probably not, except maybe when analysing the underlying dependency graph? Could it be interesting to analyse the impact of this analysis on missed artefacts when using ProdScalpel? (maybe to relate to reusability in compilation)
+
+Section 3.2, Page 9, "To overcome these issues Foundry introduces an organ-host wrapper. This layer is responsible for providing access to the organ from the target host. It is automatically constructed on demand, according to a given implantation point in the product base."
+when I saw this, I wonder whether Foundry would only produce wrappers to call new features and thus, would it be possible that the product line becomes polygot (in the sense that the wrapper may only be a call to "exec" for instance whatever the program called)? 
+It is probably not as simple as that, but could it be a viable solution? What would be the impacts on the host system (in term of performance for instance)?
+
+Section 4.1, page 12, "Figure 8 gives a example of a portion of code after prodScalpel cleaned up unused directives."
+in the end, from what I can see from Figure 8, ProdScalpel is able to provide two output "partial source code", one to use when the feature is activated and the second one when it is not, when adding a new feature to the host. The choice between the two will depend on the new product to derive I assume. Is that correct?
+
+Section 5.2, page 15, when authors use VI and VIM both as donor and product base. Did authors took two different versions of VI (and VIM)? One with the desired feature and one without it. That could make sense to the why trying to transplant a feature to the same codebase. It could also be a maner to evaluate the tool. Is it able to provide the same code in the end than the original? How does it differ? Which tests pass or fail? etc.
+
+Section 5.3, page 16, when answering RQ2, I have the feeling that it lacks some in-depth analysis. From my understanding, I assume that some products cannot be run due to missed instructions or something else, but it is not discussed. The text only refers to documentation that is imprecise.
+In addition, maybe RQ2 is expressed in a misleading way when put in light of the analysis. I was expected to get a taxonomy of different features that can or cannot be handled yet.
+
+MINOR:
+ - Section 2, Page 4, line 20 "a document viewer for multiple document formats that is part of GNOME, not not an editor." -> an additional "not" maybe it was a "but" in the first place.
+
+ - Figure 3 mentions two products P and Q but no products are visible on the figure.
+
+- I wonder whether Figures 1, 2, and 3 somehow may be redundant. Could they be merged? Is it a necessity to keep all these 3? (at least 1 and 2 separated?)
+
+Additional Questions:
+Review's recommendation for paper type: Full length technical paper
+
+Does this paper present innovative ideas or material?: Yes
+
+In what ways does this paper advance the field?: This paper proposes a tool and describes a methodology toward software (and feature) transplation for SPLs which is a very challenging topic and not fully addressed in the litterature.
+
+Is the information in the paper sound, factual, and accurate?: Yes
+
+If not, please explain why.: 
+
+Rate the paper on its contribution to the body of knowledge in software engineering (none=1, very important=5): 5
+
+What are the major contributions of the paper?: This work describes Foundry in the first place. It is a tool that allows for feature transplatation from one codebase to another with re-engineering. This way, the transplated codebase (the host) can use the feature coming from the donor. This approach is particularly challenging in the context of SPLs since the feature can be spread among different artefact and the hosted SPL can still be capable of introduce the feature correctly in its codebase.
+Secondly, the paper proposes an implementation in C of Foundry, named ProdScalpel which is evaluated.
+
+Rate how well the ideas are presented (very difficult to understand=1, very easy to understand=5): 4
+
+Rate the overall quality of the writing (very poor=1, excellent=5): 5
+
+Does this paper cite and use appropriate references?: Yes
+
+If not, what important references are missing?: 
+
+Should anything be deleted from or condensed in the paper?: No
+
+If so, please explain.: 
+
+Is the treatment of the subject complete?: Yes
+
+If not, What important details / ideas/ analyses are missing?: 
+
+If this is a Journal-First Paper, does it differ by more than 70% from any other previous publication?: 
+
+Comments: 
+
+Please help ACM create a more efficient time-to-publication process: Using your best judgment, what amount of copy editing do you think this paper needs?: Light
+
+Most ACM journal papers are researcher-oriented. Is this paper of potential interest to developers and engineers?: Yes
+
+
+Referee: 2
+
+Recommendation: Reject
+
+Comments:
+=SUMARY=
+The paper introduces software transplantation (ST, term coined by Harman et al) to the field of software product line engineering (SPLE). A process for the introduction of ST in SPLE is presented, a tool using C is developed and presented and an evaluation is carried out using two different techniques: case study and experimentation. The results show that the technique improves the performance of experts when transplantation a feature. 
+
+== REVIEW==
+
+The paper is interesting in the sense that tries to find synergies between two separate areas (SC and SPLE) to improve the SPLE process. It is also interesting that the proposal has been implemented and evaluated. The writing is in general easy to follow and the paper is well structured. 
+
+However, there are two main elements that make the paper not suitable for publication in a venue like TOSEM: 
+
+1) The general proposal is not clear. There are important mismatches in the problem definition and the example. Without a clear problem definition, the solution is difficult to evaluate. 
+2) The solution is described in a vague way. A more theoretical or at least rigorous approach should be followed to describe the solution. The solution seems to be more like a white paper for a tool than a research paper with reproducible elements. 
+
+==DETAILED COMMENTS==
+
+1) In the abstract, you say that this proposal is to re-engineer existing product into a SPL. However, the motivating example and the solution does not fit well with this. In Section 2 you say that the GNOME team could be interested in offering an SPL of text editors. Then, you describe two other tools where you could take features from and "transplant"  it to a common code base generated from Gedit. This is confusing because when you are in an extractive SPL approach you have a set of products and you do not know from which one you should start building the code base for your SPL. Why Gedit and not Evince or Nedit? Are really those systems of a family of systems managed from the same organization or are they just individual products that share some common features. 
+
+The example seems to be more on "copying" features from other products rather than re-engineering an existing SPL. Also, you present in Fig. 1 the donors and the  host using a feature model. Are they already SPLs according to that? Are you re-engineering an SPL from existing SPLs? All this is confusing and makes it difficult to understand the problem you want to solve. The problem has to be very well explained so that the solution can be evaluated. 
+
+Also, it is confusing in the example that you talk about three editors (gedit, evince and nedit). However, in the introduction you say that for evaluating your proposal you used other text editors (kilo, vi and cflow on top of vi and vim). This is confusing and distracts the reader. 
+
+2) The solution is weakly presented. The difference between "foundary" and "prodscalpel" is confusing. After some reads, one can understand that one if the conceptual and the other is the implementation. However, this should be cleared right from the beginning. Nevertheless, the main problem comes when the solution is described. Section 3 is not formally or rigorously described. There is no a single definition along the sections and only descriptive paragraphs are used. This is unusual in prestigious journals such as TOSEM. The way you describe your proposal is more for a workshop to present ideas rather to a solid result to be presented in a journal. 
+
+Why in Figure 2 system 4 is selected? why P and Q are the "code base" and feature N and O are removed? P and Q are not features that are shared with other systems, are they?
+
+In addition, the implementation is described as a tool paper and adds no value to rigorously and clearly present your approach/tool. 
+
+== OTHER COMMENTS ==
+- The title is confusing. It seems that the paper is more about "feature extraction and implantation using software transplantation" and it is not much about SPLE
+- In the abstract, the ideas are not clear. More details should be given. What is your solution about? In what is based? Only high level descriptions are given.
+- Add a reference to support the first sentence of the 2nd paragraph of Section 1
+- The first time that prodscalpel is mentioned is in line 44 (pag 3 of 32) and it is confusing that it is. 
+- Fig 1 is in page 4 but the first mention to it is in pag 5 and in another section. This is confusing. 
+- Foundary is described as "an approach" (l 29 p 4). It would be nice to more precisely describe it: process? methodology fragment? tool? what?
+- The statement that GNOME is a natural candidate for SPL is quite strong! (l 9, p5)
+
+
+Additional Questions:
+Review's recommendation for paper type: Full length technical paper
+
+Does this paper present innovative ideas or material?: Yes
+
+In what ways does this paper advance the field?: - ideas about feature transplantation 
+- tool for performing the taks
+- ideas about potential processes behind
+- empirical evidences
+
+Is the information in the paper sound, factual, and accurate?: Yes
+
+If not, please explain why.: 
+
+Rate the paper on its contribution to the body of knowledge in software engineering (none=1, very important=5): 3
+
+What are the major contributions of the paper?: 
+
+Rate how well the ideas are presented (very difficult to understand=1, very easy to understand=5): 3
+
+Rate the overall quality of the writing (very poor=1, excellent=5): 3
+
+Does this paper cite and use appropriate references?: Yes
+
+If not, what important references are missing?: 
+
+Should anything be deleted from or condensed in the paper?: No
+
+If so, please explain.: 
+
+Is the treatment of the subject complete?: No
+
+If not, What important details / ideas/ analyses are missing?: Theoretical or conceptual details are misleading and confusing (see review)
+
+If this is a Journal-First Paper, does it differ by more than 70% from any other previous publication?: 
+
+Comments: 
+
+Please help ACM create a more efficient time-to-publication process: Using your best judgment, what amount of copy editing do you think this paper needs?: Moderate
+
+Most ACM journal papers are researcher-oriented. Is this paper of potential interest to developers and engineers?: Maybe
+
+===================================

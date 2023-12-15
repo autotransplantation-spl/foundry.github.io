@@ -1,0 +1,82 @@
+Referee: 2
+
+Recommendation: Reject
+
+Comments:
+=SUMARY=
+The paper introduces software transplantation (ST, term coined by Harman et al) to the field of software product line engineering (SPLE). A process for the introduction of ST in SPLE is presented, a tool using C is developed and presented and an evaluation is carried out using two different techniques: case study and experimentation. The results show that the technique improves the performance of experts when transplantation a feature. 
+
+== REVIEW==
+
+The paper is interesting in the sense that tries to find synergies between two separate areas (SC and SPLE) to improve the SPLE process. It is also interesting that the proposal has been implemented and evaluated. The writing is in general easy to follow and the paper is well structured. 
+
+However, there are two main elements that make the paper not suitable for publication in a venue like TOSEM: 
+
+1) The general proposal is not clear. There are important mismatches in the problem definition and the example. Without a clear problem definition, the solution is difficult to evaluate. 
+2) The solution is described in a vague way. A more theoretical or at least rigorous approach should be followed to describe the solution. The solution seems to be more like a white paper for a tool than a research paper with reproducible elements. 
+
+==DETAILED COMMENTS==
+
+1) In the abstract, you say that this proposal is to re-engineer existing product into a SPL. However, the motivating example and the solution does not fit well with this. In Section 2 you say that the GNOME team could be interested in offering an SPL of text editors. Then, you describe two other tools where you could take features from and "transplant"  it to a common code base generated from Gedit. This is confusing because when you are in an extractive SPL approach you have a set of products and you do not know from which one you should start building the code base for your SPL. Why Gedit and not Evince or Nedit? Are really those systems of a family of systems managed from the same organization or are they just individual products that share some common features. 
+
+The example seems to be more on "copying" features from other products rather than re-engineering an existing SPL. Also, you present in Fig. 1 the donors and the  host using a feature model. Are they already SPLs according to that? Are you re-engineering an SPL from existing SPLs? All this is confusing and makes it difficult to understand the problem you want to solve. The problem has to be very well explained so that the solution can be evaluated. 
+
+Also, it is confusing in the example that you talk about three editors (gedit, evince and nedit). However, in the introduction you say that for evaluating your proposal you used other text editors (kilo, vi and cflow on top of vi and vim). This is confusing and distracts the reader. 
+
+2) The solution is weakly presented. The difference between "foundary" and "prodscalpel" is confusing. After some reads, one can understand that one if the conceptual and the other is the implementation. However, this should be cleared right from the beginning. Nevertheless, the main problem comes when the solution is described. Section 3 is not formally or rigorously described. There is no a single definition along the sections and only descriptive paragraphs are used. This is unusual in prestigious journals such as TOSEM. The way you describe your proposal is more for a workshop to present ideas rather to a solid result to be presented in a journal. 
+
+Why in Figure 2 system 4 is selected? why P and Q are the "code base" and feature N and O are removed? P and Q are not features that are shared with other systems, are they?
+
+In addition, the implementation is described as a tool paper and adds no value to rigorously and clearly present your approach/tool. 
+
+== OTHER COMMENTS ==
+- The title is confusing. It seems that the paper is more about "feature extraction and implantation using software transplantation" and it is not much about SPLE
+- In the abstract, the ideas are not clear. More details should be given. What is your solution about? In what is based? Only high level descriptions are given.
+- Add a reference to support the first sentence of the 2nd paragraph of Section 1
+- The first time that prodscalpel is mentioned is in line 44 (pag 3 of 32) and it is confusing that it is. 
+- Fig 1 is in page 4 but the first mention to it is in pag 5 and in another section. This is confusing. 
+- Foundary is described as "an approach" (l 29 p 4). It would be nice to more precisely describe it: process? methodology fragment? tool? what?
+- The statement that GNOME is a natural candidate for SPL is quite strong! (l 9, p5)
+
+
+Additional Questions:
+Review's recommendation for paper type: Full length technical paper
+
+Does this paper present innovative ideas or material?: Yes
+
+In what ways does this paper advance the field?: - ideas about feature transplantation 
+- tool for performing the taks
+- ideas about potential processes behind
+- empirical evidences
+
+Is the information in the paper sound, factual, and accurate?: Yes
+
+If not, please explain why.: 
+
+Rate the paper on its contribution to the body of knowledge in software engineering (none=1, very important=5): 3
+
+What are the major contributions of the paper?: 
+
+Rate how well the ideas are presented (very difficult to understand=1, very easy to understand=5): 3
+
+Rate the overall quality of the writing (very poor=1, excellent=5): 3
+
+Does this paper cite and use appropriate references?: Yes
+
+If not, what important references are missing?: 
+
+Should anything be deleted from or condensed in the paper?: No
+
+If so, please explain.: 
+
+Is the treatment of the subject complete?: No
+
+If not, What important details / ideas/ analyses are missing?: Theoretical or conceptual details are misleading and confusing (see review)
+
+If this is a Journal-First Paper, does it differ by more than 70% from any other previous publication?: 
+
+Comments: 
+
+Please help ACM create a more efficient time-to-publication process: Using your best judgment, what amount of copy editing do you think this paper needs?: Moderate
+
+Most ACM journal papers are researcher-oriented. Is this paper of potential interest to developers and engineers?: Maybe
