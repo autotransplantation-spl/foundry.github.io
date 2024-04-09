@@ -13,6 +13,9 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{adjustbox}
+\usepackage{soul}
+
+\usepackage[normalem]{ulem}
 \input{abbreviations.tex}
   
 % hyperref commands to correct capitalise \autoref labels
@@ -22,7 +25,7 @@
 \def\algorithmautorefname{Algorithm}
 %github
 \usepackage[switch]{lineno}%line number
-%\linenumbers
+\linenumbers
 \AtBeginDocument{%
   \providecommand\BibTeX{{%
     \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
@@ -64,7 +67,7 @@
 \newcommand{\eb}[1]{\nbc{Earl}{#1}{orange}}
 \newcommand{\jp}[1]{\nbc{Justyna}{#1}{blue}}
 \newcommand{\ls}[1]{\nbc{Leandro}{#1}{red}}
-\newcommand\re[1]{\nbc{To Review:}{#1}{green}}
+\newcommand\re[1]{\nbc{}{#1}{blue}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End Comments %%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% Project Macros
@@ -153,15 +156,15 @@
 \renewcommand{\shortauthors}{Trovato and Tobin, et al.}
 
 \begin{abstract}
-For companies producing related products, a Software Product Line (SPL) is a software reuse method that improves time-to-market and software quality, achieving substantial cost reductions. 
-These benefits do not come for free.
-It often takes years to re-architect and re-engineer a codebase to support SPL and, once adopted, it must be maintained. Current SPL practice relies on a collection of tools, tailored for different reengineering phases, whose output developers must coordinate and integrate. 
-We present \FOUNDRY, a general automated approach for leveraging software transplantation to speed conversion to and maintenance of SPL. 
-\FOUNDRY facilitates feature extraction and migration. 
-It can efficiently, repeatedly, transplant a sequence of features, implemented in multiple files. 
-We used \FOUNDRY to create two valid product lines that integrate features from three real-world systems in an automated way. 
-Moreover, we conducted an experiment comparing \FOUNDRY's feature migration with manual effort. We show that \FOUNDRY automatically migrated features across codebases 4.8 times faster, on average, than the average time a group of SPL experts took to accomplish the task.
+\eb{To be deleted after your review}
+\sout{For companies producing related products, a Software Product Line (SPL) is a software reuse method that improves time-to-market and software quality, achieving substantial cost reductions. These benefits do not come for free. It often takes years to re-architect and re-engineer a codebase to support SPL and, once adopted, it must be maintained. Current SPL practice relies on a collection of tools, tailored for different reengineering phases, whose output developers must coordinate and integrate. We present \FOUNDRY, a general automated approach for leveraging software transplantation to speed conversion to and maintenance of SPL. \FOUNDRY facilitates feature extraction and migration.  It can efficiently, repeatedly, transplant a sequence of features, implemented in multiple files. We used \FOUNDRY to create two valid product lines that integrate features from three real-world systems in an automated way. Moreover, we conducted an experiment comparing \FOUNDRY's feature migration with manual effort. We show that \FOUNDRY automatically migrated features across codebases 4.8 times faster, on average, than the average time a group of SPL experts took to accomplish the task.}
+
+\textcolor{blue}{Software Product Lines (SPLs) offer substantial benefits for companies producing related products by improving time-to-market, enhancing software quality, and reducing costs.  However, implementing SPL practices involves lengthy re-engineering and ongoing maintenance challenges. Current SPL practices rely on a suite of tools, each tailored for specific reengineering phases, leading to coordination and integration complexities for developers.
+To address these challenges, we introduce \FOUNDRY, an automated approach utilizing software transplantation to expedite SPL conversion and maintenance. \FOUNDRY's solution is rooted in the concept of software transplantation, a process involving the adaptation and incorporation of code segments from one system into another. Building upon this foundation, \FOUNDRY systematically applies software transplantation to SPL, providing a structured and automated approach. By understanding the intricacies of feature extraction and migration, \FOUNDRY enables the generation of SPLs with increased speed and efficiency, addressing the challenges associated with manual efforts.
+We realise \FOUNDRY in \prodscalpel, a tool that transplants multiple organs (\ie, a set of interesting features) from donor systems into an emergent product line for codebases written in C. To evaluate its effectiveness, we conducted an experiment comparing feature transplantation using \prodscalpel with manual effort. Our tool successfully produced two valid product lines, automating feature extrastion and integration from three real-world systems. The achieved results reveal that \prodscalpel achieved an average of 4.8 times faster feature migration across codebases compared to a group of SPL experts.}
+
 \end{abstract}
+
 
 
 %We show that \FOUNDRY takes, on average, 18\% of the time to reuse features across codebases than a group of SPL experts.

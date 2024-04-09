@@ -11,28 +11,30 @@ We aim to answer the following research questions:
 Given the complexity of the task at hand, it seems unreasonable to expect the product derivation process to be instantaneous. Still, it will need to be fast enough to be incorporated into a development cycle and demonstrate its advantage over manual effort. To answer this question, we computed the time required, and the number LOCs transferred to productize software.
 
 \begin{quote}
-\textbf{RQ2.} \emph{Which features can \prodscalpel~productize?}
+\textbf{RQ2.} \emph{\textcolor{blue}{How effective is \prodscalpel~at productizing software?}}
 \end{quote}
-We discuss the characteristics of features that \prodscalpel~can and those it cannot yet handle. Given the inherent complexity of the process, it is important to clearly define its current limitations. 
+\textcolor{blue}{We conduct an initial empirical study and} discuss the characteristics of features that \prodscalpel~can and those it cannot yet handle. Given the inherent complexity of the process, it is important to clearly define its current limitations. 
 
 \subsection{Methodology}
 
-\textbf{Subject systems}. We chose two text editors, \emph{VI} and \emph{VIM}, as product bases.
+\sout{\textbf{Subject systems}. We chose two text editors, \emph{VI} and \emph{VIM}, as product bases.
 For donors we chose subjects from two different domains: code analysis software and text editors.
 We chose \emph{GNU Cflow}, a call graph extractor from C source code, as a donor.
 This is to show that donors can also come from different application domains.
 We reuse \emph{VI} and \emph{VIM} as donors, as well as another text editor, \emph{kilo}.
-This is to show that donors can come from the same system as the product base, but also different systems within the same application domain.
+This is to show that donors can come from the same system as the product base, but also different systems within the same application domain.}
 
-Our donors are presented in Table~\ref{tab:donors_list}.
-We identified the following features as possible desired features in a new editor: $\texttt{output}$ from CFLOW, $\texttt{enableRawMode}$ from kilo, $\texttt{vclear}$ from VI, and $\texttt{spell\_check}$ and $\texttt{search}$ from VIM. Table~\ref{tab:donors_list} presents more details on the subjects.
+\textcolor{blue}{\textbf{Subject Systems and Selection Criteria.}To define the context for performing the case study research, the first step was to identify the most suitable codebases for composing the product lines. The selection of subject systems for our case studies was based on four criteria aimed at providing a comprehensive evaluation of the proposed approach and tool. These selection criteria were based on the convenient sampling method Wohlin et al.~\cite{Wohlin2012}.}
 
-\textbf{Procedure and execution}. 
-Initially, we automatically remove dead-code from both donors and host codebases by using \prodscalpel. 
-We also reduced each host to its basic form removing all optional features. Thus, both donors and host are prepared for the transplantation process. 
-Given an organs' entry point for each organ in the donor systems provided by us, their target implantation points in the product base, and a set of test suites for each organ, \prodscalpel was used to localise and extract a set of organs from the donor, transform each organ to be compatible with the context of their target sites in the product base and implant the organs in the beneficiary's environment. Each automated organ transplantation process was repeated 20 times, due to the heuristic nature of the over-organ adaptation process. We computed the average number of lines of code transplanted and the average runtimes for the transplantation process.
+\textcolor{blue}{\textbf{(i) Diversity and variation:} The selection of subjects should aim to encompass a range of diversity and variation to provide a comprehensive understanding of the phenomenon under investigation. This can include diversity in terms of domains, sizes, complexity, functionality, or other relevant characteristics.}
 
-\textbf{Case study environment}. The runtimes for each transplantation were measured on an Intel Core 3.1 GHz Dual-Core Intel Core i5, with 16 GB memory running MacOS 10.15.4.
+\textcolor{blue}{\textbf{(ii) Representativeness:} The selected subjects should be representative of the broader population or the specific context under study. They should capture the characteristics and variations found in the target population or application domain.}
+
+\textcolor{blue}{\textbf{(iii) Feasibility and accessibility:} Practical considerations, such as availability of data, availability of use and modification, access to organizations or systems, and resources required for data collection, should be taken into account during subject selection.}
+
+\textcolor{blue}{\textbf{(iv) Established systems:} Established systems are typically used in real-world scenarios and have a significant user base. Studying such systems can provide insights into practical challenges and solutions.}
+
+\textcolor{blue}{Base on these criteria, we present the systems used in Table~\ref{tab:donors_list}. We chose two text editors, \emph{VI} and \emph{VIM}, as product bases. These text editors serve as the foundation upon which the transplantation process is performed. By selecting widely used and established text editors, we increase the relevance of your case study.}
 
 \begin{table}[t]
 \centering 
@@ -49,6 +51,19 @@ Given an organs' entry point for each organ in the donor systems provided by us,
 		VIM      &Product Base & 737,466 & 117     \\\hline
 	\end{tabular}
 \end{table}
+
+\textcolor{blue}{To illustrate that donors can come from different application domains, we included \textit{GNU Cflow} one of the donors. \textit{GNU Cflow}, being a call graph extractor from C source code, represents a distinct domain compared to the text editors. This demonstrates that the transplantation process can be applied to diverse types of software systems. In addition to using donors from different domains, we also included \textit{VI} and \textit{VIM} as donors as well as another text editor, \emph{kilo}. This highlights the possibility of using donors from the same system as the product base or from different systems within the same application domain. It showcases the flexibility of the transplantation process and its ability to handle variations within a specific domain.}
+
+We identified the following features as possible desired features in a new editor: $\texttt{output}$ from CFLOW, $\texttt{enableRawMode}$ from kilo, $\texttt{vclear}$ from VI, and $\texttt{spell\_check}$ and $\texttt{search}$ from VIM. Table~\ref{tab:donors_list} presents more details on the subjects.
+
+\textbf{Procedure and execution}. 
+Initially, we automatically remove dead-code from both donors and host codebases by using \prodscalpel. 
+We also reduced each host to its basic form removing all optional features. Thus, both donors and host are prepared for the transplantation process. 
+Given an organs' entry point for each organ in the donor systems provided by us, their target implantation points in the product base, and a set of test suites for each organ, \prodscalpel was used to localise and extract a set of organs from the donor, transform each organ to be compatible with the context of their target sites in the product base and implant the organs in the beneficiary's environment. Each automated organ transplantation process was repeated 20 times, due to the heuristic nature of the over-organ adaptation process. We computed the average number of lines of code transplanted and the average runtimes for the transplantation process.
+
+\textbf{Case study environment}. The runtimes for each transplantation were measured on an Intel Core 3.1 GHz Dual-Core Intel Core i5, with 16 GB memory running MacOS 10.15.4.
+
+
 
 \subsection{Results and Discussion} \label{sec:result_discussion}
 
@@ -99,6 +114,10 @@ We can, in the future, turn to \emph{Dynamic analysis}~\cite{Cornelissen2009} an
 \noindent To answer RQ2, \prodscalpel was able to productise three features from three different systems. However, transplantation of organs from a larger donor exposed some limitations of the technologies used by our tool.
 \end{framed}
 
+\textcolor{blue}{In the transplantation of features from two different versions of the same system - one with the desired feature as the donor and another without it as the host - \prodscalpel replicated the original code, incorporating the transplanted feature. The introduction of the organ-host wrapper, a necessary addition, did not compromise the overall integrity or functionality of the codebase. To thoroughly validate this integration, acceptance tests were conducted on the resulting code. These tests affirmed the successful assimilation of the transplanted organ into the original codebase.}
+
+\textcolor{blue}{The capability to selectively remove or reimplant features in a software product line, facilitated by tools like \prodScalpel, can provide adaptability to the product line, allowing dynamic adjustments to meet changing requirements or market demands, providing flexibility in tailoring product configurations without extensive manual efforts. In terms of maintenance and evolution, the process of reimplanting features can automate updates or modifications, replacing intricate manual interventions. The systematic reuse of features across different product variants reduces redundancy and promotes consistency. This removal and reimplantation functionality contributes to product line customization, facilitating tailored solutions for specific customer needs. Additionally, the automated process significantly reduces development time by minimizing manual efforts, ensuring a more efficient product line engineering process. Furthermore, it enhances consistency and cohesion by uniformly applying changes to features across product variants, mitigating the risk of inconsistencies or errors.}
+
 In summary, these case studies show initial evidence that software transplantation can be successfully used for building product variants automatically by combining features transplanted from real-world systems.
 \prodscalpel inherits limitations of the underlying slicing tools, thus its generalisability can be further improved with progress in that domain.
 New studies may give more evidence that our approach is also extensible and flexible in other domains, opening perspectives for future work.\looseness=-1
@@ -106,7 +125,7 @@ New studies may give more evidence that our approach is also extensible and flex
 
 \subsection{Threats to Validity} \label{ch-6:threats}
 
-The relatively small number and diversity of systems used for transplantation pose an external threat to validity. However, we tried to mitigate it by constructing a possible real-world scenario, i.e., transplantation of features that would be useful in production of new text editors.
+The relatively small number and diversity of systems used for transplantation pose an external threat to validity. However, we tried to mitigate it by constructing a possible real-world scenario, i.e., transplantation of features that would be useful in production of new text editors. By selecting different subject systems allowed us to assess the effectiveness, applicability, and versatility of \prodscalpel in achieving products. We used subjects from different domains and with a wide range of sizes to give evidence that \prodscalpel can also be used to achieve a product line from a different set of usage scenarios.
 
 In terms of internal threats, we are limited by abilities of the tools we use, in particular, Doxygen, for call graph construction, and TXL for program transformation. We also use testing as a means of validating our approach, which cannot provide a formal proof of its correctness. However, testing is a standard approach in evaluating code in real-world scenarios due to its high scalability. 
 

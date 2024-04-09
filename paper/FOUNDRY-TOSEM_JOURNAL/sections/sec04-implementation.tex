@@ -32,8 +32,10 @@ First we need to select and prepare our product base. The selected program might
 	\label{fig:reconfigurator}
 \end{figure} 
 
+\textcolor{blue}{In the context of the donor preparation for the transplant, the choice between retaining or removing a portion of code surrounded by directives in the donor depends on the relevance of the code to the target organ. If the portion of code is used as a substrate for the organ to work correctly, ProdScalpel retains the code in the donor, removing only its directives. Otherwise, it removes both the code and the directives that delimit it. Thus, the process illustrated in \Cref{fig:reconfigurator} results in a clean donor codebase, important for providing an organ free of directives for the transplantation process.} 
+
 \subsection{Automating Vein and Over-Organ Extraction}
-As optimisations, \prodscalpel extracts the vein from multiple files. \prodscalpel uses backward slicing to identity each function belonging to the vein and saves it in a copy of its souce file in the transplantation platform. Then, it includes all functions calling existing into vein source code in the \emph{array of over-organ statements} used by GP to achieve an organ from the over-organ~\cite{Barr2015}. Thus,  a function/method in the vein shared between two organs is not duplicated when transplanted.
+As optimizations, \prodscalpel extracts the vein from multiple files. \prodscalpel uses backward slicing to identity each function belonging to the vein and saves it in a copy of its source file in the transplantation platform. Then, it includes all functions calling existing into vein source code in the \emph{array of over-organ statements} used by GP to achieve an organ from the over-organ~\cite{Barr2015}. Thus,  a function/method in the vein shared between two organs is not duplicated when transplanted.
 
 \prodscalpel avoids the problem of vein redundancy when a great part of the vein is common for multiple organs transplanted from the same donors. The vein duplication is discovered by the implantation module during the implantation stage. In the extraction stage, both veins belonging to two organs (A and B) are kept duplicated in the transplantation platform in different directories, since it is important to keep the over-organ functional. However, when the second organ( organ B) is implanted after the transplant of organ A, the code clone detector looks for duplication also in the vein code of organ A. For example, imagine that a vein has a function $\texttt{fx()}$ implemented in file $\texttt{F\.c}$ and belonging to both over-organs A and B. When \prodscalpel tries to transplant organ B after organ A, it checks if the function  $\texttt{fx()}$ already exists in file F.c in the post-operative environment. In this way, if the function  $\texttt{fx()}$ is already in the host post-operative, as part of organ A, \prodscalpel does not insert it into the host again. Instead, the function $\texttt{fx()}$ already transplanted also is used by organ B.
 
@@ -56,6 +58,9 @@ In the wrapper, \prodscalpel~abstracts variable names so that GP can select a ty
 By a mutation operation, a new version of the organ (i.e., a new individual) is created while \prodscalpel makes several changes in the organ-host wrapper and pruning the over-organ. Each such mutation operation is either an $\texttt{INSERT}$, $\texttt{REPLACE}$ and $\texttt{DELETE}$ of code into the individual and the wrapper at the level of statements.
 
 In the end, \prodscalpel synthesises a call to the extracted organ to execute and test it from the wrapper constructed.
+\textcolor{blue}{The organ-host wrapper can be designed to be versatile, enabling the calling of new features as different programs or executable in various languages. This flexibility is a deliberate design choice, aiming to accommodate diverse features from different sources and facilitate their integration into the product line.
+Adapting the process to such a polyglot product line can introduce a level of indirection that may have performance implications, especially if external processes like "exec" are involved. 
+Additionally, this would have direct impact on the GP algorithm that must be redesigned to handle different languages or execution environments.}
 
 \subsection{Automating Multiple Organ Implantation}
 \label{sec:Implantation}

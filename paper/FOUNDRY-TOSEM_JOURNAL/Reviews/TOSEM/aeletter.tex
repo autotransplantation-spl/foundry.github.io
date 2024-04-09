@@ -1,0 +1,61 @@
+\documentclass[a4paper,10pt]{letter}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\newcommand{\jp}[1]{\textcolor{blue}{#1}}
+
+
+\name{Leandro O. Souza, Earl T. Barr, Justyna Petke, Eduardo S. Almeida, Paulo Anselmo M. S. Neto} % authors
+
+% Signature of sender
+\signature{\vspace{-3em} Authors of \#TOSEM-2023-0120} % manuscript number
+
+
+% Address of sender
+\address
+{
+}
+
+%-----------------------------------------------------------------------------%
+
+\begin{document}
+
+% Name and address of receiver
+\begin{letter}
+{
+   Associate Editor handling \#TOSEM-2023-0120
+}
+
+% Opening statement
+\opening{Dear Dr. Groce,}
+
+% Letter body
+
+We hope you are well. 
+
+We are writing to ask for advice on how to handle some of Reviewer 2 (R2)'s comments to ensure that we are, all of us --- you, the reviewers, and us --- are effectively spending our time on revisions.
+In particular, 
+
+\begin{enumerate}
+
+\item R2 states ``In addition, the implementation is described as a tool paper and adds no value to rigorously and clearly present your approach/tool.'' (Point 2.10).  We present both an empirical study and a tool, but, accepting the counterfactual that we were solely an empirical study, even in this case, the study relies heavily on the tool, so presenting its implementation shows the challenge of implementing our approach in practice and crucially facilitates its replication and reuse.
+
+\item R2 fundamentally misunderstands what we do. Multiple times R2 states we ``re-engineer an existing SPL'' (Points 2.4, 2.5), which is not what we do.  We allow a new way to identify and compose SPL components, 
+including components from foreign code bases.
+
+\item R2 states that ``Section 3 is not formally or rigorously described. There is no a single definition along the sections and only descriptive paragraphs are used.'' (Point 2.8) Formal definitions are in our earlier work, which we clearly state in the paper. We note that R2 is not complaining that our informal descriptions are not self-contained.  As such, we feel that it would be misleading to formally define these notions that we borrow from previous work here, as doing so would imply --- falsely --- that they are or we believed them to be contributions of the current submission.
+
+\end{enumerate}
+
+In addition to seeking advice for how best to address these issues, we are also bringing your attention to them, as one tactic we are considering is to violate conventional practice and simply overtly disagree with R2 on these points.  In that case, R2 will recommend reject with high probability.  
+
+We are hoping that the fact that we've 
+opened this dialogue with you about the issues will mean that, either you can recommend a conventional path forward where we can constructively address R2's comments, or, failing that and R2 does reject us again, 
+you would be amenable to overruling R2 or seeking another reviewer.
+
+
+
+% Closing statement
+\closing{Thank you,}
+\end{letter}
+\end{document}

@@ -8,12 +8,17 @@ Based on software transplantation idea, \FOUNDRY treats \emph{product base} and 
 A product base is a host that contains all features that will be shared among the products. 
 An over-organ, in turn, is a completely functional and reusable portion of code extracted from a donor system that conservatively over-approximates the target organ~\cite{Barr2015}. An over-organ can be specialized to became an organ that preserves the original behavior of the feature in a different host codebase~\cite{Barr2015}.
 
-Conceptually, in \FOUNDRY, while the product base provides commonalities (i.e., common features) to the target product line, the variability (i.e., variant features) are provided by the transplantation process, as illustrated in \Cref{fig:product_for_transplantation}. This idea opens new ways for SPLE area by automated construction of different products by transplanting multiple organs into a product base. 
+Conceptually, in \FOUNDRY, while the product base provides commonalities (i.e., common features) to the target product line, the variability (i.e., variant features) are provided by the transplantation process. This idea opens new ways for SPLE area by automated construction of different products by transplanting multiple organs into a product base. 
+
+\textcolor{blue}{\Cref{fig:product_for_transplantation} illustrates the concept under discussion. In the first part of the figure, we identify three donor systems from which features are transplanted into a codebase. The representation of features B, F, H, and J serves to demonstrate the inherent variability in the product line. These features are extracted into the product line and subsequently implanted into specific products according to their requirements.}
+
+\textcolor{blue}{In the second part of the figure, we have a product base generated from a host system. The features N and O in the host system symbolize elements that need to be removed during the transplantation process due to their irrelevance to the target product line or the resulting products. Features P and Q exemplify the commonality within the product line, as they will be kept in the product base and shared among multiple products. As a result, we have a product line comprising features B, F, H, J, P, and Q, enabling the generation of diverse products through the software transplantation process.}
 
 \begin{figure}[t]
 	\centering \includegraphics[width=\textwidth]{images/product_for_transplantation7.png}
 	\centering 
-	\caption{An overview of how new products are derived from a product line based on ST.}
+	\caption{An overview of how new products are derived from a product line based on ST.\textit{Four over-organs (A, D, G, L) are extracted from three donor systems and kept in the transplantation platform, with product base consisting of 2 features shared across all products (P and Q).}}
+ 
 	\label{fig:product_for_transplantation}
 \end{figure} 
 
@@ -33,7 +38,7 @@ As in medicine, \FOUNDRY has a \emph{preoperative} stage where donors and the ho
 
 \begin{figure}[t]
 	\centering  \includegraphics[width=\linewidth]{images/FOUNDRY_DOM6.png}
-	\centering \caption{Domain engineering process supported by FOUNDRY. \textit{Four over-organs (A, D, G, L) are extracted from three donor systems and kept in the transplantation platform, with product base consisting of 2 features shared across all products (P and Q).} }
+	\centering \caption{Domain engineering process supported by FOUNDRY.  }
 	\label{fig:foundry_dom}
 \end{figure} 
 
@@ -82,7 +87,7 @@ Second, defects might be introduced due to code redundancy stemming from multipl
 Multiple organs can use the same code, creating code duplication and possible errors, if not handled correctly.
 Third, an organ's vein can contain a large amount of code, especially when the host and the donor have very different structures. 
 This requires extensive modification during the adaptation process. 
-According to Barr et al.~\cite{Barr2015},  inlined function calls constitute the second largest number of code lines transplanted. 
+According to Barr et al.~\cite{Barr2015}, inlined function calls constitute the second largest number of code lines transplanted. 
 Fourth challenge is that an extracted over-organ may itself contain multiple smaller features, which its functionality depends on.
 For example, a $\texttt{spell\_checker}$ feature might depend on a memory-resident database feature. 
 Thus, the extraction process has to implicitly learn feature's dependencies, by including them in its over-organ. 
@@ -93,7 +98,7 @@ Thus, even if an over-organ is contained in multiple files, \FOUNDRY can obtain 
 
 Given an entry point in the donor provided by the user, \FOUNDRY uses conservative slicing to automatically extract a feature into an ``over-organ'', completely automating the extraction task. Based on the method introduced in \cite{Barr2015}, \FOUNDRY slices \emph{forward} and \emph{backward} from the given organ entry point to identify the organ and one of its veins. 
 
-At the end of the extraction process, the  source code of the over-organ is then stored in the transplantation platform, together with other over-organs that compose the product line. 
+At the end of the extraction process, the source code of the over-organ is then stored in the transplantation platform, together with other over-organs that compose the product line. 
 All over-organs in the platform are available to be reused during the application engineering process. 
 
 \subsection{Application Engineering}
@@ -161,3 +166,4 @@ Once selected, organ has been successfully transplanted, and the postoperative p
 
 After the postoperative stage, new iterations of organ transplantation can be performed; thus, in a stepwise and incremental way, a new product is derived as organs are transplanted into a product base. 
 
+\FOUNDRY is an approach that combines a conceptual framework with a systematic methodology for the reengineering of individual systems into SPLs. It functions as a process aimed at extracting, adapting, and combining features from various sources to construct a product line. \FOUNDRY is implemented and operationalized through \prodscalpel. While Foundry serves as a conceptual foundation and methodology, \prodscalpel acts as the operational instrument, automating the steps outlined by Foundry. Together, they provide a structured and automated solution for the generation of SPL by transition of features from individual systems to a cohesive product line.
