@@ -108,8 +108,8 @@
                             <li><a href="#top">OVERVIEW</a></li>
                             <li><a href="#proposal">APPROACH</a></li> 
                             <li><a href="#corpus-collection">ProdScapel</a></li>
-                            <li><a href="#case_study">CASE STUDIES</a></li>
                             <li><a href="#experimental_evaluation">EXPERIMENTAL EVALUATION</a></li>
+                            <li><a href="#case_study">CASE STUDIES</a></li>
                             <li><a href="#reference">REFERENCES</a></li>
                             <li><a href="#contact">CONTACT</a></li>
                         </ul><!-- /.navbar-right -->
@@ -388,9 +388,197 @@
         </div><!-- /.projects-bg -->
     </div><!-- /.projects-area -->
     <!--Projects Area End-->
-    
-    
-    <!--News Proposal Start-->
+
+
+    <!--About EXPERIMENTAL EVALUATION Start-->
+    <div class="about-area" id="experimental_evaluation">
+        <div class="about-bg">
+            <div class="container">
+                <div class="row">
+
+                    <div class="about-title title">
+                        <h2>EXPERIMENTAL EVALUATION</h2>
+                    </div><!-- /.about-title -->
+
+                    <div class="about-ful">
+                        <p class="justifyText"> Aiming to assess Foundry with respect to human effort, we conducted We conducted an experiment that reflects a real-world process of product line migration from existing codebases [2]. The goal of this experiment is to analyse the effectiveness and efficiency of our approach compared with the manual process of generating a product line from existing systems, performed by SPL experts.
+
+                            We answer our research questions by simulating a real reengineering process where two features must be transferred to a product line built over a product base.
+
+                            In scenario I, we gathered a group of 10 SPL experts (called Group A) where each one of them had to manually re-transplant all portions of code that implement the feature <i>dir_init</i> to the product base. We removed this feature from the original version of <i>NEATVI</i> to generate the product base used in this scenario. In scenario II, another group of 10 SPL experts (called Group B) tried to insert the feature write_archive from <i>MYTAR</i> into the original version of <i>NEATVI</i> used as the product base.
+
+                            We recruited 20 SPL experts for the experiment that were divided into two different groups.</p>
+                        <br>
+
+                        <p class="justifyText"> We created two groups (A and B) with similar background distribution of participants. Table shows the details of
+                            the participants involved in the experiment. Group A simulated the first scenario by transplanting a
+                            feature from a codebase different to the host one. Group B simulated the second scenario by transplanting a feature
+                            from the same codebase as the host.</p>
+                        <br>
+
+
+                        <div class='table3'>
+                            <p align="center"><img src='assets/images/img/participants.jpg'\>
+                        </div>
+                        <p align="center"><b>Table 3: The participants’ expertise and division into groups.</b></p>
+                        <br>
+
+                        <h5>Results</h5>
+                        </p>
+                        <p class="justifyText">We summarise our results in Table 5. We report the status of the product base and feature inserted by the participants, the time spent and the number of passing tests for the regression augmented regression and acceptance test suites. In the first scenario, only one of the participants was not able to finish the process before the timeout. On the other hand, half of the participants were able to finish the process before achieving the timeout in the second scenario and only three of them have been able to insert the target feature without breaking the product base.
+
+                        </p>
+                        <br>
+
+                        <p class="justifyText">The results analysis can be accessed using the link: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment" target="_blank">Experiment results</a>.
+                        </p>
+                        <br>
+                        <p class="justifyText">
+                            For each scenario, we also report the number of prodScalpel runs in which the product derived passed all test cases. For each scenario, we repeat each run 20 times. The success rate was retained for both scenarios I and II, where only one run timed out and the product line generated passed all tests from all test suite. </p>
+                        <div class='table4'>
+                            <p align="center"><img src='assets/images/img/experiment_results.jpg'\>
+                        </div>
+                        <p align="center"><b>Fig. 4. Time (in minutes) spent by participants and prodScalpel on performing the three stages of SPL reengineering: feature extraction, adaption and merging.</b></p>
+                        <p align="center"><i>The graph highlights the average time spent by participants who successfully generated new products</i></p>
+
+                        <br>
+                        <p class="justifyText">In summary, Group A transferred the target feature from NETVI to the product base in 1h24 minutes on average. prodScalpel turned out to be quicker, successfully transplanting this feature in all 20 trials, taking an average of 20 minutes. Most of the participants from Group B had not completed the feature migration process from Mytar within the 4 hours time limit. Considering the participants that were able to finish the process (i.e., participants P17, P18 and P19)successfully (all tests passed) they spent an average of 2h23 minutes while prodScalpel was able to complete this task in 19 of 20 trials in the timeout, taking 27 minutes on average.
+                        </p>
+                        <br>
+                        <p class="justifyText">By considering the time spent in both scenarios, the tool accomplished the product line generation process 4.8 times faster than the mean time taken by participants who were able to finish the experiment within the
+                        </p>
+                        <br>
+
+                        <h5>Data collection</h5>
+
+                        <p class="justifyText">We have provided a task and time registration worksheet. While participants were conducting the assigned tasks, we asked them to take notes of which strategies were being used for each stage of the feature transfer process and why they are performing each specific task. It allowed us to capture strategies and performance data simultaneously. We have complemented the above setup with a post-survey. This way we can better understand participants’ problems and differences between the manual and automated process in both scenarios. We have triangulated the data generated from the experiment with the responses we obtain from the pre and post-surve
+                        </p>
+                        <br>
+
+                        <!--<p class="justifyText"><p>Our artifact can be downloaded from: <a href="../../assets/img/donors">Download</a></p>
+                        </p>
+                        <br>
+
+
+                        <p class="justifyText"><strong>Our artifact can be downloaded from: </strong></p>
+                        <br>-->
+
+                        <p class="justifyText"><strong>All artifacts generated by the experiment participants can be accessed using the links below:</strong></p>
+                        <br>
+                        <p class="justifyText"><strong>Manual process</strong></p>
+                        <ol>
+                            <li> Group_A (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/scenario_I_group-A/manual_process">Scenario I</a>.</li>
+                            <li> Group_B (NEATVI → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_II_group-B/Manual_process">Scenario II</a>.</li>
+                        </ol>
+                        <p class="justifyText"><strong>Automated process</strong></p>
+
+                        <ol>
+                            <li> (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_I_group-A/Automated_process" target="_blank">Scenario I</a>.</li>
+                            <li> (NEATVI → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_II_group-B/Automated_process" target="_blank">Scenario II</a>.</li>
+                        </ol>
+
+                        <h5>Data Analysis</h5>
+
+                        <p class="justifyText">We used 22 pre-existing regression test suites designed by the NEATVI developers to assess the success of prodScalpel and manual transplantations. To achieve better product line coverage, we manually augmented the host’s regression test suites with additional tests, our augmented regression suites. Furthermore, we implemented an acceptance test suite for evaluating the transferred feature in both scenario I and II. We have a total of 30 such tests in scenario I and 33 in scenario II. Our test suites provided statement coverage of 72.5% to the post-operative product line in scenario I and 73.3% to the post-operative product line in scenario II.
+                        </p>
+                        <br>
+                        <p class="justifyText">All artifacts generated by the results analysis can be accessed using the link:
+                            <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment" target="_blank">Data collection</a>.</li>
+                        </p>
+                        <br>
+
+                        <h4>Experiment Scripts</h4>
+
+                        <p class="justifyText"> This website contains the prodScalpel in binary form, and the data sets used in both scenarios, including test suites, that underlie our experiments.
+                            To facilitate replicating our results, we have written a sequence of scripts that run a *single* run of each of our scenario.
+                            The name of the script identifies the scenario. We have worked hard to make each script bullet-proof and have it thoroughly check your environment for its dependencies and tell you what, if anything, is missing. Despite our best efforts, you may still encounter problems. If that happens, please contact us so we can work with you to resolve them.</p>  <br>
+                        <p class="justifyText"> This artifact contains the tool prodScalpel, which was used for autotransplantation. Also we provide our regression, augmented regression, and acceptance test suites, where possible. In the other cases these test suites were executed manually (for GUI programs or the Webserver), or the original regression test suite was not executing at all the organ.
+                        </p><br>
+                        <p class="justifyText">
+                            To establish the time for feature transplantation using our automated approach, we ran prodScalpel 20 times, and measure the average time spent on feature migration in each scenario. This average time was compared with the time spent by our participants on the manual re-engineering proces.
+                            For enhancing the reproducibility of our results, we include in this artifact all the required scripts, and tools, for obtaining:</p>
+                        <ol>
+                            <li>All the transplant in our empirical study and in the case study.</li>
+                            <li>The required time for doing each and every transplant, as well as the total time required for all our experiments
+                                (Table 2, columns under Time).</li>
+                            <li>The results of regression, augmented regression, and acceptance test suite (Table 2, columns PR, for Unanimously,
+                                Regression, Regression++, and Acceptance tests).</li>
+
+                            <li>The coverage results for the entire postoperative host, and just for the organs (Table 2, columns All and O, for Unanimously,
+                                >Regression, Regression++, and Acceptance tests).</li>
+                        </ol>
+
+                        <p class="justifyText">Note: this scripts contains just one run of each transplant. In the paper the results are averaged on 20 runs. By using the random seed parameter of prodScalpel, and than run the script for 20 times, the results from the paper may be approximated.</p>
+                        <br>
+                        <p class="justifyText"> You should run this from scenario I and II folders. The organ is automatically grafted into the host program,
+                            so, for subsequent runs the original version of the host must be restored.</p>
+                        <br>
+
+                        <h5>Scenario I</h5>
+
+                        <p class="justifyText"> The artefacts and script used in the first scenario can be downloaded from the list below.</p>
+                        <ol>
+                            <li>Mytar->NEATVI (product base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Transplantation_artifacts/Scenario_I"> Download</a>.</li>
+                            <!-- <li>Mytar: <a href = "case_study2/Donors/MYTAR.zip"> Download</a>.</li>
+                            <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li> -->
+                            <li>Script: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment/scenario_I_group-A/manual_process/experiment_script_for_scenario_I.pdf"> Download</a>.</li>
+                        </ol>
+
+                        <p class="justifyText"> <strong>RUN - The complete command, as it should be pasted is: </strong>Transplanting feature <i>write_archive</i>
+                            from Mytar-NEATVI</p>
+                        <i>./prodScalpel_spl --seeds_file Transplant-PRODUCT_B/T_MYTAR/seed-1.in --transplant_log Transplant-PRODUCT_B/T_MYTAR/LOG/
+                            --compiler_options Transplant-PRODUCT_B/T_MYTAR/CFLAGS --donor_folder Transplant-PRODUCT_B/T_MYTAR/Donor/MYTAR/ --workspace
+                            Transplant-PRODUCT_B/T_MYTAR/ --txl_tools_path TXL/ --functions_target Transplant-PRODUCT_B/T_MYTAR/coreFunctions.in
+                            --host_project Transplant-PRODUCT_B/ProductBase/NEATVI --donor_entry_function main --donor_entry_file main.c --conditional_directives
+                            F_WRITE_ARCHIVE --product_base T2</i></p>
+                        <br>
+
+                        <h5>Scenario II</h5>
+
+                        <p class="justifyText"> The artefacts and script used in the second scenario can be downloaded from the list below.</p>
+                        <ol>
+                            <li>NEATVI2.0 -> NEATVI (product base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Transplantation_artifacts/Scenario_II"> Download</a>.</li>
+                            <!-- <li>NeatVI: <a href="case_study2/Host/NEATVI.zip"> Download</a>.</li>
+                            <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li> -->
+                            <li>Script: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment/scenario_II_group-B/manual_process/experiment_script_for_scenario_II.pdf"> Download</a>.</li>
+                        </ol>
+
+
+
+
+                        <!-- <p><strong>Donors</strong>: the donor systems can be downloaded from the list below.
+                                </p>
+                               <ol>
+                                <li>Mytar: <a
+                                     href = "case_study2/Donors/MYTAR.zip"> Download</a>.</li>
+
+                                <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li>
+                                </ol>
+
+                           <p><strong>Host</strong>: the product base can be downloaded from the list below.</p>
+                               <ol>
+                                <li>NeatVI: <a href="case_study2/Host/NEATVI.zip"> Download</a>.</li>
+                                </ol>
+                           </p> -->
+
+
+                        <p><strong>RUN - The complete command, as it should be pasted is:</strong> Transplanting feature <i>dir_init</i> from NEATVI-NEATVI(product base)</p>
+
+                        <p>./prodScalpel_spl --seeds_file Transplant-PRODUCT_B/T_NEATVI/seed-1.in --transplant_log Transplant-PRODUCT_B/T_NEATVI/LOG/ --compiler_options
+                            Transplant-PRODUCT_B/T_NEATVI/CFLAGS --donor_folder Transplant-PRODUCT_B/T_NEATVI/Donor/NEATVI/ --workspace Transplant-PRODUCT_B/T_NEATVI/
+                            --txl_tools_path TXL/ --functions_target Transplant-PRODUCT_B/T_NEATVI/coreFunctions.in --host_project Transplant-PRODUCT_B/ProductBase/NEATVI
+                            --donor_entry_function main --donor_entry_file main.c --conditional_directives F_DIR_INIT --product_base T1</p>
+                        <br>
+
+                    </div><!-- /.about-details -->
+
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.about-bg -->
+    </div><!-- /.about-area -->
+    <!--About Area End-->
+
+    <!--News CASE STUDIES Start-->
     <div class="news-area" id="case_study">
         <div class="news-bg">
             <div class="container">
@@ -470,11 +658,10 @@
 
                             <h4>Case Study Scripts</h4>
 
-                            <p class="justifyText"> For enhancing the reproducibility of our results, we include in this artifact all the required scripts, and tools, for obtaining:</p>
-                            <ol>
-                            <li>All the transplant in the case study.</li>
-                            <li>The results of regression, augmented regression, and acceptance test suite (Table 2, columns PR, for Unanimously, Regression, Regression++, and Acceptance tests).</li>
-                            </ol>
+                            <p class="justifyText"> For enhancing the reproducibility of our results, we include in this artifact
+                                a script and all the required subjects.
+                           <!-- <li>The results of regression, augmented regression, and acceptance test suite (Table 2, columns PR, for Unanimously, Regression, Regression++, and Acceptance tests).</li>
+                         -->
                             
                             <p class="justifyText">Note: this scripts contains just one run of each transplant. In the paper the results are averaged on 20 runs. By using the random seed parameter of prodScalpel, and than run the script for 20 times, the results from the paper may be approximated.</p>
                             <br>
@@ -487,21 +674,17 @@
                             <ol> 
                             <li>Product Line A: <a href="https://github.com/autotransplantation-spl/foundry.github.io/raw/main/case-studies/host-programs/VI.zip">Download</a>.</li>
                             <li>Product Line B: <a href="https://github.com/autotransplantation-spl/foundry.github.io/raw/main/case-studies/host-programs/macvim.zip">Download</a>.</li>
+                            <li>Scripts used for running each case study: <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/case-studies/Script_to_run_case_studies_A_and_B.md" target="_blank">Case study script</a>.</li>
                             </ol>
-
                             <p class="justifyText">For running a transplantation untar it and run ./run.sh in the root folder. First we check if you have all the dependencies required for 
                             running prodScalpel. If you don't have them, you may still chose to run the transplantation, but prodScalpel may crash, or the results may be 
-                            affected. After the run finishes, all the results will be in DONOR-HOST/Host_BENEFICIARY. For example:
-                            <p>ar-xzvf RUN_KILO-Product_base.tar.gz && cd KILO-Product_base && ./run.sh</p>
-                            <p>The results will be in: KILO-Product_base/Host_BENEFICIARY</p>
-                            </p>
+                            affected. After the run finishes, all the results will be in RUN_CASE_STUDIES/PRODUCT_BASE directory. </p>
+
                              <br>
 
-                            <p class="justifyText">Links to the scripts used for running each case study:
-                                <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/case-studies/Script_to_run_case_studies_A_and_B.md" target="_blank">Case study script</a>.
-                            </p>
+
                        	 	<br>
-                       	 	<p class="justifyText"><strong>Product A: </strong> The preprocessed donor and host programs and script used to generate the product A can be downloaded from the list below.</p>
+                <!--       	 	<p class="justifyText"><strong>Product A: </strong> The preprocessed donor and host programs and script used to generate the product A can be downloaded from the list below.</p>
                               <ol> 
                                 <li> Kilo → Product_Base_A: <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/case-studies/Product_A/Kilo_to_product_base/c-editor">Download</a>.</li>
                                 <li> CFLOW → Product_Base_A: <a href="../../assets/img/donors">Download</a>.</li>
@@ -516,7 +699,7 @@
                                 <li> VI → Product_Base_B: <a href="../../assets/img/donors">Download</a>.</li>
                                 <li> VIM → Product_Base_B: <a href="../../assets/img/donors">Download</a>.</li>
                                </ol>
-
+-->
                            <!--  <br>
                              <h5>Docker Build Files</h5>
                        		 </p>
@@ -554,194 +737,6 @@
                                 <li>Develop the SPL Framework.</li>
                                 <li>Perform an experiment to evaluate the SPL Framework.</li>
                             </div>-->
-                        </div><!-- /.about-details -->
-   
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.about-bg -->
-    </div><!-- /.about-area -->
-    <!--About Area End-->
-
-<!--About Contributions Start-->
-    <div class="about-area" id="experimental_evaluation">
-        <div class="about-bg">
-            <div class="container">
-                <div class="row">
-   
-                        <div class="about-title title">
-                            <h2>EXPERIMENTAL EVALUATION</h2>
-                        </div><!-- /.about-title -->
-
- 						<div class="about-ful">
- 						<p class="justifyText"> Aiming to assess Foundry with respect to human effort, we conducted We conducted an experiment that reflects a real-world process of product line migration from existing codebases [2]. The goal of this experiment is to analyse the effectiveness and efficiency of our approach compared with the manual process of generating a product line from existing systems, performed by SPL experts.
-
-                        We answer our research questions by simulating a real reengineering process where two features must be transferred to a product line built over a product base.  
-                        
-                        In scenario I, we gathered a group of 10 SPL experts (called Group A) where each one of them had to manually re-transplant all portions of code that implement the feature <i>dir_init</i> to the product base. We removed this feature from the original version of <i>NEATVI</i> to generate the product base used in this scenario. In scenario II, another group of 10 SPL experts (called Group B) tried to insert the feature write_archive from <i>MYTAR</i> into the original version of <i>NEATVI</i> used as the product base. 
-
-                        We recruited 20 SPL experts for the experiment that were divided into two different groups.</p>
-						<br>
-						
-						<p class="justifyText"> We created two groups (A and B) with similar background distribution of participants. Table shows the details of 
-                       	the participants involved in the experiment. Group A simulated the first scenario by transplanting a 
-                             feature from a codebase different to the host one. Group B simulated the second scenario by transplanting a feature 
-                             from the same codebase as the host.</p>
-                             <br>
-                          
-                       	
-                       	<div class='table3'>
-    							<p align="center"><img src='assets/images/img/participants.jpg'\>
-  							 </div>
-                             <p align="center"><b>Table 3: The participants’ expertise and division into groups.</b></p> 
-                       		 <br> 
-
-                       <h5>Results</h5> 
-                            </p>
-                            <p class="justifyText">We summarise our results in Table 5. We report the status of the product base and feature inserted by the participants, the time spent and the number of passing tests for the regression augmented regression and acceptance test suites. In the first scenario, only one of the participants was not able to finish the process before the timeout. On the other hand, half of the participants were able to finish the process before achieving the timeout in the second scenario and only three of them have been able to insert the target feature without breaking the product base.
-
-                            </p>
-                             <br>
-
-                            <p class="justifyText">The results analysis can be accessed using the link: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment" target="_blank">Experiment results</a>.
-                            </p>
-                            <br>
-                                <p class="justifyText">
-                            For each scenario, we also report the number of prodScalpel runs in which the product derived passed all test cases. For each scenario, we repeat each run 20 times. The success rate was retained for both scenarios I and II, where only one run timed out and the product line generated passed all tests from all test suite. </p>
-                            <div class='table4'>
-                                <p align="center"><img src='assets/images/img/experiment_results.jpg'\>
-                             </div>
-                             <p align="center"><b>Fig. 4. Time (in minutes) spent by participants and prodScalpel on performing the three stages of SPL reengineering: feature extraction, adaption and merging.</b></p>
-                            <p align="center"><i>The graph highlights the average time spent by participants who successfully generated new products</i></p>
-
-                            <br>
-                            <p class="justifyText">In summary, Group A transferred the target feature from NETVI to the product base in 1h24 minutes on average. prodScalpel turned out to be quicker, successfully transplanting this feature in all 20 trials, taking an average of 20 minutes. Most of the participants from Group B had not completed the feature migration process from Mytar within the 4 hours time limit. Considering the participants that were able to finish the process (i.e., participants P17, P18 and P19)successfully (all tests passed) they spent an average of 2h23 minutes while prodScalpel was able to complete this task in 19 of 20 trials in the timeout, taking 27 minutes on average.
-                            </p> 
-                            <br>
-                            <p class="justifyText">By considering the time spent in both scenarios, the tool accomplished the product line generation process 4.8 times faster than the mean time taken by participants who were able to finish the experiment within the 
-                       		</p> 
-                            <br>
-
-                        <h5>Data collection</h5>
-                            
-                            <p class="justifyText">We have provided a task and time registration worksheet. While participants were conducting the assigned tasks, we asked them to take notes of which strategies were being used for each stage of the feature transfer process and why they are performing each specific task. It allowed us to capture strategies and performance data simultaneously. We have complemented the above setup with a post-survey. This way we can better understand participants’ problems and differences between the manual and automated process in both scenarios. We have triangulated the data generated from the experiment with the responses we obtain from the pre and post-surve
-                            </p> 
-                            <br>
-                            
-                            <!--<p class="justifyText"><p>Our artifact can be downloaded from: <a href="../../assets/img/donors">Download</a></p>
-                            </p> 
-                            <br>
-
-
-                            <p class="justifyText"><strong>Our artifact can be downloaded from: </strong></p>
-                            <br>-->
-
-                             <p class="justifyText"><strong>All artifacts generated by the experiment participants can be accessed using the links below:</strong></p>
-                            <br>
-                             <p class="justifyText"><strong>Manual process</strong></p>
-                              <ol> 
-                                <li> Group_A (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/scenario_I_group-A/manual_process">Scenario I</a>.</li>
-                                <li> Group_B (NEATVI → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_II_group-B/Manual_process">Scenario II</a>.</li>
-                               </ol>
-                             <p class="justifyText"><strong>Automated process</strong></p>
-                            
-                              <ol> 
-                                <li> (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_I_group-A/Automated_process" target="_blank">Scenario I</a>.</li>
-                                <li> (NEATVI → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_II_group-B/Automated_process" target="_blank">Scenario II</a>.</li>
-                               </ol>
-                            
-                            <h5>Data Analysis</h5>
-
-                            <p class="justifyText">We used 22 pre-existing regression test suites designed by the NEATVI developers to assess the success of prodScalpel and manual transplantations. To achieve better product line coverage, we manually augmented the host’s regression test suites with additional tests, our augmented regression suites. Furthermore, we implemented an acceptance test suite for evaluating the transferred feature in both scenario I and II. We have a total of 30 such tests in scenario I and 33 in scenario II. Our test suites provided statement coverage of 72.5% to the post-operative product line in scenario I and 73.3% to the post-operative product line in scenario II.
-                            </p> 
-                            <br>
-                            <p class="justifyText">All artifacts generated by the results analysis can be accessed using the link:
-                             <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment" target="_blank">Data collection</a>.</li>
-                            </p>
-                            <br>
-
-                       <h4>Experiment Scripts</h4>
-
-                             <p class="justifyText"> This website contains the prodScalpel in binary form, and the data sets used in both scenarios, including test suites, that underlie our experiments. 
-                             To facilitate replicating our results, we have written a sequence of scripts that run a *single* run of each of our scenario. 
-                             The name of the script identifies the scenario. We have worked hard to make each script bullet-proof and have it thoroughly check your environment for its dependencies and tell you what, if anything, is missing. Despite our best efforts, you may still encounter problems. If that happens, please contact us so we can work with you to resolve them.</p>  <br>  
-                             <p class="justifyText"> This artifact contains the tool prodScalpel, which was used for autotransplantation. Also we provide our regression, augmented regression, and acceptance test suites, where possible. In the other cases these test suites were executed manually (for GUI programs or the Webserver), or the original regression test suite was not executing at all the organ.
-                            </p><br>  
-                             <p class="justifyText">
-                             To establish the time for feature transplantation using our automated approach, we ran prodScalpel 20 times, and measure the average time spent on feature migration in each scenario. This average time was compared with the time spent by our participants on the manual re-engineering proces.
-                             For enhancing the reproducibility of our results, we include in this artifact all the required scripts, and tools, for obtaining:</p>
-                            <ol>
-                            <li>All the transplant in our empirical study and in the case study.</li>
-                            <li>The required time for doing each and every transplant, as well as the total time required for all our experiments 
-                            (Table 2, columns under Time).</li>
-                            <li>The results of regression, augmented regression, and acceptance test suite (Table 2, columns PR, for Unanimously, 
-                            Regression, Regression++, and Acceptance tests).</li>
-                            
-                            <li>The coverage results for the entire postoperative host, and just for the organs (Table 2, columns All and O, for Unanimously, 
-                            >Regression, Regression++, and Acceptance tests).</li>
-                            </ol>
-                            
-                        <p class="justifyText">Note: this scripts contains just one run of each transplant. In the paper the results are averaged on 20 runs. By using the random seed parameter of prodScalpel, and than run the script for 20 times, the results from the paper may be approximated.</p>
-                        <br>
-                       	<p class="justifyText"> You should run this from scenario I and II folders. The organ is automatically grafted into the host program, 
-                       	so, for subsequent runs the original version of the host must be restored.</p>
- 						<br>
-
-                       	<h5>Scenario I</h5>
-                       	
-                       	 <p class="justifyText"> The artefacts and script used in the first scenario can be downloaded from the list below.</p>
-                               <ol> 
-                                <li>Mytar->NEATVI (product base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Transplantation_artifacts/Scenario_I"> Download</a>.</li>   
-                                 <!-- <li>Mytar: <a href = "case_study2/Donors/MYTAR.zip"> Download</a>.</li>   
-                                 <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li> --> 
-                                <li>Script: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment/scenario_I_group-A/manual_process/experiment_script_for_scenario_I.pdf"> Download</a>.</li>
-                                </ol> 
-                       
- 						<p class="justifyText"> <strong>RUN - The complete command, as it should be pasted is: </strong>Transplanting feature <i>write_archive</i> 
- 						from Mytar-NEATVI</p>
- 						<i>./prodScalpel_spl --seeds_file Transplant-PRODUCT_B/T_MYTAR/seed-1.in --transplant_log Transplant-PRODUCT_B/T_MYTAR/LOG/ 
- 						--compiler_options Transplant-PRODUCT_B/T_MYTAR/CFLAGS --donor_folder Transplant-PRODUCT_B/T_MYTAR/Donor/MYTAR/ --workspace 
- 						Transplant-PRODUCT_B/T_MYTAR/ --txl_tools_path TXL/ --functions_target Transplant-PRODUCT_B/T_MYTAR/coreFunctions.in 
- 						--host_project Transplant-PRODUCT_B/ProductBase/NEATVI --donor_entry_function main --donor_entry_file main.c --conditional_directives 
- 						F_WRITE_ARCHIVE --product_base T2</i></p>
- 						<br>
- 						
-                       	<h5>Scenario II</h5>
-                       	
-                       	<p class="justifyText"> The artefacts and script used in the second scenario can be downloaded from the list below.</p>
-                               <ol> 
-                                <li>NEATVI2.0 -> NEATVI (product base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Transplantation_artifacts/Scenario_II"> Download</a>.</li> 
-                                <!-- <li>NeatVI: <a href="case_study2/Host/NEATVI.zip"> Download</a>.</li>   
-                                <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li> -->
-                                <li>Script: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment/scenario_II_group-B/manual_process/experiment_script_for_scenario_II.pdf"> Download</a>.</li>                       
-                                </ol> 
-                     
-                       		 
-                       		 
-						
-						<!-- <p><strong>Donors</strong>: the donor systems can be downloaded from the list below.
-                       		 </p>
-                               <ol> 
-                                <li>Mytar: <a
-                                     href = "case_study2/Donors/MYTAR.zip"> Download</a>.</li>  
-                                                         
-                                <li>NeatVI: <a href="case_study2/Donors/NEATVI_2.0.zip"> Download</a>.</li>  
-                                </ol> 
-    
-                       	<p><strong>Host</strong>: the product base can be downloaded from the list below.</p>
-                               <ol> 
-                                <li>NeatVI: <a href="case_study2/Host/NEATVI.zip"> Download</a>.</li>                    
-                                </ol> 
-                       	</p> -->
-                       	
-
- 						<p><strong>RUN - The complete command, as it should be pasted is:</strong> Transplanting feature <i>dir_init</i> from NEATVI-NEATVI(product base)</p>
-
- 						<p>./prodScalpel_spl --seeds_file Transplant-PRODUCT_B/T_NEATVI/seed-1.in --transplant_log Transplant-PRODUCT_B/T_NEATVI/LOG/ --compiler_options
- 						Transplant-PRODUCT_B/T_NEATVI/CFLAGS --donor_folder Transplant-PRODUCT_B/T_NEATVI/Donor/NEATVI/ --workspace Transplant-PRODUCT_B/T_NEATVI/
- 						--txl_tools_path TXL/ --functions_target Transplant-PRODUCT_B/T_NEATVI/coreFunctions.in --host_project Transplant-PRODUCT_B/ProductBase/NEATVI
- 						--donor_entry_function main --donor_entry_file main.c --conditional_directives F_DIR_INIT --product_base T1</p>
- 						<br>
- 						
                         </div><!-- /.about-details -->
    
                 </div><!-- /.row -->
@@ -791,8 +786,12 @@
                        <div class="footer-text">
                            <p>Contact us and we'll get back as soon as possible.</p>
                            <br>
-                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
-                            <p>Department of Computer Science,  University College London, UK</p>
+                           <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Federal Institute of Bahia, Bahia, Brazil</p>
+                           <p>Leandro Souza</p>
+                           <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +55 74 99997 3165</p>
+                           <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: leandro.souza@ifba.edu.br</p>
+                           <br>
+                           <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Department of Computer Science,  University College London, UK</p>
                             <p>Petke, Justyna</p>
                             <!--<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +44 ....</p>-->
                             <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: j.petke@ucl.ac.uk</p>
@@ -804,21 +803,15 @@
                        </div><!--/.footer-text-->
                        <br>
                        <div class="footer-text">
-                       		
-                            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
-                            <p>Federal Univerisity of Bahia, Bahia, Brazil</p>
-                            <p>Federal Institute of Bahia, Bahia, Brazil</p>
-                            <p>Leandro Souza</p>
-                            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +55 74 99997 3165</p>
-                            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: leandro.souza@ifba.edu.br</p>
-                             <br>
+
+
                             <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Federal Univerisity of Bahia, Bahia, Brazil</p>
                             <p>Eduardo Almeida</p>
                             <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +55 71 9607 0309</p>
                             <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: esa@rise.com.br</p>
                        </div><!--/.footer-text-->
 
-                       
+
                    </div>
                    
                    <div class="col-md-5">
