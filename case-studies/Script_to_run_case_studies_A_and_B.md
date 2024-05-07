@@ -92,17 +92,6 @@ The main parameters of ProdScalpel are:
 
     For generating PRODUCT_BASE_A:
 
-    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_CFLOW/seed-1.in --transplant_log Transplant-PRODUCT_B/T_CFLOW/LOG/ --compiler_options PRODUCT_LINE_B/T_CFLOW/CFLAGS --donor_folder PRODUCT_LINE_B/T_CFLOW/Donor/CFLOW/ --workspace PRODUCT_LINE_B/T_CFLOW/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_CFLOW/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_OUTPUT --product_base MACVIM_1 
-
-    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_KILO/seed-1.in --transplant_log Transplant-PRODUCT_B/T_KILO/LOG/ --compiler_options PRODUCT_LINE_B/T_KILO/KILO --donor_folder PRODUCT_LINE_B/T_KILO/Donor/KILO/ --workspace PRODUCT_LINE_B/T_KILO/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_KILO/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_ENABLE_RAW_MODE --product_base MACVIM_2 
-
-    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_MACVIM/seed-1.in --transplant_log Transplant-PRODUCT_B/T_MACVIM/LOG/ --compiler_options PRODUCT_LINE_B/T_MACVIM/MACVIM --donor_folder PRODUCT_LINE_B/T_MACVIM/Donor/MACVIM/ --workspace PRODUCT_LINE_B/T_MACVIM/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_MACVIM/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_SPELL_CHECK --product_base MACVIM_3
-
-    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_CFLOW/seed-1.in --transplant_log Transplant-PRODUCT_B/T_VI/LOG/ --compiler_options PRODUCT_LINE_B/T_VI/CFLAGS --donor_folder PRODUCT_LINE_B/T_VI/Donor/CFLOW/ --workspace PRODUCT_LINE_B/T_VI/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_VI/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_SERACH --product_base MACVIM_4 
-
-
-    For generating PRODUCT_BASE_B:
-
     ./prodScalpel_spl --seeds_file PRODUCT_LINE_A/T_CFLOW/seed-1.in --transplant_log Transplant-PRODUCT_LINE_A/T_CFLOW/LOG/ --compiler_options PRODUCT_LINE_A/T_CFLOW/CFLAGS --donor_folder PRODUCT_LINE_A/T_CFLOW/Donor/CFLOW/ --workspace PRODUCT_LINE_A/T_CFLOW/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_A/T_CFLOW/coreFunctions.in --host_project PRODUCT_LINE_A/PRODUCT_BASE/VI --donor_entry_function main --donor_entry_file main.c --conditional_directives F_OUTPUT --product_base VI_1 
 
     ./prodScalpel_spl --seeds_file PRODUCT_LINE_A/T_KILO/seed-1.in --transplant_log Transplant-PRODUCT_LINE_A/T_KILO/LOG/ --compiler_options PRODUCT_LINE_A/T_KILO/KILO --donor_folder PRODUCT_LINE_A/T_KILO/Donor/KILO/ --workspace PRODUCT_LINE_A/T_KILO/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_A/T_KILO/coreFunctions.in --host_project PRODUCT_LINE_A/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_ENABLE_RAW_MODE --product_base VI_2 
@@ -110,6 +99,18 @@ The main parameters of ProdScalpel are:
     ./prodScalpel_spl --seeds_file PRODUCT_LINE_A/T_MACVIM/seed-1.in --transplant_log Transplant-PRODUCT_LINE_A/T_MACVIM/LOG/ --compiler_options PRODUCT_LINE_A/T_MACVIM/MACVIM --donor_folder PRODUCT_LINE_A/T_MACVIM/Donor/MACVIM/ --workspace PRODUCT_LINE_A/T_MACVIM/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_A/T_MACVIM/coreFunctions.in --host_project PRODUCT_LINE_A/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_SPELL_CHECK --product_base VI_3
 
     ./prodScalpel_spl --seeds_file PRODUCT_LINE_A/T_CFLOW/seed-1.in --transplant_log Transplant-PRODUCT_LINE_A/T_VI/LOG/ --compiler_options PRODUCT_LINE_A/T_VI/CFLAGS --donor_folder PRODUCT_LINE_A/T_VI/Donor/CFLOW/ --workspace PRODUCT_LIPRODUCT_LINE_ANE_B/T_VI/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_A/T_VI/coreFunctions.in --host_project PRODUCT_LINE_A/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_SERACH --product_base VI_4 
+
+
+    For generating PRODUCT_BASE_B:
+
+
+    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_CFLOW/seed-1.in --transplant_log Transplant-PRODUCT_B/T_CFLOW/LOG/ --compiler_options PRODUCT_LINE_B/T_CFLOW/CFLAGS --donor_folder PRODUCT_LINE_B/T_CFLOW/Donor/CFLOW/ --workspace PRODUCT_LINE_B/T_CFLOW/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_CFLOW/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_OUTPUT --product_base MACVIM_1 
+
+    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_KILO/seed-1.in --transplant_log Transplant-PRODUCT_B/T_KILO/LOG/ --compiler_options PRODUCT_LINE_B/T_KILO/KILO --donor_folder PRODUCT_LINE_B/T_KILO/Donor/KILO/ --workspace PRODUCT_LINE_B/T_KILO/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_KILO/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_ENABLE_RAW_MODE --product_base MACVIM_2 
+
+    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_MACVIM/seed-1.in --transplant_log Transplant-PRODUCT_B/T_MACVIM/LOG/ --compiler_options PRODUCT_LINE_B/T_MACVIM/MACVIM --donor_folder PRODUCT_LINE_B/T_MACVIM/Donor/MACVIM/ --workspace PRODUCT_LINE_B/T_MACVIM/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_MACVIM/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_SPELL_CHECK --product_base MACVIM_3
+
+    ./prodScalpel_spl --seeds_file PRODUCT_LINE_B/T_CFLOW/seed-1.in --transplant_log Transplant-PRODUCT_B/T_VI/LOG/ --compiler_options PRODUCT_LINE_B/T_VI/CFLAGS --donor_folder PRODUCT_LINE_B/T_VI/Donor/CFLOW/ --workspace PRODUCT_LINE_B/T_VI/ --txl_tools_path TXL/ --functions_target PRODUCT_LINE_B/T_VI/coreFunctions.in --host_project PRODUCT_LINE_B/PRODUCT_BASE/MACVIM --donor_entry_function main --donor_entry_file main.c --conditional_directives F_SERACH --product_base MACVIM_4 
 
 You should run this from RUN_CASE_STUDIES directory. The Organ is automatically grafted into the host program, so, for subsequent 
 runs the original version of the host must be restored. If you wish to run prodScalpel on your own transplants, you will 
