@@ -156,22 +156,25 @@
                             </div>
                             <div class="text-leo about-img">
                             <img src="assets/images/about/about1.jpg" alt="about">
-                               
-                               <p class="justifyText">For companies producing related products, Software Product Lines (SPL) is a software reuse method that improves time-to-market and software quality, achieving substantial cost reductions. These benefits do not come for free. It often takes years to rearchitect and reengineer a codebase to support SPL and, once adopted, it must be maintained. Current SPL practice rely on a collection of tools, tailored for different reengineering phases, whose output developers must coordinate and integrate. We present Foundry, a general automated approach for leveraging software transplantation to speed conversion to and maintenance of SPL. Foundry facilitates feature extraction. It can efficiently, repeatedly, transplant a sequence of features, implemented in multiple files. 
-                               </p>
-                               
-                               <p class="about-para-middle">We realised FOUNDRY in prodScalpel, a software transplantation tool for SPL that 
-                               facilitates feature identification and can efficiently transplant a multi-organ, i.e., a sequence of features. 
-                               We used prodScalpel to create two product lines and derive two products that contain features from three real-world 
-                               systems each. We also compared it with manual effort, showing that prodScalpel is able to migrate features 
-                               between different codebases within 4 hours, time limit within which expert SPL developers have not finished the task. 
-                               When the same codebase for the host and the donor was used, prodScalpel was able to migrate a feature within 4.8 faster than SPL experts performing
-                              the same task.
+
+                                <p class="justifyText">Software Product Lines (SPLs) improve time-to-market, enhance software quality, and reduce maintenance costs.
+                                    Current SPL re-engineering practices are largely manual and require domain knowledge.
+                                    Thus, adopting and, to a lesser extent, maintaining SPLs are expensive tasks, preventing many companies from enjoying their benefits.
+                                </p>
+                                <p class="about-para-middle">
+                                    To address these challenges, we introduce FOUNDRY, an approach utilizing software transplantation to reduce the manual effort of SPL adoption and maintenance.
+                                    FOUNDRY enables integrating features across different codebases, even codebases that are unaware that they are contributing features to a software product line.
+                                    Each product produced by FOUNDRY is pure code, without variability annotation, unlike feature flags, which eases variability management and reduces code bloat.
+                                </p>
+                                <p class="about-para-middle">We realise FOUNDRY in ProdScalpel, a tool that transplants multiple organs (ie, a set of interesting features) from donor systems into an emergent product line for codebases written in C.
+                                    Given tests and lightweight annotations identifying features and implantation points, ProdScalpel automates feature extraction and integration.
+                                    To evaluate its effectiveness, our evaluation compares feature transplantation using ProdScalpel to the current state of practice: on our dataset,
+                                    ProdScalpel's use speeds up feature migration by an average of 4.8 times when compared to current practice.
                                 </p>
                                 
                                 <!--<p class="about-para-middle">Our paper is available for 
-                                <a href = "https://github.com/autotransplantation-spl/foundry.github.io/raw/main/paper/FOUNDRY_TOSEM_JOURNAL-3.pdf" target = "_ blank"-->
-                                     rel = "noopener"> download</a> .<!--The paper was presented at FSE 2021 and the slides 
+                                <a href = "https://github.com/autotransplantation-spl/foundry.github.io/raw/main/paper/FOUNDRY_TOSEM_JOURNAL-3.pdf" target = "_ blank"
+                                     rel = "noopener"> download</a> .The paper was presented at FSE 2021 and the slides
                                 from the presentation are also available: <a
                                      href = "documents/slide.pdf" target = "_ blank"
                                      rel = "noopener"> slides</a>.
@@ -222,7 +225,9 @@
                         <div class='table4'>
                                 <p align="center"><img src='assets/images/img/autotransplantation_for_spl.png'\></p>
                                 <br>
-                                <p align="center"><b>Fig. 2. Overview of the automated software transplantation process for product derivan.</b></p> 
+                            <p align="center"><b>Fig. 2. An overview of how new products are derived from a product line based on ST.</b></p>
+                            <p align="center"> <i> Four over-organs (A, D, G, L) are extracted from three donor systems and kept in the transplantation platform, with product base consisting of 2 features shared across all products (P and Q).</i></p>
+
                         </div>
 
                      
@@ -302,7 +307,9 @@
                              </div><!-- /.about-title -->
                             <p align="center"><img src="assets/images/img/prodscalpel-workflow.png" alt="about"></p>
                             <br>
-                            <p align="center"><b>Fig. 3. Overall architecture of prodScalpel. An SDG is a system dependency graph that the genetic programming phase uses to constrain its search space.</b></p> 
+                            <p align="center"><b>Fig. 3. Overall architecture of prodScalpel.</b></p>
+                            <p align="center"><i>An SDG is a system dependency graph that the genetic programming phase uses to constrain its search space.</i></p>
+
                             <br>
                             <div class="projects-title title">
                             <br>
@@ -422,8 +429,10 @@
 							 <div class='table6'>
     							<p align="center"><img src='assets/images/img/subjects.png' \>
   							 </div>
-                             <p align="center"><b>Table 1: Donors and hosts corpus for the evaluation</b></p> 
-                       		 <br> 
+                             <p align="center"><b>Table 1: Donors and hosts corpus for the evaluation.</b></p>
+                             <p align="center"><i>Column Features shows the number of features identified</i></p>
+
+                             <br>
                        		 
                        		 <p><strong>Product Base</strong> 
                        		 </p>
@@ -456,7 +465,7 @@
                             <div class='table6'>
     							<p align="center"><img src='assets/images/img/results_study_1.png'\>
   							 </div>
-                             <p align="center"><b>Table 2: Results</b></p>  
+                             <p align="center"><b>Table 2: Case studies results</b></p>
                             <br> 
 
                             <h4>Case Study Scripts</h4>
@@ -591,13 +600,18 @@
 
                             </p>
                              <br>
-                            <p class="justifyText">
+
+                            <p class="justifyText">The results analysis can be accessed using the link: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment" target="_blank">Experiment results</a>.
+                            </p>
+                            <br>
+                                <p class="justifyText">
                             For each scenario, we also report the number of prodScalpel runs in which the product derived passed all test cases. For each scenario, we repeat each run 20 times. The success rate was retained for both scenarios I and II, where only one run timed out and the product line generated passed all tests from all test suite. </p>
                             <div class='table4'>
                                 <p align="center"><img src='assets/images/img/experiment_results.jpg'\>
                              </div>
-                             <p align="center"><b>Fig. 4. Time (in minutes) spent by participants and prodScalpel on performing the three stages of SPL reengineering: feature extraction, adaption and merging. The graph highlights the average time spent by participants who successfully generated new products</b></p> 
-                             
+                             <p align="center"><b>Fig. 4. Time (in minutes) spent by participants and prodScalpel on performing the three stages of SPL reengineering: feature extraction, adaption and merging.</b></p>
+                            <p align="center"><i>The graph highlights the average time spent by participants who successfully generated new products</i></p>
+
                             <br>
                             <p class="justifyText">In summary, Group A transferred the target feature from NETVI to the product base in 1h24 minutes on average. prodScalpel turned out to be quicker, successfully transplanting this feature in all 20 trials, taking an average of 20 minutes. Most of the participants from Group B had not completed the feature migration process from Mytar within the 4 hours time limit. Considering the participants that were able to finish the process (i.e., participants P17, P18 and P19)successfully (all tests passed) they spent an average of 2h23 minutes while prodScalpel was able to complete this task in 19 of 20 trials in the timeout, taking 27 minutes on average.
                             </p> 
@@ -624,14 +638,14 @@
                             <br>
                              <p class="justifyText"><strong>Manual process</strong></p>
                               <ol> 
-                                <li> Group_A (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_I_group-A/Manual_process">Scenario I</a>.</li>
+                                <li> Group_A (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/scenario_I_group-A/manual_process">Scenario I</a>.</li>
                                 <li> Group_B (NEATVI → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_II_group-B/Manual_process">Scenario II</a>.</li>
                                </ol>
                              <p class="justifyText"><strong>Automated process</strong></p>
                             
                               <ol> 
-                                <li> (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_I_group-A/Automated_process">Scenario I</a>.</li>
-                                <li> (NEATVI → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_II_group-B/Automated_process">Scenario II</a>.</li>
+                                <li> (Mytar → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_I_group-A/Automated_process" target="_blank">Scenario I</a>.</li>
+                                <li> (NEATVI → Product Base): <a href="https://github.com/autotransplantation-spl/foundry.github.io/tree/main/experiment/Scenario_II_group-B/Automated_process" target="_blank">Scenario II</a>.</li>
                                </ol>
                             
                             <h5>Data Analysis</h5>
@@ -639,11 +653,10 @@
                             <p class="justifyText">We used 22 pre-existing regression test suites designed by the NEATVI developers to assess the success of prodScalpel and manual transplantations. To achieve better product line coverage, we manually augmented the host’s regression test suites with additional tests, our augmented regression suites. Furthermore, we implemented an acceptance test suite for evaluating the transferred feature in both scenario I and II. We have a total of 30 such tests in scenario I and 33 in scenario II. Our test suites provided statement coverage of 72.5% to the post-operative product line in scenario I and 73.3% to the post-operative product line in scenario II.
                             </p> 
                             <br>
-                            <p class="justifyText"><strong>All artifacts generated by the results analysis can be accessed using the list below:</strong></p>
-                              <ol> 
-                                <li> Data analysis: <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment/Data_analisys/Experiment_results.xlsx">Experiment results</a>.</li>
-                               </ol>
-                 
+                            <p class="justifyText">All artifacts generated by the results analysis can be accessed using the link:
+                             <a href="https://github.com/autotransplantation-spl/foundry.github.io/blob/main/experiment" target="_blank">Data collection</a>.</li>
+                            </p>
+                            <br>
 
                        <h4>Experiment Scripts</h4>
 
