@@ -1,6 +1,9 @@
 README
 
-#AUTOTRANSPLANTATION SPL
+#Foundry
+An approach utilizing software transplantation to reduce the manual effort of SPL adoption and maintenance.
+
+#ProdScalpel
    The autotransplantation tool for product derivation using automated (multi-organ) software transplantation approach called FOUNDRY
 
 ## Versioning
@@ -85,6 +88,7 @@ runs the original version of the host must be restored. If you wish to run prodS
 need to keep the same folder structure as shown in our examples. The main parameters of autoScalpel are:
 
     * --exclude_functions /path/to/file:(optional parameter) → exclude some functions from the transplantation algorithm. 
+
 The functions names must be written in a text file: foo bar .
 
     * --seeds_file /path/to/file: (required) take the seeds from a file. The file must contain 7 lines of 4 numbers each, as in this example.
@@ -118,7 +122,7 @@ Additional parameters:
 For a new organ transplantation change the file coreFunctions.in. For example, to transplant the feature write_archive from MYTAR to the product base NEATVI the complete command, as it should be pasted in the file is:
     * --coreFunction write_archive --donorSystem MYTAR --donorFileTarget Transplant-PRODUCT_BASE/Donor/append.c --hostFileTarget Transplant-PRODUCT_BASE/ProductBase/NEATVI/ex.c
 
-Where:
+    Where:
     * --core_function function_name : (required) the entry point of the functionality to transplant.
     * --donorSystem: (required) the donor system name.
     * --donor_target /path/to/file : (required) the file in the donor, with the function annotated for transplantation.
@@ -152,7 +156,7 @@ Ex: --coreFunction write_archive --donorSystem mytar --donorFileTarget Transplan
 ## Deployment
 
 ## Authors
- Created by Marginean Alexandru on 27/02/14 and evolved by Leandro Oliveira de Souza  on 15/05/2017
+ Created by Leandro Oliveira de Souza on 15/05/2017
 
 ## License
  Copyright (c) 2014 Marginean Alexandru and 2017 Leandro Oliveira de Souza. All rights reserved.
